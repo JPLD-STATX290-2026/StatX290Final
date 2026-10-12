@@ -1,0 +1,1136 @@
+poll_info,Obama,Romney,Undecided,Other,poll_id,pollster,start_date,end_date,sample_subpopulation,sample_size,mode,partisanship,partisan_affiliation
+2012-washington-dc-president-romney-vs-obama,88,8,,Not included in poll,15956,PPP (D)/Washington City Paper/Kojo Nnamdi Show,2012-10-12,2012-10-14,Likely Voters,1222,Automated Phone,Pollster,Dem
+2012-idaho-president-romney-vs-obama,27,63,6,4,15826,Mason-Dixon/Idaho Statesman,2012-10-08,2012-10-10,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-rhode-island-president-romney-vs-obama,54,33,8,Not included in poll,16411,Fleming and Associates/WPRI,2012-10-24,2012-10-27,Likely Voters,601,Live Phone,Nonpartisan,None
+2012-rhode-island-president-romney-vs-obama,58,32,10,Not included in poll,15672,Brown University,2012-09-26,2012-10-05,Likely Voters,471,Live Phone,Nonpartisan,None
+2012-rhode-island-president-romney-vs-obama,57,33,7,Not included in poll,15495,Fleming and Associates/WPRI,2012-09-26,2012-09-29,Likely Voters,501,Live Phone,Nonpartisan,None
+2012-rhode-island-president-romney-vs-obama,54,37,10,Not included in poll,15018,PPP (D),2011-02-16,2011-02-22,Likely Voters,544,Automated Phone,Pollster,Dem
+2012-kentucky-president-romney-vs-obama,39,53,5,3,15085,SurveyUSA/The Courier-Journal,2012-09-11,2012-09-13,Likely Voters,606,IVR/Online,Nonpartisan,None
+2012-kentucky-president-romney-vs-obama,40,48,11,Not included in poll,14974,PPP (D),2011-08-25,2011-08-28,Likely Voters,600,Automated Phone,Pollster,Dem
+2012-mississippi-president-romney-vs-obama,36,54,10,Not included in poll,12585,PPP (D),2011-11-04,2011-11-06,Likely Voters,796,Automated Phone,Pollster,Dem
+2012-mississippi-president-romney-vs-obama,40,46,13,Not included in poll,15016,PPP (D),2011-03-24,2011-03-27,Likely Voters,817,Automated Phone,Pollster,Dem
+2012-louisiana-president-romney-vs-obama,36,59,5,Not included in poll,15650,Magellan (R),2012-10-02,2012-10-04,Likely Voters,2682,Automated Phone,Pollster,Rep
+2012-louisiana-president-romney-vs-obama,37,50,10,Not included in poll,15507,JZ Analytics,2012-09-29,2012-09-30,Likely Voters,412,Internet,Nonpartisan,None
+2012-louisiana-president-romney-vs-obama,39,45,17,Not included in poll,15469,Southern Media/Opinion Research,2012-09-11,2012-09-20,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-kansas-president-romney-vs-obama,39,48,13,Not included in poll,14973,SurveyUSA,2011-11-18,2011-11-21,Registered Voters,510,IVR/Online,Nonpartisan,None
+2012-kansas-president-romney-vs-obama,31,56,12,Not included in poll,12571,SurveyUSA,2011-11-10,2011-11-10,Likely Voters,800,Automated Phone,Nonpartisan,None
+2012-hawaii-president-romney-vs-obama,61,34,5,Not included in poll,16453,Honolulu Civil Beat/Merriman,2012-10-24,2012-10-26,Likely Voters,1218,Automated Phone,Nonpartisan,None
+2012-hawaii-president-romney-vs-obama,62,30,6,3,15516,Honolulu Civil Beat/Merriman,2012-09-26,2012-09-28,Likely Voters,1684,Automated Phone,Nonpartisan,None
+2012-hawaii-president-romney-vs-obama,59,32,10,Not included in poll,12582,DailyKos.com/PPP (D),2011-10-13,2011-10-16,Likely Voters,568,Automated Phone,Sponsor,Dem
+2012-west-virginia-president-romney-vs-obama,38,52,10,Not included in poll,14852,R.L. Repass & Partners,2012-08-22,2012-08-25,Likely Voters,401,Mixed,Nonpartisan,None
+2012-west-virginia-president-romney-vs-obama,37,54,10,Not included in poll,14877,R.L. Repass & Partners,2012-04-25,2012-04-28,Likely Voters,410,Live Phone/Online,Nonpartisan,None
+2012-alabama-president-romney-vs-obama,36,51,,Not included in poll,14263,Capital Survey Research Center,2012-06-07,2012-06-27,Likely Voters,551,Live Phone,Nonpartisan,None
+2012-utah-president-romney-vs-obama,26,69,,Not included in poll,16509,Dan Jones & Associates,2012-10-26,2012-11-01,Registered Voters,870,Live Phone,Nonpartisan,None
+2012-utah-president-romney-vs-obama,25,70,3,2,16630,Mason-Dixon/The Salt Lake Tribune,2012-10-29,2012-10-31,Registered Voters,625,Live Phone,Nonpartisan,None
+2012-utah-president-romney-vs-obama,20,71,9,Not included in poll,16144,Key/BYU,2012-10-09,2012-10-13,Likely Voters,500,Live Phone,Nonpartisan,None
+2012-utah-president-romney-vs-obama,26,68,2,4,14175,Dan Jones & Associates,2012-06-15,2012-06-21,Registered Voters,1222,Live Phone,Nonpartisan,None
+2012-utah-president-romney-vs-obama,31,63,6,Not included in poll,15024,PPP (D),2011-07-08,2011-07-10,Likely Voters,732,Automated Phone,Pollster,Dem
+2012-maryland-president-romney-vs-obama,59,37,2,2,16577,YouGov,2012-10-31,2012-11-03,Likely Voters,705,Internet,Nonpartisan,None
+2012-maryland-president-romney-vs-obama,55,36,8,Not included in poll,16429,Baltimore Sun/OpinionWorks,2012-10-20,2012-10-23,Likely Voters,801,Live Phone,Nonpartisan,None
+2012-maryland-president-romney-vs-obama,60,36,2,2,16062,Washington Post,2012-10-11,2012-10-15,Likely Voters,843,Live Phone,Nonpartisan,None
+2012-maryland-president-romney-vs-obama,58,37,4,2,15852,YouGov,2012-10-04,2012-10-11,Likely Voters,498,Internet,Nonpartisan,None
+2012-maryland-president-romney-vs-obama,57,34,10,Not included in poll,15463,Baltimore Sun/OpinionWorks,2012-09-25,2012-09-27,Likely Voters,804,Live Phone,Nonpartisan,None
+2012-maryland-president-romney-vs-obama,55,36,8,1,15325,Gonzales Research,2012-09-17,2012-09-23,Likely Voters,813,Live Phone,Nonpartisan,None
+2012-maryland-president-romney-vs-obama,57,37,3,3,15229,YouGov,2012-09-07,2012-09-14,Likely Voters,686,Internet,Nonpartisan,None
+2012-maryland-president-romney-vs-obama,58,35,6,Not included in poll,13898,PPP (D)/Marylanders for Marriage Equality,2012-05-14,2012-05-21,Likely Voters,852,Live Phone,Sponsor,Dem
+2012-oklahoma-president-romney-vs-obama,33,58,8,Not included in poll,16203,SoonerPoll.com,2012-10-18,2012-10-24,Likely Voters,305,Live Phone,Nonpartisan,None
+2012-oklahoma-president-romney-vs-obama,29,58,13,Not included in poll,14703,SoonerPoll.com,2012-07-26,2012-08-14,Likely Voters,495,Live Phone,Nonpartisan,None
+2012-oklahoma-president-romney-vs-obama,27,62,11,Not included in poll,13856,SoonerPoll.com,2012-05-07,2012-05-10,Likely Voters,503,Live Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,40,54,3,Not included in poll,16371,Mason-Dixon,2012-10-26,2012-10-28,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,38,55,,Not included in poll,16325,Pharos Research Group,2012-10-26,2012-10-28,Likely Voters,752,Live Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,39,49,,Not included in poll,16246,Pharos Research Group,2012-10-19,2012-10-21,Likely Voters,807,Live Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,40,54,4,2,16060,Rasmussen,2012-10-17,2012-10-18,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,32,57,10,1,16064,Essman/Research,2012-10-12,2012-10-15,Likely Voters,500,Live Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,40,54,5,Not included in poll,15618,Mason-Dixon,2012-10-03,2012-10-05,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,39,51,,Not included in poll,15399,DFM Research (D-ND Dems/NPL),2012-09-24,2012-09-27,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-north-dakota-president-romney-vs-obama,35,54,,Not included in poll,14480,DFM Research (D-ND Dems/NPL),2012-07-24,2012-07-26,Likely Voters,400,Live Phone,Sponsor,Dem
+2012-north-dakota-president-romney-vs-obama,36,51,7,6,14336,Rasmussen,2012-07-10,2012-07-11,Likely Voters,400,Automated Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,39,52,,Not included in poll,14040,Mason-Dixon,2012-06-04,2012-06-06,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-north-dakota-president-romney-vs-obama,32,51,,Not included in poll,13664,DFM Research (D-DSCC),2012-04-18,2012-04-26,Registered Voters,478,Live Phone,Sponsor,Dem
+2012-washington-president-romney-vs-obama,53,46,1,Not included in poll,16521,PPP (D),2012-11-01,2012-11-03,Likely Voters,932,Automated Phone,Pollster,Dem
+2012-washington-president-romney-vs-obama,54,40,2,Not included in poll,16583,YouGov,2012-10-31,2012-11-03,Likely Voters,837,Internet,Nonpartisan,None
+2012-washington-president-romney-vs-obama,54,40,,Not included in poll,16415,SurveyUSA,2012-10-28,2012-10-31,Likely Voters,555,Mixed,Nonpartisan,None
+2012-washington-president-romney-vs-obama,57,36,4,Not included in poll,16435,University of Washington/KCTS9,2012-10-18,2012-10-31,Likely Voters,632,Live Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,52,39,5,Not included in poll,16051,Strategies 360 (D),2012-10-17,2012-10-20,Likely Voters,500,Live Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,50,45,4,Not included in poll,15913,PPP (D-Washington Conservation Voters),2012-10-15,2012-10-16,Likely Voters,574,Automated Phone,Sponsor,Dem
+2012-washington-president-romney-vs-obama,52,43,3,Not included in poll,15936,University of Washington/KCTS9,2012-10-01,2012-10-16,Likely Voters,644,Live Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,55,42,1,Not included in poll,15884,Rasmussen,2012-10-14,2012-10-14,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,54,40,3,Not included in poll,15834,SurveyUSA,2012-10-12,2012-10-14,Likely Voters,543,IVR/Online,Nonpartisan,None
+2012-washington-president-romney-vs-obama,56,39,3,Not included in poll,15847,YouGov,2012-10-04,2012-10-11,Likely Voters,747,Internet,Nonpartisan,None
+2012-washington-president-romney-vs-obama,56,36,3,Not included in poll,15506,SurveyUSA,2012-09-28,2012-09-30,Likely Voters,540,IVR/Online,Nonpartisan,None
+2012-washington-president-romney-vs-obama,52,41,4,Not included in poll,15412,Rasmussen,2012-09-26,2012-09-26,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,56,39,5,Not included in poll,15356,Gravis Marketing,2012-09-21,2012-09-22,Likely Voters,625,Automated Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,53,39,3,Not included in poll,15212,YouGov,2012-09-07,2012-09-14,Likely Voters,880,Internet,Nonpartisan,None
+2012-washington-president-romney-vs-obama,53,36,,Not included in poll,15051,Elway,2012-09-09,2012-09-12,Registered Voters,405,Live Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,54,38,4,Not included in poll,14955,SurveyUSA,2012-09-07,2012-09-09,Likely Voters,524,IVR/Online,Nonpartisan,None
+2012-washington-president-romney-vs-obama,46,36,17,Not included in poll,15428,Moore Information (R),2012-08-06,2012-08-07,Likely Voters,500,Live Phone,Pollster,Rep
+2012-washington-president-romney-vs-obama,54,37,5,Not included in poll,14569,SurveyUSA,2012-08-01,2012-08-02,Likely Voters,524,IVR/Online,Nonpartisan,None
+2012-washington-president-romney-vs-obama,46,37,,Not included in poll,14404,SurveyUSA,2012-07-16,2012-07-18,Registered Voters,630,IVR/Online,Nonpartisan,None
+2012-washington-president-romney-vs-obama,54,41,5,Not included in poll,14134,PPP (D),2012-06-14,2012-06-17,Likely Voters,1073,Automated Phone,Pollster,Dem
+2012-washington-president-romney-vs-obama,49,41,,Not included in poll,14123,Elway,2012-06-13,2012-06-16,Registered Voters,408,Live Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,50,36,14,Not included in poll,13766,SurveyUSA,2012-05-08,2012-05-09,Registered Voters,557,IVR/Online,Nonpartisan,None
+2012-washington-president-romney-vs-obama,53,38,9,Not included in poll,13025,PPP (D),2012-02-16,2012-02-19,Likely Voters,1264,Automated Phone,Pollster,Dem
+2012-washington-president-romney-vs-obama,50,39,11,Not included in poll,13459,SurveyUSA,2012-02-13,2012-02-15,Registered Voters,572,IVR/Online,Nonpartisan,None
+2012-washington-president-romney-vs-obama,49,38,12,Not included in poll,13155,Elway,2012-02-07,2012-02-09,Likely Voters,405,Live Phone,Nonpartisan,None
+2012-washington-president-romney-vs-obama,50,39,11,Not included in poll,13154,SurveyUSA,2012-01-12,2012-01-16,Likely Voters,572,IVR/Online,Nonpartisan,None
+2012-vermont-president-romney-vs-obama,62,25,7,1,14755,Castleton State College,2012-08-11,2012-08-21,Likely Voters,477,Automated Phone,Nonpartisan,None
+2012-vermont-president-romney-vs-obama,58,33,,6,13458,Castleton State College,2012-02-11,2012-02-22,Registered Voters,664,Automated Phone,Nonpartisan,None
+2012-texas-president-romney-vs-obama,38,57,2,3,16596,YouGov,2012-10-31,2012-11-03,Likely Voters,1563,Internet,Nonpartisan,None
+2012-texas-president-romney-vs-obama,39,55,,6,16331,YouGov/U of Texas/Texas Tribune,2012-10-15,2012-10-21,Likely Voters,540,Internet,Nonpartisan,None
+2012-texas-president-romney-vs-obama,41,55,2,2,15872,YouGov,2012-10-04,2012-10-11,Likely Voters,957,Internet,Nonpartisan,None
+2012-texas-president-romney-vs-obama,39,58,4,Not included in poll,15488,Texas Lyceum,2012-09-10,2012-09-26,Likely Voters,443,Live Phone,Nonpartisan,None
+2012-texas-president-romney-vs-obama,41,53,2,4,15231,YouGov,2012-09-07,2012-09-14,Likely Voters,1165,Internet,Nonpartisan,None
+2012-texas-president-romney-vs-obama,40,55,3,2,14990,Wilson Perkins Allen Opinion Research (R),2012-09-09,2012-09-11,Likely Voters,1000,Live Phone,Pollster,Rep
+2012-texas-president-romney-vs-obama,35,55,,Not included in poll,13863,YouGov/U of Texas/Texas Tribune,2012-05-07,2012-05-13,Likely Voters,511,Internet,Nonpartisan,None
+2012-texas-president-romney-vs-obama,43,50,7,Not included in poll,13603,PPP (D),2012-04-19,2012-04-22,Likely Voters,591,Automated Phone,Pollster,Dem
+2012-texas-president-romney-vs-obama,36,49,,Not included in poll,13457,U of Texas/Texas Tribune,2012-02-08,2012-02-15,Likely Voters,529,Internet,Nonpartisan,None
+2012-texas-president-romney-vs-obama,42,49,9,Not included in poll,12647,PPP (D),2012-01-12,2012-01-15,Likely Voters,700,Automated Phone,Pollster,Dem
+2012-tennessee-president-romney-vs-obama,42,53,3,2,16594,YouGov,2012-10-31,2012-11-03,Likely Voters,697,Internet,Nonpartisan,None
+2012-tennessee-president-romney-vs-obama,34,59,6,1,16330,MTSU,2012-10-16,2012-10-21,Likely Voters,609,Live Phone,Nonpartisan,None
+2012-tennessee-president-romney-vs-obama,43,52,4,2,15871,YouGov,2012-10-04,2012-10-11,Likely Voters,484,Internet,Nonpartisan,None
+2012-tennessee-president-romney-vs-obama,42,50,4,4,15226,YouGov,2012-09-07,2012-09-14,Likely Voters,694,Internet,Nonpartisan,None
+2012-tennessee-president-romney-vs-obama,40,47,,Not included in poll,13845,Vanderbit/PSRA,2012-05-02,2012-05-09,Registered Voters,826,Live Phone,Nonpartisan,None
+2012-tennessee-president-romney-vs-obama,41,47,,Not included in poll,13087,MTSU,2012-02-13,2012-02-25,Likely Voters,416,Live Phone,Nonpartisan,None
+2012-tennessee-president-romney-vs-obama,39,42,7,Not included in poll,13125,Vanderbit/PSRA,2012-02-16,2012-02-22,Registered Voters,1508,Live Phone,Nonpartisan,None
+2012-tennessee-president-romney-vs-obama,29,44,,Not included in poll,12578,MTSU,2011-10-03,2011-10-14,Adults,640,Live Phone,Nonpartisan,None
+2012-south-dakota-president-romney-vs-obama,41,53,6,Not included in poll,16663,Nielson Brothers,2012-10-31,2012-11-04,Likely Voters,617,Automated Phone,Nonpartisan,None
+2012-south-dakota-president-romney-vs-obama,42,50,8,Not included in poll,16499,Nielson Brothers,2012-10-28,2012-10-31,Likely Voters,777,Automated Phone,Nonpartisan,None
+2012-south-dakota-president-romney-vs-obama,41,52,7,Not included in poll,15753,Nielson Brothers,2012-10-01,2012-10-05,Likely Voters,749,Automated Phone,Nonpartisan,None
+2012-south-dakota-president-romney-vs-obama,39,54,7,Not included in poll,15249,Nielson Brothers,2012-08-29,2012-09-06,Likely Voters,512,Automated Phone,Nonpartisan,None
+2012-south-dakota-president-romney-vs-obama,43,49,8,Not included in poll,14558,Nielson Brothers,2012-07-19,2012-07-23,Registered Voters,546,Automated Phone,Nonpartisan,None
+2012-south-dakota-president-romney-vs-obama,35,44,21,Not included in poll,13456,Nielson Brothers,2012-02-15,2012-02-17,Registered Voters,559,Automated Phone,Nonpartisan,None
+2012-south-carolina-president-romney-vs-obama,40,46,,Not included in poll,12475,Ipsos/Reuters (Internet),2012-01-10,2012-01-13,Registered Voters,995,Internet,Nonpartisan,None
+2012-south-carolina-president-romney-vs-obama,45,42,13,Not included in poll,12565,Marist College,2011-12-04,2011-12-06,Likely Voters,2107,Live Phone,Nonpartisan,None
+2012-south-carolina-president-romney-vs-obama,40,46,14,Not included in poll,12566,Marist College,2011-10-11,2011-10-13,Likely Voters,2131,Live Phone,Nonpartisan,None
+2012-oregon-president-romney-vs-obama,52,46,3,Not included in poll,16491,PPP (D),2012-10-31,2012-11-01,Likely Voters,921,Automated Phone,Pollster,Dem
+2012-oregon-president-romney-vs-obama,47,41,9,Not included in poll,16315,Elway/Oregonian,2012-10-25,2012-10-28,Likely Voters,405,Live Phone,Nonpartisan,None
+2012-oregon-president-romney-vs-obama,47,42,12,Not included in poll,16329,Hoffman Research (R),2012-10-24,2012-10-25,Likely Voters,615,Live Phone,Pollster,Rep
+2012-oregon-president-romney-vs-obama,49,42,5,Not included in poll,15941,SurveyUSA,2012-10-16,2012-10-18,Likely Voters,579,IVR/Online,Nonpartisan,None
+2012-oregon-president-romney-vs-obama,50,41,5,Not included in poll,15097,SurveyUSA,2012-09-10,2012-09-13,Likely Voters,552,IVR/Online,Nonpartisan,None
+2012-oregon-president-romney-vs-obama,50,42,8,Not included in poll,14185,PPP (D),2012-06-21,2012-06-24,Likely Voters,686,Automated Phone,Pollster,Dem
+2012-oregon-president-romney-vs-obama,47,43,10,Not included in poll,13744,SurveyUSA,2012-05-07,2012-05-10,Registered Voters,1468,IVR/Online,Nonpartisan,None
+2012-oregon-president-romney-vs-obama,50,39,11,Not included in poll,13294,SurveyUSA,2012-03-14,2012-03-19,Likely Voters,1615,IVR/Online,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,59,36,3,2,16579,YouGov,2012-10-31,2012-11-03,Likely Voters,1430,Internet,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,62,33,2,4,16219,SurveyUSA,2012-10-23,2012-10-25,Likely Voters,554,IVR/Online,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,59,35,6,Not included in poll,16188,Siena,2012-10-22,2012-10-24,Likely Voters,750,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,61,35,3,1,16137,Marist,2012-10-18,2012-10-21,Likely Voters,565,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,59,35,4,2,15856,YouGov,2012-10-04,2012-10-11,Likely Voters,1403,Internet,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,58,36,4,2,15227,YouGov,2012-09-07,2012-09-14,Likely Voters,1403,Internet,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,62,34,2,1,14998,Quinnipiac,2012-09-04,2012-09-12,Likely Voters,1486,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,62,33,5,Not included in poll,14726,Siena,2012-08-14,2012-08-19,Likely Voters,671,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,55,32,10,2,14440,Quinnipiac,2012-07-17,2012-07-23,Registered Voters,1779,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,61,34,5,Not included in poll,14362,Siena,2012-07-10,2012-07-15,Registered Voters,758,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,59,35,6,Not included in poll,14068,Siena,2012-06-03,2012-06-06,Registered Voters,807,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,56,31,8,2,13968,Quinnipiac,2012-05-22,2012-05-28,Registered Voters,1504,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,57,37,6,Not included in poll,13797,Siena,2012-05-06,2012-05-10,Registered Voters,766,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,57,35,8,Not included in poll,13554,Marist,2012-04-10,2012-04-12,Registered Voters,632,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,60,35,5,Not included in poll,13492,Siena,2012-04-01,2012-04-04,Registered Voters,808,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,56,33,10,2,13439,Quinnipiac,2012-03-28,2012-04-02,Registered Voters,1597,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,60,34,6,Not included in poll,13321,Siena,2012-02-26,2012-02-29,Registered Voters,808,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,52,35,7,2,13146,Quinnipiac,2012-02-08,2012-02-13,Registered Voters,1233,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,63,31,6,Not included in poll,13322,Siena,2012-01-29,2012-02-01,Registered Voters,807,Live Phone,Nonpartisan,None
+2012-new-york-president-romney-vs-obama,58,35,7,Not included in poll,13455,Marist,2012-01-18,2012-01-19,Registered Voters,554,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,53,41,4,2,16587,YouGov,2012-10-31,2012-11-03,Likely Voters,987,Internet,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,51,41,8,Not included in poll,16213,Philadelphia Inquirer/National Research (R)/GSG (D),2012-10-23,2012-10-25,Likely Voters,601,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,54,40,4,2,15975,SurveyUSA,2012-10-17,2012-10-18,Registered Voters,577,IVR/Online,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,53,38,,Not included in poll,15982,Stockton,2012-10-12,2012-10-18,Likely Voters,811,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,48,41,,Not included in poll,15870,Neighborhood (R-AFP),2012-10-10,2012-10-14,Likely Voters,783,Live Phone,Sponsor,Rep
+2012-new-jersey-president-romney-vs-obama,51,43,5,1,15819,Quinnipiac,2012-10-10,2012-10-14,Likely Voters,1319,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,54,41,3,2,15846,YouGov,2012-10-04,2012-10-11,Likely Voters,770,Internet,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,51,40,10,Not included in poll,15691,Philadelphia Inquirer/National Research (R)/GSG (D),2012-10-04,2012-10-08,Likely Voters,604,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,56,39,4,2,15491,Rutgers-Eagleton,2012-09-27,2012-09-30,Likely Voters,645,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,52,37,10,1,15299,Monmouth University/Asbury Park Press,2012-09-19,2012-09-23,Likely Voters,613,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,52,40,4,3,15195,YouGov,2012-09-07,2012-09-14,Likely Voters,1040,Internet,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,51,37,12,Not included in poll,15075,Philadelphia Inquirer/National Research (R)/GSG (D),2012-09-09,2012-09-12,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,52,38,9,1,15035,Fairleigh Dickinson,2012-09-06,2012-09-12,Likely Voters,706,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,51,44,4,1,14902,Quinnipiac,2012-08-27,2012-09-02,Likely Voters,1471,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,51,37,5,6,14821,Rutgers-Eagleton,2012-08-23,2012-08-25,Likely Voters,710,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,49,36,15,Not included in poll,14543,Fairleigh Dickinson,2012-07-23,2012-07-29,Registered Voters,945,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,50,42,6,1,14456,Monmouth University/Asbury Park Press,2012-07-18,2012-07-22,Likely Voters,535,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,49,38,11,2,14371,Quinnipiac,2012-07-09,2012-07-15,Registered Voters,1623,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,56,33,9,3,14088,Rutgers-Eagleton,2012-05-31,2012-06-04,Registered Voters,1065,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,49,39,10,2,13812,Quinnipiac,2012-05-09,2012-05-14,Registered Voters,1582,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,50,36,14,Not included in poll,13726,Fairleigh Dickinson,2012-04-30,2012-05-06,Registered Voters,797,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,49,40,9,2,13518,Quinnipiac,2012-04-03,2012-04-09,Registered Voters,1607,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,50,37,13,Not included in poll,13453,Fairleigh Dickinson,2012-03-05,2012-03-11,Registered Voters,800,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,49,39,7,1,13086,Quinnipiac,2012-02-21,2012-02-27,Registered Voters,1396,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,52,38,10,Not included in poll,13085,SurveyUSA,2012-02-24,2012-02-26,Registered Voters,533,IVR/Online,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,56,31,13,Not included in poll,13088,Rutgers-Eagleton,2012-02-09,2012-02-11,Registered Voters,914,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,48,38,9,2,12499,Quinnipiac,2012-01-10,2012-01-16,Registered Voters,1460,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,51,32,,Not included in poll,12575,Rutgers-Eagleton,2011-12-15,2011-12-18,Registered Voters,823,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,49,40,7,2,12131,Quinnipiac,2011-11-09,2011-11-14,Registered Voters,1788,Live Phone,Nonpartisan,None
+2012-new-jersey-president-romney-vs-obama,47,41,7,2,11959,Quinnipiac,2011-10-05,2011-10-10,Registered Voters,1186,Live Phone,Nonpartisan,None
+2012-nebraska-president-romney-vs-obama,41,54,3,2,16457,We Ask America,2012-11-01,2012-11-01,Likely Voters,1178,Automated Phone,Nonpartisan,None
+2012-nebraska-president-romney-vs-obama,39,58,,Not included in poll,16324,Pharos Research Group,2012-10-26,2012-10-28,Likely Voters,761,Live Phone,Nonpartisan,None
+2012-nebraska-president-romney-vs-obama,38,52,,Not included in poll,16265,Wiese/Omaha World-Herald,2012-10-23,2012-10-25,Likely Voters,679,Live Phone,Nonpartisan,None
+2012-nebraska-president-romney-vs-obama,41,51,,Not included in poll,16248,Pharos Research Group,2012-10-19,2012-10-21,Likely Voters,783,Live Phone,Nonpartisan,None
+2012-nebraska-president-romney-vs-obama,39,53,6,2,15275,Wiese/Omaha World-Herald,2012-09-17,2012-09-20,Likely Voters,656,Live Phone,Nonpartisan,None
+2012-nebraska-president-romney-vs-obama,39,53,3,6,13833,Rasmussen,2012-05-16,2012-05-16,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-nebraska-president-romney-vs-obama,39,51,10,Not included in poll,13373,PPP (D),2012-03-22,2012-03-25,Likely Voters,1028,Automated Phone,Pollster,Dem
+2012-nebraska-president-romney-vs-obama,35,52,3,10,13452,Rasmussen,2012-03-05,2012-03-05,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,45,52,3,Not included in poll,16561,PPP (D),2012-11-02,2012-11-03,Likely Voters,836,Automated Phone,Pollster,Dem
+2012-montana-president-romney-vs-obama,43,53,2,2,16553,The Lee Newspapers Poll/Mason-Dixon,2012-10-29,2012-10-31,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,43,53,4,1,16552,Rasmussen,2012-10-29,2012-10-29,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,43,50,,Not included in poll,16326,Pharos Research Group,2012-10-26,2012-10-28,Likely Voters,799,Live Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,41,48,,Not included in poll,16247,Pharos Research Group,2012-10-19,2012-10-21,Likely Voters,828,Live Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,43,53,4,Not included in poll,15896,PPP (D-LCV),2012-10-15,2012-10-16,Likely Voters,806,Automated Phone,Sponsor,Dem
+2012-montana-president-romney-vs-obama,45,53,1,1,15867,Rasmussen,2012-10-14,2012-10-14,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,41,52,6,Not included in poll,15671,PPP (D),2012-10-08,2012-10-10,Likely Voters,737,Automated Phone,Pollster,Dem
+2012-montana-president-romney-vs-obama,35,49,10,6,15695,MSU-Billings,2012-09-27,2012-09-30,Adults,477,Live Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,44,48,,Not included in poll,15591,Mellman (D-Montana JET PAC),2012-09-23,2012-09-26,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-montana-president-romney-vs-obama,42,51,5,2,15263,The Lee Newspapers Poll/Mason-Dixon,2012-09-17,2012-09-19,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,45,50,5,Not included in poll,14987,PPP (D),2012-09-10,2012-09-11,Likely Voters,656,Automated Phone,Pollster,Dem
+2012-montana-president-romney-vs-obama,38,55,4,4,14724,Rasmussen,2012-08-20,2012-08-20,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,42,51,2,5,14135,Rasmussen,2012-06-18,2012-06-18,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,44,51,1,3,13690,Rasmussen,2012-05-02,2012-05-02,Likely Voters,450,Automated Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,43,48,9,Not included in poll,13673,PPP (D),2012-04-26,2012-04-29,Likely Voters,934,Automated Phone,Pollster,Dem
+2012-montana-president-romney-vs-obama,40,49,2,9,13431,Rasmussen,2012-04-02,2012-04-02,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-montana-president-romney-vs-obama,41,48,4,7,13144,Rasmussen,2012-02-22,2012-02-22,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,57,37,4,1,16609,UMass Lowell/Herald,2012-10-31,2012-11-03,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,57,37,3,3,16576,YouGov,2012-10-31,2012-11-03,Likely Voters,811,Internet,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,57,42,2,Not included in poll,16484,PPP (D),2012-11-01,2012-11-02,Likely Voters,1089,Automated Phone,Pollster,Dem
+2012-massachusetts-president-romney-vs-obama,58,40,2,Not included in poll,16543,WNEU/MassLive.com,2012-10-26,2012-11-01,Likely Voters,535,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,63,31,3,2,16332,Suffolk,2012-10-25,2012-10-28,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,52,38,,Not included in poll,16276,Boston Globe/UNH,2012-10-24,2012-10-28,Likely Voters,583,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,59,40,1,Not included in poll,16361,Rasmussen,2012-10-25,2012-10-25,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,56,36,7,2,16103,MassINC/WBUR,2012-10-21,2012-10-22,Likely Voters,516,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,55,39,6,Not included in poll,16034,Kimball Political Consulting (R),2012-10-18,2012-10-21,Likely Voters,761,Automated Phone,Pollster,Rep
+2012-massachusetts-president-romney-vs-obama,57,39,,Not included in poll,15898,PPP (D-LCV),2012-10-15,2012-10-16,Likely Voters,709,Automated Phone,Sponsor,Dem
+2012-massachusetts-president-romney-vs-obama,55,41,4,Not included in poll,15712,PPP (D),2012-10-09,2012-10-11,Likely Voters,1051,Automated Phone,Pollster,Dem
+2012-massachusetts-president-romney-vs-obama,55,36,5,4,15854,YouGov,2012-10-04,2012-10-11,Likely Voters,669,Internet,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,57,42,1,Not included in poll,15831,Rasmussen,2012-10-10,2012-10-10,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,55,34,9,2,15638,UMass Amherst/YouGov,2012-10-02,2012-10-08,Likely Voters,437,Internet,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,52,36,10,2,15620,MassINC/WBUR,2012-10-05,2012-10-07,Likely Voters,501,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,60,34,7,Not included in poll,15510,Mass Insight/Opinion Dynamics,2012-09-25,2012-09-30,Registered Voters,405,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,57,30,11,2,15413,Boston Globe/UNH,2012-09-21,2012-09-27,Likely Voters,502,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,55,40,2,3,15329,Rasmussen,2012-09-24,2012-09-24,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,60,36,5,Not included in poll,15145,UMass Lowell/Herald,2012-09-13,2012-09-17,Likely Voters,497,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,57,39,4,Not included in poll,15111,PPP (D),2012-09-13,2012-09-16,Likely Voters,876,Automated Phone,Pollster,Dem
+2012-massachusetts-president-romney-vs-obama,64,31,4,3,15092,Suffolk,2012-09-13,2012-09-16,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,55,39,4,3,15222,YouGov,2012-09-07,2012-09-14,Likely Voters,825,Internet,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,60,38,3,Not included in poll,15101,WNEU/MassLive.com,2012-09-06,2012-09-13,Likely Voters,444,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,56,40,9,Not included in poll,14954,Kimball Political Consulting (R),2012-09-07,2012-09-09,Likely Voters,756,Automated Phone,Pollster,Rep
+2012-massachusetts-president-romney-vs-obama,52,41,7,Not included in poll,14792,Kimball Political Consulting (R),2012-08-21,2012-08-21,Likely Voters,592,Automated Phone,Pollster,Rep
+2012-massachusetts-president-romney-vs-obama,55,39,6,Not included in poll,14738,PPP (D),2012-08-16,2012-08-19,Likely Voters,1115,Automated Phone,Pollster,Dem
+2012-massachusetts-president-romney-vs-obama,55,39,6,Not included in poll,14195,PPP (D),2012-06-22,2012-06-24,Likely Voters,902,Automated Phone,Pollster,Dem
+2012-massachusetts-president-romney-vs-obama,56,34,9,Not included in poll,13986,WNEU/MassLive.com,2012-05-29,2012-05-31,Registered Voters,504,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,46,34,19,Not included in poll,13985,Boston Globe/UNH,2012-05-25,2012-05-31,Likely Voters,651,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,59,34,5,1,13887,Suffolk,2012-05-20,2012-05-22,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,56,35,2,6,13718,Rasmussen,2012-05-07,2012-05-07,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,51,40,6,3,13505,Rasmussen,2012-04-09,2012-04-09,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,49,33,16,Not included in poll,13398,Boston Globe/UNH,2012-03-21,2012-03-27,Likely Voters,544,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,58,35,7,Not included in poll,13260,PPP (D),2012-03-16,2012-03-18,Registered Voters,936,Automated Phone,Pollster,Dem
+2012-massachusetts-president-romney-vs-obama,60,36,4,Not included in poll,13112,WNEU,2012-02-23,2012-03-01,Registered Voters,527,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,55,38,3,4,13095,Rasmussen,2012-02-29,2012-02-29,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,53,39,6,2,12946,Suffolk,2012-02-11,2012-02-15,Registered Voters,600,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,55,34,7,1,12944,MassINC,2012-02-06,2012-02-09,Likely Voters,503,Live Phone,Nonpartisan,None
+2012-massachusetts-president-romney-vs-obama,53,35,,Not included in poll,13451,Mass Insight/Opinion Dynamics,2012-01-31,2012-02-04,Registered Voters,456,Live Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,53,42,3,2,16680,MPRC,2012-11-01,2012-11-03,Likely Voters,905,Automated Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,55,42,2,Not included in poll,16486,PPP (D),2012-11-01,2012-11-02,Likely Voters,1633,Automated Phone,Pollster,Dem
+2012-maine-president-romney-vs-obama,49,42,6,2,16531,Critical Insights,2012-10-30,2012-10-31,Likely Voters,613,Live Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,48,44,,Not included in poll,15791,NMB (R-American Crossroads),2012-10-07,2012-10-08,Likely Voters,500,Live Phone,Sponsor,Rep
+2012-maine-president-romney-vs-obama,51,37,10,3,15659,Pan Atlantic SMS Group,2012-09-24,2012-09-28,Likely Voters,400,Live Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,52,40,4,4,15376,Rasmussen,2012-09-25,2012-09-25,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,55,39,7,Not included in poll,15138,PPP (D),2012-09-17,2012-09-18,Likely Voters,804,Automated Phone,Pollster,Dem
+2012-maine-president-romney-vs-obama,54,37,7,2,15133,MPRC/Maine People's Alliance (D),2012-09-15,2012-09-17,Likely Voters,856,Automated Phone,Sponsor,Dem
+2012-maine-president-romney-vs-obama,52,36,,Not included in poll,15430,Critical Insights,2012-09-12,2012-09-16,Likely Voters,618,Live Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,49,35,13,Not included in poll,14297,Critical Insights,2012-06-20,2012-06-25,Registered Voters,615,Live Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,48,34,13,4,14106,MassINC,2012-06-13,2012-06-14,Likely Voters,506,Live Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,50,42,,Not included in poll,13781,Critical Insights,2012-05-02,2012-05-07,Registered Voters,600,Live Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,55,37,9,Not included in poll,13495,MPRC,2012-03-31,2012-04-02,Registered Voters,993,Automated Phone,Nonpartisan,None
+2012-maine-president-romney-vs-obama,58,35,7,Not included in poll,13447,PPP (D),2012-03-02,2012-03-04,Registered Voters,1256,Automated Phone,Pollster,Dem
+2012-indiana-president-romney-vs-obama,44,51,4,2,16590,YouGov,2012-10-31,2012-11-03,Likely Voters,768,Internet,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,43,52,4,1,16551,Rasmussen,2012-11-01,2012-11-01,Likely Voters,600,Mixed,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,41,54,5,Not included in poll,16446,McLaughlin (R-Mourdock),2012-10-31,2012-11-01,Likely Voters,600,Live Phone,Sponsor,Rep
+2012-indiana-president-romney-vs-obama,39,57,4,Not included in poll,16372,McLaughlin (R-Mourdock),2012-10-29,2012-10-30,Likely Voters,600,Live Phone,Sponsor,Rep
+2012-indiana-president-romney-vs-obama,42,55,,Not included in poll,16323,Pharos Research Group,2012-10-26,2012-10-28,Likely Voters,753,Live Phone,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,41,55,4,Not included in poll,16187,McLaughlin (R-Mourdock),2012-10-24,2012-10-25,Likely Voters,600,Live Phone,Sponsor,Rep
+2012-indiana-president-romney-vs-obama,41,54,4,1,15830,Rasmussen,2012-10-10,2012-10-11,Likely Voters,600,Mixed,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,41,53,3,2,15863,YouGov,2012-10-04,2012-10-11,Likely Voters,494,Internet,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,40,52,,Not included in poll,15346,Howey-Depauw,2012-09-19,2012-09-23,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,45,50,3,2,15223,YouGov,2012-09-07,2012-09-14,Likely Voters,658,Internet,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,41,47,,Not included in poll,15080,Global Strategy Group (D-Donnelly),2012-09-10,2012-09-12,Likely Voters,800,Live Phone,Sponsor,Dem
+2012-indiana-president-romney-vs-obama,35,51,11,3,14601,Rasmussen,2012-07-31,2012-08-01,Likely Voters,400,Mixed,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,42,48,5,5,13924,Rasmussen,2012-05-23,2012-05-24,Likely Voters,600,Internet,Nonpartisan,None
+2012-indiana-president-romney-vs-obama,40,49,,Not included in poll,13470,Howey-Depauw,2012-03-26,2012-03-28,Likely Voters,503,Live Phone,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,57,38,3,2,16574,YouGov,2012-10-31,2012-11-03,Likely Voters,1126,Internet,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,57,41,,2,16359,We Ask America,2012-10-30,2012-10-30,Likely Voters,1198,Automated Phone,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,58,38,3,1,15851,YouGov,2012-10-04,2012-10-11,Likely Voters,849,Internet,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,55,36,5,4,15708,Chicago Tribune/WGN,2012-10-04,2012-10-08,Likely Voters,700,Live Phone,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,59,36,3,2,15228,YouGov,2012-09-07,2012-09-14,Likely Voters,1068,Internet,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,47,34,16,3,15079,Southern Illinois U,2012-09-04,2012-09-10,Registered Voters,1261,Live Phone,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,54,37,6,3,14961,We Ask America,2012-09-05,2012-09-05,Likely Voters,1382,Automated Phone,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,55,29,16,Not included in poll,14839,Ipsos/Crain's Business Journal,2012-08-17,2012-08-23,Adults,600,Internet,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,51,31,14,Not included in poll,14473,Ipsos/Crain's Business Journal,2012-07-16,2012-07-22,Adults,600,Internet,Nonpartisan,None
+2012-illinois-president-romney-vs-obama,56,35,9,Not included in poll,13446,Chicago Tribune,2012-02-02,2012-02-06,Registered Voters,600,Live Phone,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,44,52,2,1,16589,YouGov,2012-10-31,2012-11-03,Likely Voters,1070,Internet,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,46,52,1,1,16444,20/20 Insight (D-Better Georgia),2012-10-29,2012-10-31,Likely Voters,1316,Automated Phone,Sponsor,Dem
+2012-georgia-president-romney-vs-obama,44,52,2,2,16316,SurveyUSA,2012-10-25,2012-10-28,Likely Voters,574,IVR/Online,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,43,51,5,Not included in poll,15770,Abt SRBI Inc/Atlanta Journal-Constitution,2012-10-08,2012-10-11,Likely Voters,706,Live Phone,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,44,52,3,1,15862,YouGov,2012-10-04,2012-10-11,Likely Voters,776,Internet,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,35,56,7,2,15184,InsiderAdvantage/Fox 5 Atlanta,2012-09-18,2012-09-18,Likely Voters,483,Live Phone,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,44,51,3,2,15224,YouGov,2012-09-07,2012-09-14,Likely Voters,1020,Internet,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,46,49,4,1,14730,20/20 Insight (D-Better Georgia),2012-08-15,2012-08-18,Likely Voters,1158,Automated Phone,Sponsor,Dem
+2012-georgia-president-romney-vs-obama,40,52,8,Not included in poll,13912,InsiderAdvantage,2012-05-22,2012-05-22,Likely Voters,438,Automated Phone,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,40,51,,Not included in poll,13782,Landmark/Rosetta Stone,2012-05-10,2012-05-10,Registered Voters,600,Automated Phone,Pollster,Rep
+2012-georgia-president-romney-vs-obama,42,49,8,Not included in poll,13060,SurveyUSA,2012-02-23,2012-02-26,Registered Voters,1156,IVR/Online,Nonpartisan,None
+2012-georgia-president-romney-vs-obama,43,51,6,Not included in poll,13073,SurveyUSA,2012-02-01,2012-02-02,Registered Voters,1144,IVR/Online,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,54,39,5,2,16571,YouGov,2012-10-31,2012-11-03,Likely Voters,895,Internet,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,55,42,3,Not included in poll,16485,PPP (D),2012-11-01,2012-11-02,Likely Voters,1220,Automated Phone,Pollster,Dem
+2012-connecticut-president-romney-vs-obama,55,41,4,Not included in poll,16104,Quinnipiac,2012-10-19,2012-10-22,Likely Voters,1412,Live Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,52,45,2,1,16092,Rasmussen,2012-10-21,2012-10-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,53,40,4,3,16063,SurveyUSA/WABC-TV,2012-10-19,2012-10-21,Likely Voters,575,IVR/Online,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,49,42,,Not included in poll,16168,Mason-Dixon,2012-10-15,2012-10-17,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,53,44,4,Not included in poll,15928,PPP (D-LCV),2012-10-15,2012-10-16,Likely Voters,1015,Automated Phone,Sponsor,Dem
+2012-connecticut-president-romney-vs-obama,51,37,,Not included in poll,15912,UConn/Hartford Courant,2012-10-11,2012-10-16,Likely Voters,574,Live Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,53,38,7,Not included in poll,15869,Siena,2012-10-04,2012-10-14,Likely Voters,552,Live Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,53,39,5,3,15859,YouGov,2012-10-04,2012-10-11,Likely Voters,434,Internet,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,51,45,3,1,15637,Rasmussen,2012-10-07,2012-10-07,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,54,42,4,Not included in poll,15513,Quinnipiac,2012-09-28,2012-10-02,Likely Voters,1696,Live Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,54,41,5,Not included in poll,15355,PPP (D),2012-09-24,2012-09-26,Likely Voters,801,Automated Phone,Pollster,Dem
+2012-connecticut-president-romney-vs-obama,53,32,12,Not included in poll,15150,UConn/Hartford Courant,2012-09-11,2012-09-16,Likely Voters,508,Live Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,53,40,5,2,15189,YouGov,2012-09-07,2012-09-14,Likely Voters,634,Internet,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,52,45,2,Not included in poll,14806,Quinnipiac,2012-08-22,2012-08-26,Likely Voters,-1,Live Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,53,40,7,Not included in poll,14822,PPP (D-League of Conservation Voters),2012-08-22,2012-08-23,Likely Voters,881,Automated Phone,Sponsor,Dem
+2012-connecticut-president-romney-vs-obama,51,43,3,3,14754,Rasmussen,2012-08-21,2012-08-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,51,43,6,Not included in poll,14536,PPP (D),2012-07-26,2012-07-29,Likely Voters,771,Automated Phone,Pollster,Dem
+2012-connecticut-president-romney-vs-obama,50,38,10,2,14016,Quinnipiac,2012-05-29,2012-06-03,Registered Voters,1408,Live Phone,Nonpartisan,None
+2012-connecticut-president-romney-vs-obama,53,37,6,1,13292,Quinnipiac,2012-03-14,2012-03-19,Registered Voters,1622,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,55,40,2,3,16569,YouGov,2012-10-31,2012-11-03,Likely Voters,1575,Internet,Nonpartisan,None
+2012-california-president-romney-vs-obama,54,39,5,2,16496,Field/UC Berkeley,2012-10-17,2012-10-30,Likely Voters,1566,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,56,33,7,4,16376,CBRT/Pepperdine/M4,2012-10-21,2012-10-28,Likely Voters,2115,Internet,Nonpartisan,None
+2012-california-president-romney-vs-obama,55,39,2,Not included in poll,16136,USC/LATimes,2012-10-15,2012-10-21,Likely Voters,1440,Live Phone,Pollster,Dem
+2012-california-president-romney-vs-obama,53,41,4,2,16165,PPIC,2012-10-14,2012-10-21,Likely Voters,993,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,53,38,5,4,15948,Reason/Rupe,2012-10-11,2012-10-15,Likely Voters,508,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,58,39,1,2,15849,YouGov,2012-10-04,2012-10-11,Likely Voters,1169,Internet,Nonpartisan,None
+2012-california-president-romney-vs-obama,54,33,9,4,15722,CBRT/Pepperdine/M4,2012-10-07,2012-10-10,Likely Voters,830,Internet,Nonpartisan,None
+2012-california-president-romney-vs-obama,53,39,4,4,15694,SurveyUSA,2012-10-07,2012-10-09,Likely Voters,539,IVR/Online,Nonpartisan,None
+2012-california-president-romney-vs-obama,58,34,6,2,15140,Field/UC Berkeley,2012-09-05,2012-09-17,Likely Voters,891,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,53,39,6,2,15221,PPIC,2012-09-09,2012-09-16,Likely Voters,995,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,56,39,2,3,15220,YouGov,2012-09-07,2012-09-14,Likely Voters,1361,Internet,Nonpartisan,None
+2012-california-president-romney-vs-obama,55,33,7,4,15037,CBRT/Pepperdine/M4,2012-09-09,2012-09-12,Likely Voters,802,Internet,Nonpartisan,None
+2012-california-president-romney-vs-obama,57,35,3,4,14994,SurveyUSA,2012-09-09,2012-09-11,Likely Voters,524,IVR/Online,Nonpartisan,None
+2012-california-president-romney-vs-obama,56,33,8,4,14761,PACE/USC,2012-08-03,2012-08-07,Likely Voters,1041,Live Phone,Pollster,Dem
+2012-california-president-romney-vs-obama,52,33,10,5,14419,CBRT/Pepperdine/M4,2012-07-16,2012-07-17,Likely Voters,812,Internet,Nonpartisan,None
+2012-california-president-romney-vs-obama,55,37,5,3,14260,Field,2012-06-21,2012-07-02,Likely Voters,848,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,57,36,7,Not included in poll,13975,SurveyUSA,2012-05-27,2012-05-29,Registered Voters,1575,IVR/Online,Nonpartisan,None
+2012-california-president-romney-vs-obama,48,32,17,Not included in poll,13976,Field,2012-05-21,2012-05-29,Registered Voters,710,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,56,37,2,Not included in poll,13908,USC/LATimes,2012-05-17,2012-05-21,Registered Voters,1002,Live Phone,Pollster,Dem
+2012-california-president-romney-vs-obama,50,39,8,3,13907,PPIC,2012-05-14,2012-05-20,Likely Voters,894,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,62,31,8,Not included in poll,13427,SurveyUSA,2012-03-29,2012-04-02,Registered Voters,1995,IVR/Online,Nonpartisan,None
+2012-california-president-romney-vs-obama,57,36,,Not included in poll,13359,USC/LATimes,2012-03-14,2012-03-19,Registered Voters,1500,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,55,35,10,Not included in poll,13138,Field,2012-02-11,2012-02-18,Registered Voters,1003,Live Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,57,35,4,4,13137,Rasmussen,2012-02-08,2012-02-16,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-california-president-romney-vs-obama,60,31,9,Not included in poll,13139,SurveyUSA,2012-02-08,2012-02-09,Registered Voters,2088,IVR/Online,Nonpartisan,None
+2012-arkansas-president-romney-vs-obama,31,58,11,Not included in poll,16105,U of Arkansas,2012-10-09,2012-10-14,Likely Voters,642,Live Phone,Nonpartisan,None
+2012-arkansas-president-romney-vs-obama,35,56,7,Not included in poll,15292,Hendrix College,2012-09-17,2012-09-17,Likely Voters,2228,Automated Phone,Nonpartisan,None
+2012-arkansas-president-romney-vs-obama,33,57,11,Not included in poll,13437,Hendrix College,2012-03-26,2012-03-26,Likely Voters,759,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,48,1,Not included in poll,16530,PPP (D),2012-11-02,2012-11-03,Likely Voters,1256,Automated Phone,Pollster,Dem
+2012-wisconsin-president-romney-vs-obama,53,46,,1,16648,Angus-Reid,2012-11-01,2012-11-03,Likely Voters,454,Internet,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,50,46,3,1,16588,YouGov,2012-10-31,2012-11-03,Likely Voters,1225,Internet,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,48,42,8,2,16503,Grove Insight (D-Project New America/USAction),2012-11-01,2012-11-02,Likely Voters,500,Live Phone,Sponsor,Dem
+2012-wisconsin-president-romney-vs-obama,52,45,,4,16473,We Ask America,2012-10-30,2012-11-01,Likely Voters,1210,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,47,,Not included in poll,16431,Wenzel Strategies (R-Citizens United),2012-10-30,2012-10-31,Likely Voters,1074,Live Phone,Sponsor,Rep
+2012-wisconsin-president-romney-vs-obama,49,48,2,1,16605,Pulse Opinion Research/Let Freedom Ring (R),2012-10-30,2012-10-30,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-wisconsin-president-romney-vs-obama,51,46,3,Not included in poll,16352,PPP (D-Health Care for America Now),2012-10-29,2012-10-30,Likely Voters,825,Automated Phone,Sponsor,Dem
+2012-wisconsin-president-romney-vs-obama,49,49,2,Not included in poll,16423,Rasmussen,2012-10-29,2012-10-29,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,46,3,2,16397,NBC/WSJ/Marist,2012-10-28,2012-10-29,Likely Voters,1065,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,52,43,,Not included in poll,16432,St Norbert,2012-10-25,2012-10-29,Likely Voters,402,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,43,3,Not included in poll,16383,Marquette Law School,2012-10-25,2012-10-28,Likely Voters,1243,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,49,2,1,16185,Rasmussen,2012-10-25,2012-10-25,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,48,43,9,Not included in poll,16233,Grove Insight (D-Project New America),2012-10-24,2012-10-25,Likely Voters,500,Live Phone,Pollster,Dem
+2012-wisconsin-president-romney-vs-obama,51,45,4,Not included in poll,16159,PPP (D-Health Care for America Now),2012-10-23,2012-10-24,Likely Voters,827,Automated Phone,Sponsor,Dem
+2012-wisconsin-president-romney-vs-obama,51,46,,3,16021,Angus-Reid,2012-10-18,2012-10-20,Likely Voters,469,Internet,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,50,48,0,1,15960,Rasmussen,2012-10-18,2012-10-18,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,47,44,8,2,15994,Grove Insight (D-Project New America),2012-10-17,2012-10-18,Likely Voters,500,Live Phone,Pollster,Dem
+2012-wisconsin-president-romney-vs-obama,48,46,,Not included in poll,16127,Mason-Dixon,2012-10-15,2012-10-17,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,45,3,1,15938,NBC/WSJ/Marist,2012-10-15,2012-10-17,Likely Voters,1013,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,50,47,2,1,16079,Pulse Opinion Research/Let Freedom Ring (R),2012-10-15,2012-10-15,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-wisconsin-president-romney-vs-obama,49,48,2,Not included in poll,15886,Marquette Law School,2012-10-11,2012-10-14,Likely Voters,870,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,47,2,Not included in poll,15850,YouGov,2012-10-04,2012-10-11,Likely Voters,638,Internet,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,49,,Not included in poll,15660,Rasmussen,2012-10-09,2012-10-09,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,50,47,3,Not included in poll,15682,Quinnipiac/NYT/CBS,2012-10-04,2012-10-09,Likely Voters,1327,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,50,46,2,2,15721,Pulse Opinion Research/Let Freedom Ring (R),2012-10-08,2012-10-08,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-wisconsin-president-romney-vs-obama,49,47,3,Not included in poll,15566,PPP (D),2012-10-04,2012-10-06,Likely Voters,979,Automated Phone,Pollster,Dem
+2012-wisconsin-president-romney-vs-obama,51,44,2,3,15725,Pulse Opinion Research/Let Freedom Ring (R),2012-10-01,2012-10-01,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-wisconsin-president-romney-vs-obama,49,39,11,Not included in poll,15492,JZ Analytics,2012-09-29,2012-09-30,Likely Voters,414,Internet,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,53,42,3,Not included in poll,15500,Marquette Law School,2012-09-27,2012-09-30,Likely Voters,894,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,53,41,5,1,15258,We Ask America,2012-09-20,2012-09-23,Likely Voters,1238,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,52,45,3,Not included in poll,15168,PPP (D),2012-09-18,2012-09-19,Likely Voters,842,Automated Phone,Pollster,Dem
+2012-wisconsin-president-romney-vs-obama,50,45,4,1,15192,NBC/WSJ/Marist,2012-09-16,2012-09-18,Likely Voters,968,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,46,2,2,15170,Rasmussen,2012-09-17,2012-09-17,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,45,3,1,15118,Quinnipiac/NYT/CBS,2012-09-11,2012-09-17,Likely Voters,1485,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,54,40,5,Not included in poll,15139,Marquette Law School,2012-09-13,2012-09-16,Likely Voters,601,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,48,47,4,1,15165,YouGov,2012-09-07,2012-09-14,Likely Voters,753,Internet,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,48,4,Not included in poll,15084,PPP (D-Democracy for America),2012-09-12,2012-09-13,Likely Voters,959,Automated Phone,Sponsor,Dem
+2012-wisconsin-president-romney-vs-obama,49,47,3,1,14740,Quinnipiac/NYT/CBS,2012-08-15,2012-08-21,Likely Voters,1190,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,46,4,Not included in poll,14731,Marquette Law School,2012-08-16,2012-08-19,Likely Voters,576,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,47,48,5,Not included in poll,14711,PPP (D),2012-08-16,2012-08-19,Likely Voters,1308,Automated Phone,Pollster,Dem
+2012-wisconsin-president-romney-vs-obama,47,48,2,3,14672,Rasmussen,2012-08-15,2012-08-15,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,45,,Not included in poll,14681,CNN,2012-08-13,2012-08-14,Registered Voters,920,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,45,4,Not included in poll,14586,Quinnipiac/NYT/CBS,2012-07-31,2012-08-06,Likely Voters,1428,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,50,45,,Not included in poll,14599,Marquette Law School,2012-08-02,2012-08-05,Likely Voters,1188,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,46,4,2,14477,Rasmussen,2012-07-25,2012-07-25,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,42,9,Not included in poll,14386,We Ask America,2012-07-17,2012-07-18,Likely Voters,1162,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,43,6,Not included in poll,14306,Marquette Law School,2012-07-05,2012-07-08,Likely Voters,810,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,50,44,6,Not included in poll,14298,PPP (D),2012-07-05,2012-07-08,Likely Voters,1057,Automated Phone,Pollster,Dem
+2012-wisconsin-president-romney-vs-obama,49,43,,Not included in poll,14140,Marquette Law School,2012-06-13,2012-06-16,Likely Voters,594,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,44,47,4,5,14083,Rasmussen,2012-06-12,2012-06-12,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,48,43,9,Not included in poll,14024,We Ask America,2012-06-03,2012-06-03,Likely Voters,1270,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,43,6,Not included in poll,13954,Marquette Law School,2012-05-23,2012-05-26,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,43,4,4,13890,St Norbert,2012-05-17,2012-05-22,Likely Voters,406,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,46,36,12,6,13888,Reason/Rupe,2012-05-14,2012-05-20,Likely Voters,609,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,47,46,7,Not included in poll,13807,DailyKos/PPP (D),2012-05-11,2012-05-13,Registered Voters,851,Automated Phone,Sponsor,Dem
+2012-wisconsin-president-romney-vs-obama,46,46,8,Not included in poll,13815,Marquette Law School,2012-05-09,2012-05-12,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,49,45,2,4,13765,Rasmussen,2012-05-09,2012-05-09,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,51,42,,Not included in poll,13671,Marquette Law School,2012-04-26,2012-04-29,Registered Voters,705,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,50,44,6,Not included in poll,13535,DailyKos/PPP (D),2012-04-13,2012-04-15,Likely Voters,1136,Automated Phone,Sponsor,Dem
+2012-wisconsin-president-romney-vs-obama,52,41,2,6,13375,Rasmussen,2012-03-27,2012-03-27,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,52,35,13,Not included in poll,13384,NBC/Marist,2012-03-26,2012-03-27,Registered Voters,1391,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,48,43,10,Not included in poll,13348,Marquette Law School,2012-03-22,2012-03-25,Registered Voters,707,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,47,42,5,5,13079,Rasmussen,2012-02-27,2012-02-27,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,53,39,8,Not included in poll,13389,PPP (D),2012-02-23,2012-02-26,Registered Voters,900,Live Phone,Pollster,Dem
+2012-wisconsin-president-romney-vs-obama,53,38,6,Not included in poll,13156,Marquette Law School,2012-02-16,2012-02-19,Registered Voters,716,Live Phone,Nonpartisan,None
+2012-wisconsin-president-romney-vs-obama,48,40,,Not included in poll,12632,Marquette Law School,2012-01-19,2012-01-22,Registered Voters,701,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,46,5,2,16664,Ipsos/Reuters (Web),2012-11-03,2012-11-05,Likely Voters,828,Internet,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,50,1,1,16620,Rasmussen,2012-11-04,2012-11-04,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,51,47,1,Not included in poll,16608,PPP (D),2012-11-03,2012-11-04,Likely Voters,975,Automated Phone,Pollster,Dem
+2012-virginia-president-romney-vs-obama,52,44,4,Not included in poll,16653,JZ Analytics/Newsmax,2012-11-02,2012-11-04,Likely Voters,814,Internet,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,48,46,5,2,16578,YouGov,2012-10-31,2012-11-03,Likely Voters,1497,Internet,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,47,3,1,16614,NBC/WSJ/Marist,2012-11-01,2012-11-02,Likely Voters,1165,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,45,2,5,16478,Ipsos/Reuters (Web),2012-10-31,2012-11-02,Likely Voters,1065,Internet,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,45,4,1,16642,Mellman (D-Americans United for Change),2012-10-30,2012-11-02,Likely Voters,800,Live Phone,Sponsor,Dem
+2012-virginia-president-romney-vs-obama,49,48,,4,16474,We Ask America,2012-10-30,2012-11-01,Likely Voters,1069,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,46,4,Not included in poll,16391,PPP (D-Health Care for America Now),2012-10-30,2012-10-31,Likely Voters,600,Automated Phone,Sponsor,Dem
+2012-virginia-president-romney-vs-obama,49,48,3,1,16603,Pulse Opinion Research/Let Freedom Ring (R),2012-10-30,2012-10-30,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,47,48,6,Not included in poll,16403,JZ Analytics/Newsmax,2012-10-28,2012-10-30,Likely Voters,800,Internet,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,49,47,3,1,16351,Quinnipiac/NYT/CBS,2012-10-23,2012-10-28,Likely Voters,1074,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,46,,Not included in poll,16264,Garin-Hart-Yang (D-Priorities USA Action),2012-10-25,2012-10-27,Likely Voters,807,Live Phone,Sponsor,Dem
+2012-virginia-president-romney-vs-obama,48,48,4,Not included in poll,16292,Gravis Marketing,2012-10-26,2012-10-26,Likely Voters,645,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,44,50,3,4,16360,Roanoke College,2012-10-23,2012-10-26,Likely Voters,638,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,51,47,2,1,16229,Washington Post,2012-10-22,2012-10-26,Likely Voters,1228,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,48,,Not included in poll,16210,JZ Analytics/Newsmax,2012-10-23,2012-10-25,Likely Voters,834,Internet,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,47,47,7,Not included in poll,16207,Purple Strategies,2012-10-23,2012-10-25,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,50,1,Not included in poll,16149,Rasmussen,2012-10-24,2012-10-24,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,44,46,7,2,16173,FOX,2012-10-23,2012-10-24,Likely Voters,1126,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,51,46,3,Not included in poll,16132,PPP (D-Health Care for America Now),2012-10-23,2012-10-24,Likely Voters,722,Automated Phone,Sponsor,Dem
+2012-virginia-president-romney-vs-obama,46,45,8,Not included in poll,16097,Mellman (D-Americans United for Change),2012-10-18,2012-10-21,Likely Voters,800,Live Phone,Sponsor,Dem
+2012-virginia-president-romney-vs-obama,47,49,3,Not included in poll,16042,Wenzel Strategies (R-Citizens United),2012-10-19,2012-10-20,Likely Voters,1000,Live Phone,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,49,47,4,Not included in poll,15980,PPP (D-Health Care for America Now),2012-10-18,2012-10-19,Likely Voters,500,Automated Phone,Sponsor,Dem
+2012-virginia-president-romney-vs-obama,47,50,2,Not included in poll,15972,Rasmussen,2012-10-18,2012-10-18,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,50,43,3,3,16108,ODU/Virginian-Pilot,2012-09-19,2012-10-17,Likely Voters,465,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,48,,Not included in poll,15923,PPP (D-LCV),2012-10-15,2012-10-16,Likely Voters,733,Automated Phone,Sponsor,Dem
+2012-virginia-president-romney-vs-obama,47,46,3,4,16030,Pulse Opinion Research/Let Freedom Ring (R),2012-10-15,2012-10-15,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,47,48,4,1,15784,ARG,2012-10-12,2012-10-14,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,47,49,3,1,15745,Rasmussen,2012-10-11,2012-10-11,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,46,45,6,2,15845,YouGov,2012-10-04,2012-10-11,Likely Voters,742,Internet,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,44,51,4,1,15709,McLaughlin (R-Allen),2012-10-08,2012-10-09,Likely Voters,600,Live Phone,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,47,48,4,1,15679,NBC/WSJ/Marist,2012-10-07,2012-10-09,Likely Voters,981,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,51,46,3,1,15681,Quinnipiac/NYT/CBS,2012-10-04,2012-10-09,Likely Voters,1288,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,48,2,2,15724,Pulse Opinion Research/Let Freedom Ring (R),2012-10-08,2012-10-08,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,50,47,3,Not included in poll,15579,PPP (D),2012-10-04,2012-10-07,Likely Voters,725,Automated Phone,Pollster,Dem
+2012-virginia-president-romney-vs-obama,48,49,3,Not included in poll,15541,Rasmussen,2012-10-04,2012-10-04,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,45,48,5,2,15540,We Ask America,2012-10-04,2012-10-04,Likely Voters,1200,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,47,3,2,15727,Pulse Opinion Research/Let Freedom Ring (R),2012-10-01,2012-10-01,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-virginia-president-romney-vs-obama,48,46,5,1,15483,NBC/WSJ/Marist,2012-09-30,2012-10-01,Likely Voters,969,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,47,39,10,5,15466,Roanoke College,2012-09-19,2012-09-28,Likely Voters,589,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,47,3,1,15387,ARG,2012-09-24,2012-09-27,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,46,44,8,2,15367,Suffolk/NBC12,2012-09-24,2012-09-26,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,43,8,Not included in poll,15394,PPP (D)/NRDC,2012-09-17,2012-09-19,Likely Voters,2770,Automated Phone,Pollster,Dem
+2012-virginia-president-romney-vs-obama,46,43,11,Not included in poll,15202,Purple Strategies,2012-09-15,2012-09-19,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,42,6,3,15148,FOX,2012-09-16,2012-09-18,Likely Voters,1006,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,46,5,1,15122,We Ask America,2012-09-17,2012-09-17,Likely Voters,1238,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,50,46,3,1,15119,Quinnipiac/NYT/CBS,2012-09-11,2012-09-17,Likely Voters,1474,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,51,46,3,Not included in poll,15072,PPP (D),2012-09-13,2012-09-16,Likely Voters,1021,Automated Phone,Pollster,Dem
+2012-virginia-president-romney-vs-obama,52,44,,Not included in poll,15106,Washington Post,2012-09-12,2012-09-16,Likely Voters,847,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,44,6,2,15164,YouGov,2012-09-07,2012-09-14,Likely Voters,1047,Internet,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,48,2,1,15044,Rasmussen,2012-09-13,2012-09-13,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,44,5,2,15029,NBC/WSJ/Marist,2012-09-09,2012-09-11,Likely Voters,996,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,44,49,7,Not included in poll,14971,Gravis Marketing,2012-09-08,2012-09-09,Likely Voters,2238,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,47,47,3,3,14789,Rasmussen,2012-08-23,2012-08-23,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,50,45,5,Not included in poll,14717,PPP (D),2012-08-16,2012-08-19,Likely Voters,855,Automated Phone,Pollster,Dem
+2012-virginia-president-romney-vs-obama,45,48,8,Not included in poll,14666,Purple Strategies,2012-08-13,2012-08-14,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,46,3,2,14594,Rasmussen,2012-08-07,2012-08-07,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,45,5,1,14585,Quinnipiac/NYT/CBS,2012-07-31,2012-08-06,Likely Voters,1412,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,47,46,3,3,14375,Rasmussen,2012-07-16,2012-07-17,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,44,44,10,2,14383,Quinnipiac,2012-07-11,2012-07-16,Registered Voters,1673,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,46,44,10,Not included in poll,14356,Purple Strategies,2012-07-09,2012-07-13,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,50,42,8,Not included in poll,14286,PPP (D),2012-07-05,2012-07-08,Registered Voters,647,Automated Phone,Pollster,Dem
+2012-virginia-president-romney-vs-obama,46,43,,Not included in poll,14324,Garin-Hart-Yang (D-Priorities USA),2012-06-25,2012-07-03,Likely Voters,810,Live Phone,Sponsor,Dem
+2012-virginia-president-romney-vs-obama,43,48,9,Not included in poll,14173,We Ask America,2012-06-25,2012-06-25,Likely Voters,1106,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,42,8,1,14194,ODU/Virginian-Pilot,2012-05-16,2012-06-15,Registered Voters,776,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,46,5,Not included in poll,14035,Purple Strategies,2012-05-31,2012-06-05,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,47,42,8,3,14020,Quinnipiac,2012-05-30,2012-06-04,Registered Voters,1282,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,47,47,3,3,14001,Rasmussen,2012-06-03,2012-06-03,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,44,7,1,13893,NBC/Marist,2012-05-17,2012-05-20,Registered Voters,1076,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,51,44,2,3,13686,Washington Post,2012-04-28,2012-05-02,Registered Voters,964,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,51,43,6,Not included in poll,13657,PPP (D),2012-04-26,2012-04-29,Registered Voters,680,Automated Phone,Pollster,Dem
+2012-virginia-president-romney-vs-obama,44,45,5,6,13612,Rasmussen,2012-04-23,2012-04-23,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,48,46,6,Not included in poll,13620,Purple Strategies,2012-04-19,2012-04-23,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,40,46,,Not included in poll,13494,Roanoke College,2012-03-26,2012-04-05,Registered Voters,537,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,51,42,4,4,13295,Rasmussen,2012-03-20,2012-03-20,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,50,42,3,1,13274,Quinnipiac,2012-03-13,2012-03-18,Registered Voters,1034,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,52,35,12,Not included in poll,13121,NBC/Marist,2012-02-29,2012-03-02,Registered Voters,1273,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,42,43,16,Not included in poll,13080,Roanoke College,2012-02-13,2012-02-26,Adults,607,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,49,43,3,5,13152,Rasmussen,2012-02-21,2012-02-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,43,46,4,7,13153,Christopher Newport /Times Dispatch,2012-02-04,2012-02-13,Registered Voters,1018,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,47,43,8,1,12745,Quinnipiac,2012-02-01,2012-02-06,Registered Voters,1544,Live Phone,Nonpartisan,None
+2012-virginia-president-romney-vs-obama,45,44,11,Not included in poll,12872,Mason-Dixon,2012-01-16,2012-01-18,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,49,46,,Not included in poll,16660,Gravis Marketing,2012-11-04,2012-11-04,Likely Voters,1060,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,51,47,,2,16628,Angus-Reid,2012-11-02,2012-11-04,Likely Voters,479,Internet,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,52,46,1,Not included in poll,16529,PPP (D),2012-11-02,2012-11-03,Likely Voters,790,Automated Phone,Pollster,Dem
+2012-pennsylvania-president-romney-vs-obama,49,46,3,2,16559,Muhlenberg,2012-11-01,2012-11-03,Likely Voters,430,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,52,44,3,1,16581,YouGov,2012-10-31,2012-11-03,Likely Voters,1273,Internet,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,47,47,,Not included in poll,16537,Susquehanna (R)/Pittsburgh Tribune-Review,2012-10-29,2012-10-31,Likely Voters,800,Automated Phone,Pollster,Rep
+2012-pennsylvania-president-romney-vs-obama,49,46,3,2,16604,Pulse Opinion Research/Let Freedom Ring (R),2012-10-30,2012-10-30,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-pennsylvania-president-romney-vs-obama,49,45,4,2,16348,Franklin and Marshall College,2012-10-23,2012-10-28,Likely Voters,547,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,49,43,7,Not included in poll,16212,Philadelphia Inquirer/National Research (R)/GSG (D),2012-10-23,2012-10-25,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,51,46,2,1,16155,Rasmussen,2012-10-24,2012-10-24,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,48,45,6,Not included in poll,16045,Gravis Marketing,2012-10-21,2012-10-21,Likely Voters,887,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,49,46,,Not included in poll,16252,Pharos Research Group,2012-10-19,2012-10-21,Likely Voters,760,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,50,45,3,2,16015,Muhlenberg,2012-10-17,2012-10-21,Likely Voters,444,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,52,42,,6,16018,Angus-Reid,2012-10-18,2012-10-20,Likely Voters,511,Internet,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,48,44,5,3,16029,Pulse Opinion Research/Let Freedom Ring (R),2012-10-15,2012-10-15,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-pennsylvania-president-romney-vs-obama,50,46,3,1,15818,Quinnipiac,2012-10-12,2012-10-14,Likely Voters,1519,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,51,44,6,Not included in poll,15801,PPP (D),2012-10-12,2012-10-14,Likely Voters,500,Automated Phone,Pollster,Dem
+2012-pennsylvania-president-romney-vs-obama,49,45,3,3,15800,Muhlenberg,2012-10-10,2012-10-14,Likely Voters,438,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,45,49,2,3,15940,Susquehanna (R - Republican State Committee of Pennsylvania),2012-10-11,2012-10-13,Likely Voters,1376,Automated Phone,Sponsor,Rep
+2012-pennsylvania-president-romney-vs-obama,51,44,4,1,15858,YouGov,2012-10-04,2012-10-11,Likely Voters,966,Internet,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,51,46,1,1,15654,Rasmussen,2012-10-09,2012-10-09,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,47,45,,Not included in poll,15703,Pulse Opinion Research/Let Freedom Ring (R),2012-10-08,2012-10-08,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-pennsylvania-president-romney-vs-obama,50,42,8,Not included in poll,15692,Philadelphia Inquirer/National Research (R)/GSG (D),2012-10-04,2012-10-08,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,47,45,4,3,15599,Susquehanna (R),2012-10-04,2012-10-06,Likely Voters,725,Live Phone,Pollster,Rep
+2012-pennsylvania-president-romney-vs-obama,43,40,12,Not included in poll,15617,Siena,2012-10-01,2012-10-05,Likely Voters,545,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,49,42,5,4,15384,Muhlenberg,2012-09-22,2012-09-26,Likely Voters,427,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,54,42,2,1,15315,Quinnipiac/NYT/CBS,2012-09-18,2012-09-24,Likely Voters,1180,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,52,43,3,Not included in poll,15323,Franklin and Marshall College,2012-09-18,2012-09-23,Likely Voters,392,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,47,45,6,Not included in poll,15276,Susquehanna (R)/Tribune-Review,2012-09-18,2012-09-20,Likely Voters,800,Live Phone,Pollster,Rep
+2012-pennsylvania-president-romney-vs-obama,48,40,6,5,15264,Mercyhurst University,2012-09-12,2012-09-20,Likely Voters,522,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,51,39,7,3,15232,Rasmussen,2012-09-19,2012-09-19,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,48,42,9,1,15157,We Ask America,2012-09-18,2012-09-18,Likely Voters,1214,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,52,40,8,Not included in poll,15398,PPP (D)/NRDC,2012-09-17,2012-09-18,Likely Voters,2051,Automated Phone,Pollster,Dem
+2012-pennsylvania-president-romney-vs-obama,48,47,3,1,15203,Susquehanna (R-Republican State Committee of Pennsylvania),2012-09-15,2012-09-17,Likely Voters,800,Live Phone,Pollster,Rep
+2012-pennsylvania-president-romney-vs-obama,50,41,4,5,15114,Muhlenberg,2012-09-10,2012-09-16,Likely Voters,640,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,52,43,2,2,15180,YouGov,2012-09-07,2012-09-14,Likely Voters,1139,Internet,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,50,39,11,Not included in poll,15076,Philadelphia Inquirer/National Research (R)/GSG (D),2012-09-09,2012-09-12,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,51,42,7,Not included in poll,14787,Philadelphia Inquirer,2012-08-21,2012-08-23,Likely Voters,601,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,49,40,,Not included in poll,14748,Muhlenberg,2012-08-20,2012-08-22,Likely Voters,422,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,47,42,7,Not included in poll,14673,Franklin and Marshall College,2012-08-07,2012-08-12,Registered Voters,681,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,53,42,4,1,14521,Quinnipiac/NYT/CBS,2012-07-24,2012-07-30,Likely Voters,1168,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,49,43,8,Not included in poll,14444,PPP (D),2012-07-21,2012-07-23,Likely Voters,758,Automated Phone,Pollster,Dem
+2012-pennsylvania-president-romney-vs-obama,46,43,,Not included in poll,14494,Susquehanna (R),2012-07-19,2012-07-23,Likely Voters,800,Automated Phone,Pollster,Rep
+2012-pennsylvania-president-romney-vs-obama,48,44,5,4,14401,Rasmussen,2012-07-18,2012-07-18,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,47,40,13,Not included in poll,14295,We Ask America,2012-07-09,2012-07-10,Likely Voters,1227,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,49,40,,Not included in poll,14323,Garin-Hart-Yang (D-Priorities USA),2012-06-25,2012-07-03,Likely Voters,816,Live Phone,Sponsor,Dem
+2012-pennsylvania-president-romney-vs-obama,45,39,13,4,14189,Quinnipiac,2012-06-19,2012-06-25,Registered Voters,1252,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,46,40,12,2,14067,Quinnipiac,2012-06-05,2012-06-10,Registered Voters,997,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,48,36,12,5,14014,Franklin and Marshall College,2012-05-29,2012-06-04,Registered Voters,412,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,47,41,5,7,13876,Rasmussen,2012-05-21,2012-05-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,50,42,8,Not included in poll,13866,PPP (D),2012-05-17,2012-05-20,Likely Voters,671,Automated Phone,Pollster,Dem
+2012-pennsylvania-president-romney-vs-obama,47,39,8,2,13678,Quinnipiac,2012-04-25,2012-05-01,Registered Voters,1167,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,45,40,4,11,13591,Muhlenberg,2012-03-23,2012-04-01,Registered Voters,492,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,45,42,7,2,13370,Quinnipiac,2012-03-20,2012-03-26,Registered Voters,1232,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,46,40,8,2,13251,Quinnipiac,2012-03-07,2012-03-12,Registered Voters,1256,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,49,42,9,Not included in poll,13252,PPP (D),2012-03-08,2012-03-11,Likely Voters,689,Automated Phone,Pollster,Dem
+2012-pennsylvania-president-romney-vs-obama,45,44,3,8,13151,Rasmussen,2012-02-08,2012-02-23,Likely Voters,438,Automated Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,48,37,6,9,13149,Muhlenberg,2012-02-15,2012-02-21,Registered Voters,625,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,41,33,18,8,13150,Franklin and Marshall College,2012-02-14,2012-02-20,Registered Voters,592,Live Phone,Nonpartisan,None
+2012-pennsylvania-president-romney-vs-obama,43,45,,Not included in poll,12835,Susquehanna (R),2012-02-02,2012-02-06,Registered Voters,800,Automated Phone,Pollster,Rep
+2012-pennsylvania-president-romney-vs-obama,41,30,24,6,13432,Franklin and Marshall College,2012-01-17,2012-01-22,Registered Voters,614,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,48,,Not included in poll,16657,Gravis Marketing,2012-11-04,2012-11-05,Likely Voters,1316,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,51,44,6,Not included in poll,16672,JZ Analytics/Newsmax,2012-11-03,2012-11-05,Likely Voters,832,Internet,Sponsor,Rep
+2012-ohio-president-romney-vs-obama,50,46,2,1,16665,Ipsos/Reuters (Web),2012-11-03,2012-11-05,Likely Voters,680,Internet,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,49,1,1,16632,Rasmussen,2012-11-04,2012-11-04,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,52,47,2,Not included in poll,16607,PPP (D),2012-11-03,2012-11-04,Likely Voters,1000,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,51,48,,1,16675,Angus-Reid,2012-11-02,2012-11-04,Likely Voters,572,Internet,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,44,4,3,16639,SurveyUSA,2012-11-01,2012-11-04,Likely Voters,803,IVR/Online,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,49,,Not included in poll,16627,The Ohio Poll/University of Cincinnati,2012-10-31,2012-11-04,Likely Voters,889,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,46,3,2,16591,YouGov,2012-10-31,2012-11-03,Likely Voters,1620,Internet,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,48,,Not included in poll,16536,Columbus Dispatch,2012-10-24,2012-11-03,Likely Voters,1501,Mail,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,45,4,1,16505,Grove Insight (D-Project New America/USAction),2012-11-01,2012-11-02,Likely Voters,500,Live Phone,Sponsor,Dem
+2012-ohio-president-romney-vs-obama,47,45,4,3,16480,Ipsos/Reuters (Web),2012-10-31,2012-11-02,Likely Voters,1012,Internet,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,49,1,2,16469,Rasmussen,2012-11-01,2012-11-01,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,51,45,3,1,16489,NBC/WSJ/Marist,2012-10-31,2012-11-01,Likely Voters,971,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,47,3,1,16476,CNN,2012-10-30,2012-11-01,Likely Voters,796,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,46,,4,16475,We Ask America,2012-10-30,2012-11-01,Likely Voters,1649,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,46,49,,Not included in poll,16430,Wenzel Strategies (R-Citizens United),2012-10-30,2012-10-31,Likely Voters,1281,Live Phone,Sponsor,Rep
+2012-ohio-president-romney-vs-obama,50,45,4,Not included in poll,16368,PPP (D-Health Care for America Now),2012-10-29,2012-10-30,Likely Voters,600,Automated Phone,Sponsor,Dem
+2012-ohio-president-romney-vs-obama,50,44,5,Not included in poll,16402,JZ Analytics/Newsmax,2012-10-28,2012-10-30,Likely Voters,826,Internet,Sponsor,Rep
+2012-ohio-president-romney-vs-obama,48,46,2,4,16373,The Ohio Poll/University of Cincinnati,2012-10-25,2012-10-30,Likely Voters,1141,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,46,3,3,16602,Pulse Opinion Research/Let Freedom Ring (R),2012-10-29,2012-10-29,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-ohio-president-romney-vs-obama,48,45,,Not included in poll,16338,Grove Insight (D-Project New America/USAction),2012-10-28,2012-10-29,Likely Voters,500,Live Phone,Sponsor,Dem
+2012-ohio-president-romney-vs-obama,48,45,6,2,16347,SurveyUSA,2012-10-26,2012-10-29,Likely Voters,603,IVR/Online,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,50,1,1,16262,Rasmussen,2012-10-28,2012-10-28,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,46,5,Not included in poll,16327,Pharos Research Group,2012-10-26,2012-10-28,Likely Voters,765,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,51,47,2,Not included in poll,16253,PPP (D),2012-10-26,2012-10-28,Likely Voters,718,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,50,45,4,1,16349,Quinnipiac/NYT/CBS,2012-10-23,2012-10-28,Likely Voters,1100,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,49,2,Not included in poll,16254,Gravis Marketing,2012-10-27,2012-10-27,Likely Voters,730,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,44,7,Not included in poll,16313,Mellman (D-Americans United for Change),2012-10-23,2012-10-25,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-ohio-president-romney-vs-obama,50,46,4,1,16211,CNN,2012-10-23,2012-10-25,Likely Voters,741,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,46,44,8,1,16208,Purple Strategies,2012-10-23,2012-10-25,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,47,3,1,16190,ARG,2012-10-23,2012-10-25,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,48,3,2,16100,Rasmussen,2012-10-23,2012-10-23,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,44,6,1,16122,Time,2012-10-22,2012-10-23,Likely Voters,742,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,46,44,9,Not included in poll,16121,Lake Research (D-USAction),2012-10-20,2012-10-23,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-ohio-president-romney-vs-obama,49,49,1,1,16234,Ohio Newspaper Organization/University of Cincinnati,2012-10-18,2012-10-23,Likely Voters,1015,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,44,6,2,16098,SurveyUSA,2012-10-20,2012-10-22,Likely Voters,609,IVR/Online,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,45,,Not included in poll,16251,Pharos Research Group,2012-10-19,2012-10-21,Likely Voters,810,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,47,5,3,16035,Suffolk,2012-10-18,2012-10-21,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,48,,4,16008,Angus-Reid,2012-10-18,2012-10-20,Likely Voters,502,Internet,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,48,3,Not included in poll,15993,PPP (D),2012-10-18,2012-10-20,Likely Voters,523,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,50,45,3,1,16014,Quinnipiac/CBS,2012-10-17,2012-10-20,Likely Voters,1548,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,47,6,Not included in poll,15981,Gravis Marketing,2012-10-18,2012-10-19,Likely Voters,1943,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,46,43,10,1,15970,FOX,2012-10-17,2012-10-18,Likely Voters,1131,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,48,2,1,15908,Rasmussen,2012-10-17,2012-10-17,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,46,47,4,3,16033,Pulse Opinion Research/Let Freedom Ring (R),2012-10-15,2012-10-15,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-ohio-president-romney-vs-obama,45,42,9,3,15905,SurveyUSA,2012-10-12,2012-10-15,Likely Voters,613,IVR/Online,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,51,46,3,Not included in poll,15762,PPP (D),2012-10-12,2012-10-13,Likely Voters,880,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,50,46,2,2,15855,YouGov,2012-10-04,2012-10-11,Likely Voters,851,Internet,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,47,3,2,15697,Rasmussen,2012-10-10,2012-10-10,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,46,9,Not included in poll,15698,Gravis Marketing,2012-10-06,2012-10-10,Likely Voters,1313,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,51,45,4,1,15678,NBC/WSJ/Marist,2012-10-07,2012-10-09,Likely Voters,994,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,46,4,3,15723,Pulse Opinion Research/Let Freedom Ring (R),2012-10-08,2012-10-08,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-ohio-president-romney-vs-obama,45,44,8,3,15642,SurveyUSA,2012-10-05,2012-10-08,Likely Voters,808,IVR/Online,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,51,47,2,Not included in poll,15640,CNN,2012-10-05,2012-10-08,Likely Voters,722,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,48,4,1,15627,ARG,2012-10-05,2012-10-08,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,48,5,Not included in poll,15588,Wenzel Strategies (R-Citizens United),2012-10-04,2012-10-05,Likely Voters,1072,Live Phone,Sponsor,Rep
+2012-ohio-president-romney-vs-obama,50,49,1,1,15542,Rasmussen,2012-10-04,2012-10-04,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,46,47,6,1,15536,We Ask America,2012-10-04,2012-10-04,Likely Voters,1200,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,43,4,3,15726,Pulse Opinion Research/Let Freedom Ring (R),2012-10-01,2012-10-01,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-ohio-president-romney-vs-obama,51,43,4,1,15482,NBC/WSJ/Marist,2012-09-30,2012-10-01,Likely Voters,931,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,45,7,Not included in poll,15417,PPP (D),2012-09-27,2012-09-30,Likely Voters,897,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,51,42,,Not included in poll,15418,Columbus Dispatch,2012-09-19,2012-09-29,Likely Voters,1662,Mail,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,53,43,3,1,15314,Quinnipiac/NYT/CBS,2012-09-18,2012-09-24,Likely Voters,1162,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,52,44,2,2,15288,Washington Post,2012-09-19,2012-09-23,Likely Voters,759,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,44,10,Not included in poll,15298,Gravis Marketing,2012-09-21,2012-09-22,Likely Voters,594,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,44,8,Not included in poll,15201,Purple Strategies,2012-09-15,2012-09-19,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,42,7,3,15147,FOX,2012-09-16,2012-09-18,Likely Voters,1009,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,44,6,Not included in poll,15395,PPP (D)/NRDC,2012-09-14,2012-09-18,Likely Voters,2890,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,51,46,2,1,15247,Ohio Newspaper Organization/University of Cincinnati,2012-09-13,2012-09-18,Likely Voters,861,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,44,9,Not included in poll,15174,Caddell/McLaughlin (R)/Secure America Now,2012-09-13,2012-09-15,Likely Voters,600,Live Phone,Pollster,Rep
+2012-ohio-president-romney-vs-obama,47,44,2,6,15179,YouGov,2012-09-07,2012-09-14,Likely Voters,1036,Internet,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,46,3,3,15017,Rasmussen,2012-09-12,2012-09-12,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,47,4,1,15009,ARG,2012-09-10,2012-09-12,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,43,6,1,15030,NBC/WSJ/Marist,2012-09-09,2012-09-11,Likely Voters,979,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,45,5,Not included in poll,14939,PPP (D),2012-09-07,2012-09-09,Likely Voters,1072,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,47,43,10,Not included in poll,14964,Gravis Marketing,2012-09-07,2012-09-08,Likely Voters,1548,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,44,47,10,Not included in poll,14894,Gravis Marketing,2012-09-02,2012-09-02,Registered Voters,1381,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,44,10,Not included in poll,14834,Gravis Marketing,2012-08-27,2012-08-27,Likely Voters,1397,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,45,,Not included in poll,14785,Columbus Dispatch,2012-08-15,2012-08-25,Likely Voters,1758,Mail,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,44,4,2,14741,Quinnipiac/NYT/CBS,2012-08-21,2012-08-21,Likely Voters,1253,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,46,2,2,14742,The Ohio Poll/University of Cincinnati,2012-08-16,2012-08-21,Likely Voters,808,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,44,46,10,Not included in poll,14667,Purple Strategies,2012-08-13,2012-08-14,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,45,4,6,14648,Rasmussen,2012-08-13,2012-08-13,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,45,6,Not included in poll,14651,PPP (D),2012-08-09,2012-08-12,Likely Voters,961,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,50,44,4,1,14520,Quinnipiac/NYT/CBS,2012-07-24,2012-07-30,Likely Voters,1193,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,40,10,2,14470,We Ask America,2012-07-24,2012-07-24,Likely Voters,1115,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,43,3,9,14492,Magellan (R-Opportunity Ohio),2012-07-23,2012-07-24,Likely Voters,597,Automated Phone,Pollster,Rep
+2012-ohio-president-romney-vs-obama,47,45,4,5,14394,Rasmussen,2012-07-18,2012-07-18,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,45,7,Not included in poll,14357,Purple Strategies,2012-07-09,2012-07-13,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,41,,Not included in poll,14322,Garin-Hart-Yang (D-Priorities USA),2012-06-25,2012-07-03,Likely Voters,805,Live Phone,Sponsor,Dem
+2012-ohio-president-romney-vs-obama,47,38,12,3,14188,Quinnipiac,2012-06-19,2012-06-25,Registered Voters,1237,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,44,9,Not included in poll,14177,PPP (D),2012-06-21,2012-06-24,Likely Voters,673,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,45,48,8,Not included in poll,14036,Purple Strategies,2012-05-31,2012-06-05,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,44,46,5,6,13965,Rasmussen,2012-05-29,2012-05-29,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,42,8,2,13892,NBC/Marist,2012-05-17,2012-05-20,Registered Voters,1103,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,44,10,2,13724,Quinnipiac,2012-05-02,2012-05-07,Registered Voters,1069,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,43,8,Not included in poll,13708,PPP (D),2012-04-28,2012-05-06,Likely Voters,875,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,44,42,11,3,13676,Quinnipiac,2012-04-25,2012-05-01,Registered Voters,1130,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,44,7,Not included in poll,13619,Purple Strategies,2012-04-19,2012-04-23,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,46,42,,Not included in poll,13578,Rasmussen,2012-04-18,2012-04-18,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,39,12,3,13571,FOX,2012-04-15,2012-04-17,Registered Voters,606,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,48,40,3,8,13371,Rasmussen,2012-03-26,2012-03-26,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,47,41,7,2,13369,Quinnipiac,2012-03-20,2012-03-26,Registered Voters,1246,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,50,38,12,Not included in poll,13107,NBC/Marist,2012-02-29,2012-03-02,Registered Voters,1573,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,38,44,9,2,13147,FOX,2012-02-11,2012-02-13,Likely Voters,505,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,46,44,7,1,13148,Quinnipiac,2012-02-07,2012-02-12,Registered Voters,1421,Live Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,45,41,4,10,12834,Rasmussen,2012-02-08,2012-02-08,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-ohio-president-romney-vs-obama,49,42,9,Not included in poll,12696,PPP (D),2012-01-28,2012-01-29,Likely Voters,820,Automated Phone,Pollster,Dem
+2012-ohio-president-romney-vs-obama,44,42,8,3,12500,Quinnipiac,2012-01-09,2012-01-16,Registered Voters,1610,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,46,50,4,Not included in poll,16621,Gravis Marketing,2012-11-04,2012-11-04,Likely Voters,1130,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,49,49,1,Not included in poll,16613,PPP (D),2012-11-03,2012-11-04,Likely Voters,926,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,47,49,3,1,16572,YouGov,2012-10-31,2012-11-03,Likely Voters,1500,Internet,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,49,49,1,Not included in poll,16377,PPP (D),2012-10-29,2012-10-31,Likely Voters,730,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,45,46,9,Not included in poll,16426,High Point University,2012-10-22,2012-10-30,Registered Voters,403,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,45,50,3,2,16356,SurveyUSA,2012-10-27,2012-10-29,Likely Voters,682,IVR/Online,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,45,45,9,Not included in poll,16267,Elon,2012-10-21,2012-10-26,Likely Voters,1238,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,46,52,1,1,16217,Rasmussen,2012-10-25,2012-10-25,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,48,48,4,Not included in poll,16162,PPP (D),2012-10-23,2012-10-25,Likely Voters,880,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,45,53,3,Not included in poll,16198,Gravis Marketing,2012-10-24,2012-10-24,Likely Voters,1723,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,47,44,7,2,16232,Grove Insight (D-Project New America),2012-10-23,2012-10-24,Likely Voters,500,Live Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,47,48,5,Not included in poll,16195,Civitas (R) / National Research (R),2012-10-20,2012-10-21,Likely Voters,600,Live Phone,Pollster,Rep
+2012-north-carolina-president-romney-vs-obama,47,44,,Not included in poll,15957,Grove Insight (D-Project New America),2012-10-17,2012-10-18,Likely Voters,500,Live Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,46,52,1,Not included in poll,15918,Rasmussen,2012-10-17,2012-10-17,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,47,49,4,Not included in poll,15775,PPP (D),2012-10-12,2012-10-14,Likely Voters,1084,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,45,49,,Not included in poll,15986,Tel Opinion Research (R-North Carolina Republican Party),2012-10-12,2012-10-13,Likely Voters,600,Live Phone,Sponsor,Rep
+2012-north-carolina-president-romney-vs-obama,48,49,2,1,15843,YouGov,2012-10-04,2012-10-11,Likely Voters,810,Internet,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,46,45,7,2,15757,High Point University/UNC,2012-09-29,2012-10-10,Registered Voters,605,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,48,51,1,1,15701,Rasmussen,2012-10-09,2012-10-09,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,41,50,9,Not included in poll,15630,Gravis Marketing,2012-10-06,2012-10-08,Likely Voters,1325,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,47,51,1,1,15490,Rasmussen,2012-10-02,2012-10-02,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,49,47,2,2,15477,SurveyUSA,2012-09-29,2012-10-01,Likely Voters,573,IVR/Online,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,46,50,3,1,15433,ARG,2012-09-28,2012-09-30,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,48,48,4,Not included in poll,15416,PPP (D),2012-09-27,2012-09-30,Likely Voters,981,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,48,46,5,1,15369,NBC/WSJ/Marist,2012-09-23,2012-09-25,Likely Voters,1035,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,49,45,7,Not included in poll,15268,Civitas (R) / National Research (R),2012-09-18,2012-09-19,Registered Voters,600,Live Phone,Pollster,Rep
+2012-north-carolina-president-romney-vs-obama,48,46,6,Not included in poll,15205,Purple Strategies,2012-09-15,2012-09-19,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,46,43,9,3,15198,High Point University/Fox 8,2012-09-08,2012-09-18,Registered Voters,448,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,46,48,4,2,15154,YouGov,2012-09-07,2012-09-14,Likely Voters,1060,Internet,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,45,51,3,1,15034,Rasmussen,2012-09-13,2012-09-13,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,49,48,3,Not included in poll,14940,PPP (D),2012-09-07,2012-09-09,Likely Voters,1087,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,43,53,1,3,14948,Civitas (R) / SurveyUSA,2012-09-04,2012-09-06,Registered Voters,500,Automated Phone,Pollster,Rep
+2012-north-carolina-president-romney-vs-obama,48,48,4,Not included in poll,14869,PPP (D),2012-08-31,2012-09-02,Likely Voters,1012,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,43,46,6,5,14876,High Point University/SurveyUSA,2012-08-26,2012-08-30,Registered Voters,543,IVR/Online,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,43,47,6,3,14878,Elon,2012-08-25,2012-08-30,Likely Voters,1089,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,47,48,3,1,14801,CNN/Time/ORC,2012-08-22,2012-08-26,Likely Voters,766,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,43,43,8,6,14796,High Point University/SurveyUSA,2012-08-18,2012-08-23,Registered Voters,540,IVR/Online,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,49,46,5,Not included in poll,14578,PPP (D),2012-08-02,2012-08-05,Likely Voters,813,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,44,49,4,3,14549,Rasmussen,2012-08-01,2012-08-01,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,48,49,3,Not included in poll,14405,Civitas (R) / National Research (R),2012-07-16,2012-07-18,Registered Voters,600,Live Phone,Pollster,Rep
+2012-north-carolina-president-romney-vs-obama,47,46,6,Not included in poll,14285,PPP (D),2012-07-05,2012-07-08,Registered Voters,775,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,48,49,3,Not included in poll,14326,Project New America/Myers (D),2012-07-01,2012-07-08,Likely Voters,500,Live Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,45,50,2,3,14242,Civitas (R) / SurveyUSA,2012-06-29,2012-07-01,Registered Voters,558,Automated Phone,Pollster,Rep
+2012-north-carolina-president-romney-vs-obama,44,47,6,3,14178,Rasmussen,2012-06-25,2012-06-25,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,46,44,9,1,14206,NBC/Marist,2012-06-24,2012-06-25,Registered Voters,1019,Live Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,46,48,6,Not included in poll,14073,PPP (D),2012-06-07,2012-06-10,Likely Voters,810,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,44,45,6,4,13870,SurveyUSA,2012-05-18,2012-05-21,Likely Voters,524,IVR/Online,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,45,47,6,Not included in poll,13895,Civitas (R) / National Research (R),2012-05-19,2012-05-20,Registered Voters,600,Live Phone,Pollster,Rep
+2012-north-carolina-president-romney-vs-obama,43,51,4,2,13810,Rasmussen,2012-05-14,2012-05-14,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,48,47,5,Not included in poll,13811,PPP (D),2012-05-10,2012-05-13,Likely Voters,666,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,47,43,9,Not included in poll,13661,SurveyUSA,2012-04-26,2012-04-30,Registered Voters,1636,IVR/Online,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,44,46,6,4,13523,Rasmussen,2012-04-10,2012-04-10,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-north-carolina-president-romney-vs-obama,49,44,8,Not included in poll,13503,PPP (D),2012-04-04,2012-04-07,Likely Voters,975,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,49,46,5,Not included in poll,13250,PPP (D),2012-03-08,2012-03-11,Registered Voters,804,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,47,46,7,Not included in poll,12820,PPP (D),2012-02-03,2012-02-05,Likely Voters,1052,Automated Phone,Pollster,Dem
+2012-north-carolina-president-romney-vs-obama,39,48,11,Not included in poll,12670,Civitas (R) / National Research (R),2012-01-09,2012-01-11,Registered Voters,300,Live Phone,Pollster,Rep
+2012-north-carolina-president-romney-vs-obama,46,45,9,Not included in poll,12446,PPP (D),2012-01-05,2012-01-08,Registered Voters,780,Automated Phone,Pollster,Dem
+2012-new-mexico-president-romney-vs-obama,49,43,3,5,16597,YouGov,2012-10-31,2012-11-03,Likely Voters,650,Internet,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,49,41,,6,16545,POS (R-Wilson),2012-10-30,2012-10-31,Likely Voters,500,Live Phone,Sponsor,Rep
+2012-new-mexico-president-romney-vs-obama,47,42,,6,16335,POS (R-Wilson),2012-10-21,2012-10-22,Likely Voters,500,Live Phone,Sponsor,Rep
+2012-new-mexico-president-romney-vs-obama,49,39,5,6,15798,Albuquerque Journal,2012-10-09,2012-10-10,Likely Voters,658,Live Phone,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,54,43,2,2,15647,Rasmussen,2012-10-08,2012-10-08,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,52,43,5,Not included in poll,16662,PPP (D-League of Conservation Voters),2012-10-02,2012-10-03,Likely Voters,778,Automated Phone,Sponsor,Dem
+2012-new-mexico-president-romney-vs-obama,51,40,2,6,15451,Rasmussen,2012-09-27,2012-09-27,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,51,41,5,4,15446,We Ask America,2012-09-25,2012-09-27,Likely Voters,1258,Automated Phone,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,47,40,,9,15401,POS (R-Wilson),2012-09-25,2012-09-27,Likely Voters,500,Live Phone,Sponsor,Rep
+2012-new-mexico-president-romney-vs-obama,52,43,6,Not included in poll,15397,PPP (D)/NRDC,2012-09-17,2012-09-20,Likely Voters,3111,Automated Phone,Pollster,Dem
+2012-new-mexico-president-romney-vs-obama,51,43,1,4,15194,YouGov,2012-09-07,2012-09-14,Likely Voters,293,Internet,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,53,42,5,Not included in poll,14981,PPP (D-League of Conservation Voters),2012-09-07,2012-09-09,Likely Voters,1122,Automated Phone,Sponsor,Dem
+2012-new-mexico-president-romney-vs-obama,45,40,8,7,14945,Albuquerque Journal,2012-09-03,2012-09-06,Likely Voters,667,Live Phone,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,52,38,1,9,14736,Rasmussen,2012-08-21,2012-08-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,49,44,6,Not included in poll,14380,PPP (D),2012-07-13,2012-07-16,Likely Voters,724,Automated Phone,Pollster,Dem
+2012-new-mexico-president-romney-vs-obama,48,35,5,12,13979,FMMMA (D),2012-05-16,2012-05-21,Registered Voters,502,Live Phone,Pollster,Dem
+2012-new-mexico-president-romney-vs-obama,48,35,2,15,13626,PPP (D),2012-04-19,2012-04-22,Likely Voters,526,Automated Phone,Pollster,Dem
+2012-new-mexico-president-romney-vs-obama,52,36,3,9,13487,Rasmussen,2012-04-03,2012-04-03,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-mexico-president-romney-vs-obama,55,36,5,5,13145,Rasmussen,2012-02-14,2012-02-14,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,48,2,Not included in poll,16654,Rasmussen,2012-11-04,2012-11-04,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,46,3,1,16647,New England College,2012-11-03,2012-11-04,Likely Voters,687,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,48,1,Not included in poll,16600,PPP (D),2012-11-03,2012-11-04,Likely Voters,1550,Automated Phone,Pollster,Dem
+2012-new-hampshire-president-romney-vs-obama,49,49,2,1,16638,ARG,2012-11-02,2012-11-04,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,46,3,1,16623,UNH/WMUR,2012-11-01,2012-11-04,Likely Voters,776,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,47,43,6,4,16595,YouGov,2012-10-31,2012-11-03,Likely Voters,690,Internet,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,48,3,2,16528,UNH/WMUR,2012-10-31,2012-11-02,Likely Voters,502,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,49,,Not included in poll,16495,Gravis Marketing,2012-11-01,2012-11-01,Likely Voters,497,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,44,4,2,16447,New England College,2012-10-29,2012-10-31,Likely Voters,1017,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,49,47,3,1,16398,NBC/WSJ/Marist,2012-10-28,2012-10-29,Likely Voters,1013,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,49,47,5,Not included in poll,16255,PPP (D),2012-10-26,2012-10-28,Likely Voters,874,Automated Phone,Pollster,Dem
+2012-new-hampshire-president-romney-vs-obama,47,42,7,4,16317,Lake Research (D-USAction),2012-10-24,2012-10-28,Likely Voters,400,Live Phone,Sponsor,Dem
+2012-new-hampshire-president-romney-vs-obama,47,44,7,2,16245,Grove Insight (D-Project New America),2012-10-24,2012-10-25,Likely Voters,500,Live Phone,Pollster,Dem
+2012-new-hampshire-president-romney-vs-obama,49,46,4,2,16204,New England College,2012-10-23,2012-10-25,Likely Voters,571,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,50,1,1,16106,Rasmussen,2012-10-23,2012-10-23,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,47,49,3,1,16070,ARG,2012-10-19,2012-10-22,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,45,7,Not included in poll,16107,Lake Research (D-USAction),2012-10-18,2012-10-22,Likely Voters,400,Live Phone,Sponsor,Dem
+2012-new-hampshire-president-romney-vs-obama,51,42,5,2,16050,UNH,2012-10-17,2012-10-21,Likely Voters,773,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,49,3,Not included in poll,15964,PPP (D),2012-10-17,2012-10-19,Likely Voters,1036,Automated Phone,Pollster,Dem
+2012-new-hampshire-president-romney-vs-obama,50,49,1,Not included in poll,15868,Rasmussen,2012-10-15,2012-10-15,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,47,47,4,2,15815,Suffolk,2012-10-12,2012-10-14,Likely Voters,500,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,46,50,3,1,15735,ARG,2012-10-09,2012-10-11,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,48,1,3,15665,Rasmussen,2012-10-09,2012-10-09,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,44,4,2,15641,UNH/WMUR,2012-09-30,2012-10-06,Likely Voters,545,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,54,39,4,3,15447,UNH/WMUR,2012-09-27,2012-09-30,Likely Voters,588,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,45,4,1,15386,ARG,2012-09-25,2012-09-27,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,51,44,6,Not included in poll,15476,PPP (D-Progressive Change Campaign Committee),2012-09-24,2012-09-25,Likely Voters,862,Automated Phone,Sponsor,Dem
+2012-new-hampshire-president-romney-vs-obama,51,44,4,1,15370,NBC/WSJ/Marist,2012-09-23,2012-09-25,Likely Voters,1012,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,52,45,,Not included in poll,15344,GQR (D-New Hampshire Democratic Party),2012-09-15,2012-09-19,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-new-hampshire-president-romney-vs-obama,45,48,3,4,15130,Rasmussen,2012-09-18,2012-09-18,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,47,,Not included in poll,15107,ARG,2012-09-15,2012-09-17,Likely Voters,463,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,42,5,5,15152,YouGov,2012-09-07,2012-09-14,Likely Voters,340,Internet,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,45,40,12,3,15025,UNH/WMUR,2012-09-04,2012-09-10,Likely Voters,592,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,51,45,5,Not included in poll,14654,PPP (D),2012-08-09,2012-08-12,Likely Voters,1055,Automated Phone,Pollster,Dem
+2012-new-hampshire-president-romney-vs-obama,49,46,,Not included in poll,14645,UNH/WMUR,2012-08-01,2012-08-12,Likely Voters,555,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,44,6,Not included in poll,14660,PPP (D-Democracy for America),2012-08-07,2012-08-08,Likely Voters,1591,Automated Phone,Sponsor,Dem
+2012-new-hampshire-president-romney-vs-obama,49,45,,Not included in poll,14370,UNH/WMUR,2012-07-05,2012-07-15,Likely Voters,470,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,45,45,8,1,14205,NBC/Marist,2012-06-24,2012-06-25,Registered Voters,1029,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,49,46,6,Not included in poll,14167,ARG,2012-06-21,2012-06-24,Likely Voters,417,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,43,6,2,14145,Rasmussen,2012-06-20,2012-06-20,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,53,41,6,Not included in poll,13806,PPP (D),2012-05-10,2012-05-13,Likely Voters,1163,Automated Phone,Pollster,Dem
+2012-new-hampshire-president-romney-vs-obama,51,42,5,2,13594,UNH/WMUR,2012-04-09,2012-04-20,Likely Voters,486,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,42,44,,Not included in poll,13561,Dartmouth,2012-04-02,2012-04-05,Registered Voters,403,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,48,41,11,Not included in poll,13424,ARG,2012-03-15,2012-03-18,Registered Voters,557,Live Phone,Nonpartisan,None
+2012-new-hampshire-president-romney-vs-obama,50,40,9,Not included in poll,12833,UNH/WMUR,2012-01-25,2012-02-02,Likely Voters,495,Live Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,51,47,1,Not included in poll,16645,PPP (D),2012-11-03,2012-11-04,Likely Voters,750,Automated Phone,Pollster,Dem
+2012-nevada-president-romney-vs-obama,49,45,3,2,16592,YouGov,2012-10-31,2012-11-03,Likely Voters,732,Internet,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,50,44,4,Not included in poll,16493,Mellman (D-Americans United for Change),2012-10-29,2012-10-31,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-nevada-president-romney-vs-obama,50,46,2,2,16409,SurveyUSA,2012-10-23,2012-10-29,Likely Voters,1212,Mixed,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,49,43,,Not included in poll,16308,Grove Insight (D-Project New America/USAction),2012-10-27,2012-10-28,Likely Voters,500,Live Phone,Pollster,Dem
+2012-nevada-president-romney-vs-obama,50,49,2,Not included in poll,16183,Gravis Marketing,2012-10-24,2012-10-24,Likely Voters,955,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,50,47,2,1,16174,NBC/WSJ/Marist,2012-10-23,2012-10-24,Likely Voters,1042,Live Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,51,47,2,Not included in poll,16123,PPP (D),2012-10-22,2012-10-24,Likely Voters,636,Automated Phone,Pollster,Dem
+2012-nevada-president-romney-vs-obama,50,48,1,1,16111,Rasmussen,2012-10-23,2012-10-23,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,49,47,3,1,16069,ARG,2012-10-19,2012-10-22,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,51,43,,Not included in poll,15958,Mellman (D-Americans United for Change),2012-10-15,2012-10-17,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-nevada-president-romney-vs-obama,50,43,4,4,15911,Grove Insight (D-Project New America),2012-10-15,2012-10-16,Likely Voters,500,Live Phone,Pollster,Dem
+2012-nevada-president-romney-vs-obama,50,47,1,2,15879,Rasmussen,2012-10-15,2012-10-15,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,48,45,3,3,15874,SurveyUSA,2012-10-11,2012-10-15,Likely Voters,806,Mixed,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,50,45,3,1,15853,YouGov,2012-10-04,2012-10-11,Likely Voters,358,Internet,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,51,47,2,Not included in poll,15676,PPP (D),2012-10-08,2012-10-10,Likely Voters,594,Automated Phone,Pollster,Dem
+2012-nevada-president-romney-vs-obama,47,45,6,2,15687,Suffolk/KSNV,2012-10-06,2012-10-09,Likely Voters,500,Live Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,47,47,3,3,15631,Rasmussen,2012-10-08,2012-10-08,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,47,46,4,3,15648,SurveyUSA,2012-10-03,2012-10-08,Likely Voters,1222,Mixed,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,49,48,3,Not included in poll,15554,Gravis Marketing,2012-10-03,2012-10-03,Likely Voters,1006,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,53,42,3,2,15453,We Ask America,2012-09-25,2012-09-27,Likely Voters,1078,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,49,47,3,1,15371,NBC/WSJ/Marist,2012-09-23,2012-09-25,Likely Voters,984,Live Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,51,44,4,1,15272,ARG,2012-09-20,2012-09-23,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,46,46,2,5,15302,POS (R),2012-09-19,2012-09-20,Likely Voters,500,Live Phone,Pollster,Rep
+2012-nevada-president-romney-vs-obama,52,43,5,Not included in poll,15301,PPP (D-League of Conservation Voters),2012-09-18,2012-09-20,Likely Voters,501,Automated Phone,Sponsor,Dem
+2012-nevada-president-romney-vs-obama,47,45,3,4,15175,Rasmussen,2012-09-18,2012-09-18,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,49,46,4,1,15182,CNN,2012-09-14,2012-09-18,Likely Voters,741,Live Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,51,44,3,2,15155,YouGov,2012-09-07,2012-09-14,Likely Voters,541,Internet,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,50,47,4,Not included in poll,14828,PPP (D),2012-08-23,2012-08-26,Likely Voters,831,Automated Phone,Pollster,Dem
+2012-nevada-president-romney-vs-obama,47,45,4,5,14725,SurveyUSA,2012-08-16,2012-08-21,Likely Voters,869,IVR/Online,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,50,45,4,1,14462,Rasmussen,2012-07-24,2012-07-24,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,49,43,6,2,14387,We Ask America,2012-07-17,2012-07-18,Likely Voters,1092,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,50,46,4,Not included in poll,14389,Magellan (R),2012-07-16,2012-07-17,Registered Voters,665,Mixed,Pollster,Rep
+2012-nevada-president-romney-vs-obama,48,42,10,Not included in poll,14087,PPP (D),2012-06-07,2012-06-10,Likely Voters,500,Automated Phone,Pollster,Dem
+2012-nevada-president-romney-vs-obama,48,46,5,1,13961,NBC/Marist,2012-05-22,2012-05-24,Registered Voters,1040,Live Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,52,44,2,2,13659,Rasmussen,2012-04-30,2012-04-30,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-nevada-president-romney-vs-obama,51,43,6,Not included in poll,13430,PPP (D),2012-03-29,2012-04-01,Registered Voters,553,Automated Phone,Pollster,Dem
+2012-nevada-president-romney-vs-obama,50,44,2,3,13272,Rasmussen,2012-03-19,2012-03-19,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,45,53,2,Not included in poll,16550,PPP (D),2012-11-02,2012-11-03,Likely Voters,835,Automated Phone,Pollster,Dem
+2012-missouri-president-romney-vs-obama,42,53,3,Not included in poll,16593,YouGov,2012-10-31,2012-11-03,Likely Voters,779,Internet,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,43,50,3,Not included in poll,16615,SurveyUSA,2012-10-28,2012-11-03,Likely Voters,589,IVR/Online,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,42,54,,Not included in poll,16395,We Ask America,2012-10-30,2012-10-30,Likely Voters,1217,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,41,54,4,Not included in poll,16218,Mason-Dixon,2012-10-23,2012-10-25,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,46,52,2,Not included in poll,16009,PPP (D),2012-10-19,2012-10-21,Likely Voters,582,Automated Phone,Pollster,Dem
+2012-missouri-president-romney-vs-obama,43,54,3,Not included in poll,15947,Rasmussen,2012-10-17,2012-10-17,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,41,55,4,Not included in poll,15813,Wenzel Strategies (R),2012-10-12,2012-10-13,Likely Voters,1000,Live Phone,Pollster,Rep
+2012-missouri-president-romney-vs-obama,42,52,4,Not included in poll,15864,YouGov,2012-10-04,2012-10-11,Likely Voters,546,Internet,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,45,51,4,Not included in poll,15497,PPP (D),2012-10-01,2012-10-03,Likely Voters,700,Automated Phone,Pollster,Dem
+2012-missouri-president-romney-vs-obama,46,49,3,Not included in poll,15514,Rasmussen,2012-10-02,2012-10-02,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,40,50,,Not included in poll,15546,Wenzel Strategies (R-Akin),2012-09-30,2012-10-01,Likely Voters,675,Live Phone,Sponsor,Rep
+2012-missouri-president-romney-vs-obama,45,48,6,Not included in poll,15455,We Ask America,2012-09-25,2012-09-27,Likely Voters,1145,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,44,50,6,Not included in poll,15341,Chilenski Strategies/Missouri Scout,2012-09-20,2012-09-20,Likely Voters,817,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,43,50,4,Not included in poll,15225,YouGov,2012-09-07,2012-09-14,Likely Voters,734,Internet,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,45,48,3,Not included in poll,14997,Rasmussen,2012-09-11,2012-09-11,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,38,57,5,Not included in poll,15007,Wenzel Strategies (R-Citizens United),2012-09-10,2012-09-11,Likely Voters,850,Live Phone,Sponsor,Rep
+2012-missouri-president-romney-vs-obama,41,53,6,Not included in poll,14838,PPP (D),2012-08-28,2012-08-29,Likely Voters,621,Automated Phone,Pollster,Dem
+2012-missouri-president-romney-vs-obama,36,53,7,Not included in poll,14836,Gravis Marketing,2012-08-23,2012-08-23,Likely Voters,1057,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,43,50,,Not included in poll,14770,Mason-Dixon,2012-08-22,2012-08-23,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,47,46,3,Not included in poll,14759,Rasmussen,2012-08-22,2012-08-22,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,42,52,7,Not included in poll,14749,PPP (D),2012-08-20,2012-08-20,Likely Voters,500,Automated Phone,Pollster,Dem
+2012-missouri-president-romney-vs-obama,44,45,5,Not included in poll,14630,SurveyUSA,2012-08-09,2012-08-12,Likely Voters,585,IVR/Online,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,47,48,5,Not included in poll,14646,Chilenski Strategies/Missouri Scout,2012-08-08,2012-08-08,Likely Voters,663,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,44,50,3,Not included in poll,14510,Rasmussen,2012-07-30,2012-07-30,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,42,51,5,Not included in poll,14495,Mason-Dixon,2012-07-23,2012-07-25,Likely Voters,625,Live Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,40,49,9,Not included in poll,14457,We Ask America,2012-07-24,2012-07-24,Likely Voters,1172,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,42,49,3,Not included in poll,14044,Rasmussen,2012-06-07,2012-06-07,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,45,44,11,Not included in poll,13958,PPP (D),2012-05-24,2012-05-27,Registered Voters,602,Automated Phone,Pollster,Dem
+2012-missouri-president-romney-vs-obama,45,48,4,Not included in poll,13574,Rasmussen,2012-04-17,2012-04-17,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,41,50,2,Not included in poll,13249,Rasmussen,2012-03-14,2012-03-15,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-missouri-president-romney-vs-obama,45,45,9,Not included in poll,12708,PPP (D),2012-01-27,2012-01-29,Likely Voters,582,Automated Phone,Pollster,Dem
+2012-minnesota-president-romney-vs-obama,53,45,2,Not included in poll,16533,PPP (D),2012-11-02,2012-11-03,Likely Voters,1164,Automated Phone,Pollster,Dem
+2012-minnesota-president-romney-vs-obama,52,41,4,3,16611,SurveyUSA,2012-11-01,2012-11-03,Likely Voters,556,IVR/Online,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,50,43,4,2,16584,YouGov,2012-10-31,2012-11-03,Likely Voters,790,Internet,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,53,44,3,Not included in poll,16470,PPP (D-LCV),2012-10-31,2012-11-01,Likely Voters,772,Automated Phone,Sponsor,Dem
+2012-minnesota-president-romney-vs-obama,45,46,,Not included in poll,16534,NMB (R-American Future Fund),2012-10-30,2012-10-31,Likely Voters,500,Live Phone,Sponsor,Rep
+2012-minnesota-president-romney-vs-obama,50,43,3,4,16410,SurveyUSA,2012-10-26,2012-10-28,Likely Voters,574,IVR/Online,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,47,44,7,2,16231,The Star Tribune Minnesota Poll/Mason-Dixon,2012-10-23,2012-10-25,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,51,46,1,1,16073,Rasmussen,2012-10-21,2012-10-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,53,45,2,Not included in poll,16227,St. Cloud St,2012-10-15,2012-10-21,Likely Voters,601,Live Phone,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,50,40,6,4,15919,SurveyUSA,2012-10-12,2012-10-14,Likely Voters,550,IVR/Online,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,52,44,3,1,15860,YouGov,2012-10-04,2012-10-11,Likely Voters,683,Internet,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,47,43,,Not included in poll,15786,NMB (R-American Future Fund),2012-10-07,2012-10-08,Likely Voters,500,Live Phone,Sponsor,Rep
+2012-minnesota-president-romney-vs-obama,53,43,4,Not included in poll,15632,PPP (D),2012-10-05,2012-10-08,Likely Voters,937,Automated Phone,Pollster,Dem
+2012-minnesota-president-romney-vs-obama,48,40,7,5,15262,The Star Tribune Minnesota Poll/Mason-Dixon,2012-09-17,2012-09-19,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,50,42,4,4,15191,YouGov,2012-09-07,2012-09-14,Likely Voters,816,Internet,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,51,44,5,Not included in poll,15015,PPP (D),2012-09-10,2012-09-11,Likely Voters,824,Automated Phone,Pollster,Dem
+2012-minnesota-president-romney-vs-obama,50,40,5,5,14966,SurveyUSA,2012-09-06,2012-09-09,Likely Voters,551,IVR/Online,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,46,40,7,7,14418,SurveyUSA,2012-07-17,2012-07-19,Likely Voters,552,IVR/Online,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,54,39,7,Not included in poll,14033,PPP (D),2012-05-31,2012-06-03,Registered Voters,973,Automated Phone,Pollster,Dem
+2012-minnesota-president-romney-vs-obama,52,38,10,Not included in poll,13783,SurveyUSA,2012-05-09,2012-05-10,Registered Voters,516,IVR/Online,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,49,36,15,Not included in poll,13143,SurveyUSA,2012-01-31,2012-02-02,Registered Voters,542,IVR/Online,Nonpartisan,None
+2012-minnesota-president-romney-vs-obama,51,41,8,Not included in poll,12641,PPP (D),2012-01-21,2012-01-22,Likely Voters,1236,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,51,46,1,2,16684,Mitchell Research,2012-11-04,2012-11-04,Likely Voters,1305,Automated Phone,Pollster,Rep
+2012-michigan-president-romney-vs-obama,52,47,,Not included in poll,16622,Angus-Reid,2012-11-01,2012-11-03,Likely Voters,502,Internet,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,52,46,1,Not included in poll,16502,PPP (D),2012-11-01,2012-11-03,Likely Voters,700,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,51,44,3,3,16580,YouGov,2012-10-31,2012-11-03,Likely Voters,1091,Internet,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,46,47,2,5,16547,FMWB (D),2012-11-02,2012-11-02,Likely Voters,1913,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,52,47,1,1,16468,Rasmussen,2012-11-01,2012-11-01,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,52,46,2,Not included in poll,16472,PPP (D-LCV),2012-10-31,2012-11-01,Likely Voters,500,Automated Phone,Sponsor,Dem
+2012-michigan-president-romney-vs-obama,48,41,9,2,16461,Grove Insight (D-Project New America/USAction),2012-10-31,2012-11-01,Likely Voters,500,Live Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,53,45,3,Not included in poll,16390,PPP (D-Health Care for America Now),2012-10-30,2012-10-31,Likely Voters,500,Automated Phone,Sponsor,Dem
+2012-michigan-president-romney-vs-obama,48,45,6,1,16358,Glengariff Group,2012-10-27,2012-10-29,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,48,42,6,4,16412,EPIC-MRA,2012-10-26,2012-10-29,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,47,47,4,2,16167,FMWB (D),2012-10-23,2012-10-23,Likely Voters,1122,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,52,43,,5,16007,Angus-Reid,2012-10-18,2012-10-20,Likely Voters,513,Internet,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,52,46,2,Not included in poll,15934,EPIC-MRA,2012-10-17,2012-10-17,Likely Voters,800,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,52,45,1,1,15751,Rasmussen,2012-10-11,2012-10-11,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,52,42,4,1,15857,YouGov,2012-10-04,2012-10-11,Likely Voters,895,Internet,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,44,41,13,Not included in poll,15929,"Denno/ Lambert, Edwards & Associates",2012-10-09,2012-10-10,Likely Voters,600,Live Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,49,42,8,Not included in poll,15690,Glengariff Group,2012-10-06,2012-10-08,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,46,44,10,Not included in poll,15688,Gravis Marketing,2012-10-05,2012-10-08,Likely Voters,1122,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,48,45,7,Not included in poll,15605,EPIC-MRA,2012-10-04,2012-10-06,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,49,46,3,2,15606,FMWB (D),2012-10-05,2012-10-05,Likely Voters,1122,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,52,40,7,1,15421,We Ask America,2012-09-25,2012-09-27,Likely Voters,1064,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,50,46,4,Not included in poll,15377,Gravis Marketing,2012-09-21,2012-09-22,Likely Voters,804,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,54,42,3,1,15267,Rasmussen,2012-09-20,2012-09-20,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,51,42,7,Not included in poll,15396,PPP (D)/NRDC,2012-09-17,2012-09-19,Likely Voters,2386,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,52,44,3,1,15143,CNN,2012-09-14,2012-09-18,Likely Voters,754,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,52,38,9,Not included in poll,15166,Glengariff Group,2012-09-15,2012-09-17,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,48,42,8,Not included in poll,15098,Marketing Resource Group (R),2012-09-10,2012-09-14,Likely Voters,600,Live Phone,Pollster,Rep
+2012-michigan-president-romney-vs-obama,51,42,4,3,15178,YouGov,2012-09-07,2012-09-14,Likely Voters,1114,Internet,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,45,44,5,5,15058,FMWB (D),2012-09-12,2012-09-12,Likely Voters,1156,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,47,37,,Not included in poll,14992,EPIC-MRA,2012-09-08,2012-09-11,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,51,44,5,Not included in poll,14871,PPP (D),2012-08-31,2012-09-02,Likely Voters,815,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,49,46,5,Not included in poll,14848,EPIC-MRA,2012-08-28,2012-08-28,Likely Voters,1200,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,47,47,3,3,14783,Mitchell Research,2012-08-23,2012-08-23,Likely Voters,1277,Automated Phone,Pollster,Rep
+2012-michigan-president-romney-vs-obama,48,42,11,Not included in poll,14746,Glengariff Group,2012-08-18,2012-08-20,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,44,48,4,4,14716,FMWB (D),2012-08-16,2012-08-16,Likely Voters,1733,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,49,44,4,Not included in poll,14682,Mitchell Research,2012-08-13,2012-08-13,Likely Voters,1079,Automated Phone,Pollster,Rep
+2012-michigan-president-romney-vs-obama,48,42,,Not included in poll,14522,EPIC-MRA,2012-07-24,2012-07-31,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,44,45,,Not included in poll,14441,Mitchell Research,2012-07-23,2012-07-23,Likely Voters,825,Automated Phone,Pollster,Rep
+2012-michigan-president-romney-vs-obama,48,42,4,5,14431,Rasmussen,2012-07-23,2012-07-23,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,53,39,8,Not included in poll,14443,PPP (D),2012-07-21,2012-07-23,Likely Voters,579,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,47,43,10,1,14204,NBC/Marist,2012-06-24,2012-06-25,Registered Voters,1078,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,47,46,,Not included in poll,14142,Mitchell Research,2012-06-18,2012-06-18,Likely Voters,750,Automated Phone,Pollster,Rep
+2012-michigan-president-romney-vs-obama,43,45,12,Not included in poll,14131,We Ask America,2012-06-18,2012-06-18,Likely Voters,1010,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,50,42,4,4,14097,Rasmussen,2012-06-14,2012-06-14,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,47,45,4,4,14092,FMWB (D),2012-06-12,2012-06-12,Likely Voters,1783,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,45,46,9,Not included in poll,14031,EPIC-MRA,2012-06-02,2012-06-05,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,53,39,8,Not included in poll,13929,PPP (D),2012-05-24,2012-05-27,Registered Voters,500,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,45,40,15,Not included in poll,13780,Glengariff Group,2012-05-10,2012-05-11,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,47,43,10,Not included in poll,13486,EPIC-MRA,2012-03-31,2012-04-03,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,49,42,9,Not included in poll,13423,Marketing Resource Group (R),2012-03-14,2012-03-19,Likely Voters,600,Live Phone,Pollster,Rep
+2012-michigan-president-romney-vs-obama,51,33,15,Not included in poll,12991,NBC/Marist,2012-02-19,2012-02-20,Registered Voters,3149,Live Phone,Nonpartisan,None
+2012-michigan-president-romney-vs-obama,54,38,8,Not included in poll,12849,PPP (D),2012-02-10,2012-02-12,Registered Voters,560,Automated Phone,Pollster,Dem
+2012-michigan-president-romney-vs-obama,48,40,12,Not included in poll,12648,EPIC-MRA,2012-01-21,2012-01-25,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,50,48,2,Not included in poll,16599,PPP (D),2012-11-03,2012-11-04,Likely Voters,1122,Automated Phone,Pollster,Dem
+2012-iowa-president-romney-vs-obama,48,49,2,1,16637,ARG,2012-11-02,2012-11-04,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,48,47,3,2,16582,YouGov,2012-10-31,2012-11-03,Likely Voters,1040,Internet,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,47,42,,Not included in poll,16527,Des Moines Register/Selzer,2012-10-30,2012-11-02,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,49,45,6,Not included in poll,16456,Gravis Marketing,2012-11-01,2012-11-01,Likely Voters,594,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,46,44,10,Not included in poll,16494,Mellman (D-Americans United for Change),2012-10-30,2012-11-01,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-iowa-president-romney-vs-obama,48,49,1,2,16427,Rasmussen,2012-10-30,2012-10-30,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,49,47,,4,16394,We Ask America,2012-10-30,2012-10-30,Likely Voters,1174,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,50,45,4,Not included in poll,16353,PPP (D-Health Care for America Now),2012-10-29,2012-10-30,Likely Voters,676,Automated Phone,Sponsor,Dem
+2012-iowa-president-romney-vs-obama,50,44,4,2,16396,NBC/WSJ/Marist,2012-10-28,2012-10-29,Likely Voters,1142,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,44,45,6,4,16414,U of Iowa,2012-10-18,2012-10-27,Likely Voters,320,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,50,46,4,Not included in poll,16180,Gravis Marketing,2012-10-24,2012-10-24,Likely Voters,517,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,49,47,4,Not included in poll,16158,PPP (D-Health Care for America Now),2012-10-23,2012-10-24,Likely Voters,690,Automated Phone,Sponsor,Dem
+2012-iowa-president-romney-vs-obama,48,48,2,1,16028,Rasmussen,2012-10-21,2012-10-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,49,48,3,Not included in poll,16010,PPP (D-Health Care for America Now),2012-10-18,2012-10-19,Likely Voters,660,Automated Phone,Sponsor,Dem
+2012-iowa-president-romney-vs-obama,48,49,4,Not included in poll,15963,PPP (D),2012-10-17,2012-10-19,Likely Voters,869,Automated Phone,Pollster,Dem
+2012-iowa-president-romney-vs-obama,51,43,4,2,15939,NBC/WSJ/Marist,2012-10-15,2012-10-17,Likely Voters,1137,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,49,46,4,1,15822,We Ask America,2012-10-15,2012-10-15,Likely Voters,1499,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,48,48,3,1,15783,ARG,2012-10-11,2012-10-14,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,50,46,3,1,15848,YouGov,2012-10-04,2012-10-11,Likely Voters,545,Internet,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,49,47,2,1,15582,Rasmussen,2012-10-07,2012-10-07,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,48,44,7,2,15422,We Ask America,2012-09-25,2012-09-27,Likely Voters,1273,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,51,44,5,Not included in poll,15338,PPP (D),2012-09-24,2012-09-26,Likely Voters,754,Automated Phone,Pollster,Dem
+2012-iowa-president-romney-vs-obama,49,45,2,4,15408,Des Moines Register/Selzer,2012-09-23,2012-09-26,Likely Voters,650,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,46,47,7,Not included in poll,15380,Voter/Consumer Research (R-The Iowa Republican),2012-09-23,2012-09-25,Registered Voters,500,Live Phone,Sponsor,Rep
+2012-iowa-president-romney-vs-obama,51,44,4,1,15274,ARG,2012-09-20,2012-09-23,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,44,47,5,3,15176,Rasmussen,2012-09-19,2012-09-19,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,50,42,7,1,15190,NBC/WSJ/Marist,2012-09-16,2012-09-18,Likely Voters,898,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,48,43,5,3,15156,YouGov,2012-09-07,2012-09-14,Likely Voters,700,Internet,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,47,45,8,Not included in poll,14816,PPP (D),2012-08-23,2012-08-26,Likely Voters,1244,Automated Phone,Pollster,Dem
+2012-iowa-president-romney-vs-obama,44,46,6,5,14616,Rasmussen,2012-08-08,2012-08-08,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,48,43,9,Not included in poll,14368,PPP (D),2012-07-12,2012-07-15,Likely Voters,1131,Automated Phone,Pollster,Dem
+2012-iowa-president-romney-vs-obama,45,44,11,Not included in poll,14130,We Ask America,2012-06-18,2012-06-18,Likely Voters,1086,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,46,47,4,3,14074,Rasmussen,2012-06-11,2012-06-11,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,44,44,10,2,13959,NBC/Marist,2012-05-22,2012-05-24,Registered Voters,1106,Live Phone,Nonpartisan,None
+2012-iowa-president-romney-vs-obama,51,41,8,Not included in poll,13712,PPP (D),2012-05-03,2012-05-06,Likely Voters,1181,Automated Phone,Pollster,Dem
+2012-iowa-president-romney-vs-obama,44,46,4,6,13140,Des Moines Register/Selzer,2012-02-12,2012-02-15,Likely Voters,611,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,49,,Not included in poll,16659,Gravis Marketing,2012-11-04,2012-11-05,Likely Voters,1060,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,48,5,Not included in poll,16671,JZ Analytics/Newsmax,2012-11-03,2012-11-05,Likely Voters,876,Internet,Sponsor,Rep
+2012-florida-president-romney-vs-obama,47,48,4,1,16666,Ipsos/Reuters (Web),2012-11-03,2012-11-05,Likely Voters,769,Internet,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,52,1,Not included in poll,16631,InsiderAdvantage/Florida Times-Union,2012-11-04,2012-11-04,Likely Voters,437,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,50,49,1,Not included in poll,16612,PPP (D),2012-11-03,2012-11-04,Likely Voters,955,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,49,49,,2,16661,Angus-Reid,2012-11-01,2012-11-03,Likely Voters,502,Internet,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,48,2,3,16575,YouGov,2012-10-31,2012-11-03,Likely Voters,1621,Internet,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,46,4,2,16479,Ipsos/Reuters (Web),2012-10-31,2012-11-02,Likely Voters,985,Internet,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,45,3,Not included in poll,16644,Mellman (D-Americans United for Change),2012-10-30,2012-11-02,Likely Voters,800,Live Phone,Sponsor,Dem
+2012-florida-president-romney-vs-obama,49,47,2,1,16488,NBC/WSJ/Marist,2012-10-31,2012-11-01,Likely Voters,1545,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,51,,Not included in poll,16487,Mason-Dixon,2012-10-30,2012-11-01,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,50,,1,16393,We Ask America,2012-10-30,2012-10-30,Likely Voters,1146,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,50,4,Not included in poll,16378,Gravis Marketing,2012-10-30,2012-10-30,Likely Voters,549,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,47,5,Not included in poll,16401,JZ Analytics/Newsmax,2012-10-28,2012-10-30,Likely Voters,825,Internet,Sponsor,Rep
+2012-florida-president-romney-vs-obama,48,50,1,1,16601,Pulse Opinion Research/Let Freedom Ring (R),2012-10-29,2012-10-29,Likely Voters,1000,Automated Phone,Sponsor,Rep
+2012-florida-president-romney-vs-obama,48,47,5,1,16433,Grove Insight (D-Project New America/USAction),2012-10-28,2012-10-29,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-florida-president-romney-vs-obama,49,48,3,Not included in poll,16256,PPP (D),2012-10-26,2012-10-28,Likely Voters,687,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,49,50,1,Not included in poll,16281,CNN,2012-10-25,2012-10-28,Likely Voters,770,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,47,3,1,16350,Quinnipiac/NYT/CBS,2012-10-23,2012-10-28,Likely Voters,1073,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,47,5,1,16309,SurveyUSA,2012-10-25,2012-10-27,Likely Voters,595,IVR/Online,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,47,4,Not included in poll,16418,Mellman (D-Americans United for Change),2012-10-24,2012-10-27,Likely Voters,800,Live Phone,Sponsor,Dem
+2012-florida-president-romney-vs-obama,48,50,1,Not included in poll,16197,Rasmussen,2012-10-25,2012-10-25,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,50,2,Not included in poll,16138,Gravis Marketing,2012-10-24,2012-10-24,Likely Voters,1182,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,45,7,2,16157,Grove Insight (D-Project New America/USAction),2012-10-23,2012-10-24,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-florida-president-romney-vs-obama,46,51,2,1,16181,Sunshine State News/VSS,2012-10-22,2012-10-24,Likely Voters,1001,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,47,,Not included in poll,16249,Pharos Research Group,2012-10-19,2012-10-21,Likely Voters,759,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,47,6,Not included in poll,16075,Mellman (D-Americans United for Change),2012-10-18,2012-10-21,Likely Voters,800,Live Phone,Sponsor,Dem
+2012-florida-president-romney-vs-obama,46,51,,2,16041,Angus-Reid,2012-10-18,2012-10-20,Likely Voters,482,Internet,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,51,2,1,15971,Rasmussen,2012-10-18,2012-10-18,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,48,4,Not included in poll,15997,PPP (D)/WPTV/FL Democracy/TCPalm,2012-10-17,2012-10-18,Likely Voters,800,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,48,45,6,1,15995,Grove Insight (D-Project New America),2012-10-17,2012-10-18,Likely Voters,600,Live Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,47,46,5,2,15973,SurveyUSA,2012-10-17,2012-10-18,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,48,6,1,15969,FOX,2012-10-17,2012-10-18,Likely Voters,1215,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,49,2,1,15966,CNN,2012-10-17,2012-10-18,Likely Voters,681,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,42,10,Not included in poll,15974,JZ Analytics/Newsmax,2012-10-16,2012-10-18,Likely Voters,842,Internet,Sponsor,Rep
+2012-florida-president-romney-vs-obama,48,49,,3,15804,Gravis Marketing,2012-10-13,2012-10-14,Likely Voters,617,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,49,3,Not included in poll,15774,PPP (D),2012-10-12,2012-10-14,Likely Voters,791,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,47,51,2,Not included in poll,15731,Rasmussen,2012-10-11,2012-10-11,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,49,4,1,15732,ARG,2012-10-08,2012-10-11,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,47,2,3,15844,YouGov,2012-10-04,2012-10-11,Likely Voters,1244,Internet,Nonpartisan,None
+2012-florida-president-romney-vs-obama,44,51,4,1,15720,Mason-Dixon,2012-10-08,2012-10-10,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,47,4,1,15677,NBC/WSJ/Marist,2012-10-07,2012-10-09,Likely Voters,988,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,45,4,2,15664,UNF,2012-10-01,2012-10-09,Likely Voters,653,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,49,3,0,15555,Rasmussen,2012-10-04,2012-10-04,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,49,4,1,15539,We Ask America,2012-10-04,2012-10-04,Likely Voters,1200,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,46,6,1,15481,NBC/WSJ/Marist,2012-09-30,2012-10-01,Likely Voters,890,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,48,3,Not included in poll,15426,Gravis Marketing,2012-09-29,2012-09-30,Likely Voters,914,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,43,8,3,15479,Suffolk,2012-09-27,2012-09-30,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,46,4,1,15324,InsiderAdvantage/Florida Times-Union,2012-09-24,2012-09-24,Likely Voters,540,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,53,44,3,1,15313,Quinnipiac/NYT/CBS,2012-09-18,2012-09-24,Likely Voters,1196,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,50,46,4,Not included in poll,15253,PPP (D),2012-09-20,2012-09-23,Likely Voters,861,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,51,47,1,2,15289,Washington Post,2012-09-19,2012-09-23,Likely Voters,769,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,50,45,4,1,15269,ARG,2012-09-20,2012-09-22,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,47,4,1,15286,Mason-Dixon,2012-09-17,2012-09-19,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,48,5,Not included in poll,15199,Purple Strategies,2012-09-15,2012-09-19,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,46,4,Not included in poll,15158,We Ask America,2012-09-18,2012-09-18,Likely Voters,1230,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,44,5,2,15146,FOX,2012-09-16,2012-09-18,Likely Voters,829,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,48,5,Not included in poll,15096,Gravis Marketing,2012-09-15,2012-09-16,Likely Voters,1728,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,47,2,3,15163,YouGov,2012-09-07,2012-09-14,Likely Voters,1415,Internet,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,46,3,3,15008,Rasmussen,2012-09-12,2012-09-12,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,44,48,9,Not included in poll,15173,Caddell/McLaughlin (R)/Secure America Now,2012-09-11,2012-09-12,Likely Voters,600,Live Phone,Pollster,Rep
+2012-florida-president-romney-vs-obama,49,44,5,1,15028,NBC/WSJ/Marist,2012-09-09,2012-09-11,Likely Voters,980,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,42,42,,Not included in poll,15038,Consensus Communications (R),2012-09-08,2012-09-11,Likely Voters,606,Live Phone,Pollster,Rep
+2012-florida-president-romney-vs-obama,47,50,3,Not included in poll,15012,McLaughlin (R)/AIF,2012-09-09,2012-09-10,Likely Voters,600,Live Phone,Pollster,Rep
+2012-florida-president-romney-vs-obama,48,44,5,2,14979,SurveyUSA,2012-09-07,2012-09-09,Likely Voters,596,IVR/Online,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,48,5,Not included in poll,14879,Gravis Marketing,2012-09-02,2012-09-02,Likely Voters,1288,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,47,4,Not included in poll,14868,PPP (D),2012-08-31,2012-09-02,Likely Voters,1548,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,50,46,3,Not included in poll,14800,CNN/Time/ORC,2012-08-22,2012-08-26,Likely Voters,776,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,46,,1,14739,Quinnipiac/NYT/CBS,2012-08-15,2012-08-21,Likely Voters,1241,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,48,,Not included in poll,14737,Gravis Marketing,2012-08-20,2012-08-20,Likely Voters,728,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,40,54,5,3,14708,FMWB (D),2012-08-17,2012-08-17,Likely Voters,1503,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,43,45,8,3,14675,Rasmussen,2012-08-15,2012-08-15,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,48,5,Not included in poll,14667,Purple Strategies,2012-08-13,2012-08-14,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,51,45,4,1,14519,Quinnipiac/NYT/CBS,2012-07-24,2012-07-30,Likely Voters,1177,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,47,5,Not included in poll,14511,PPP (D),2012-07-26,2012-07-29,Likely Voters,871,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,48,43,5,4,14406,SurveyUSA,2012-07-17,2012-07-19,Likely Voters,647,IVR/Online,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,48,7,Not included in poll,14357,Purple Strategies,2012-07-09,2012-07-13,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,45,7,2,14349,Mason-Dixon,2012-07-09,2012-07-11,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,46,4,5,14288,Rasmussen,2012-07-09,2012-07-09,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,44,,Not included in poll,14321,Garin-Hart-Yang (D-Priorities USA),2012-06-25,2012-07-03,Likely Voters,803,Live Phone,Sponsor,Dem
+2012-florida-president-romney-vs-obama,46,45,9,Not included in poll,14241,We Ask America,2012-07-01,2012-07-02,Likely Voters,1127,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,41,12,2,14187,Quinnipiac,2012-06-19,2012-06-25,Registered Voters,1200,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,42,9,2,14141,Quinnipiac,2012-06-12,2012-06-18,Registered Voters,1697,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,49,6,Not included in poll,14037,Purple Strategies,2012-05-31,2012-06-05,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,50,46,4,Not included in poll,14009,PPP (D),2012-05-31,2012-06-03,Likely Voters,642,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,41,47,10,2,13872,Quinnipiac,2012-05-15,2012-05-21,Registered Voters,1722,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,48,44,7,1,13891,NBC/Marist,2012-05-17,2012-05-20,Registered Voters,1078,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,45,8,2,13725,Suffolk,2012-05-06,2012-05-08,Registered Voters,600,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,43,44,11,3,13677,Quinnipiac,2012-04-25,2012-05-01,Registered Voters,1169,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,46,3,6,13635,Rasmussen,2012-04-25,2012-04-25,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,47,7,Not included in poll,13618,Purple Strategies,2012-04-19,2012-04-23,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,43,11,2,13570,FOX,2012-04-15,2012-04-17,Registered Voters,757,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,50,45,5,Not included in poll,13541,PPP (D),2012-04-12,2012-04-15,Likely Voters,700,Automated Phone,Pollster,Dem
+2012-florida-president-romney-vs-obama,49,42,5,2,13368,Quinnipiac,2012-03-20,2012-03-26,Registered Voters,1228,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,43,4,7,13220,Rasmussen,2012-03-13,2012-03-13,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,47,44,3,5,12832,Rasmussen,2012-02-09,2012-02-09,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,49,41,10,Not included in poll,12652,Marist College,2012-01-25,2012-01-27,Likely Voters,1379,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,44,48,,Not included in poll,12651,Mason-Dixon,2012-01-24,2012-01-26,Likely Voters,800,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,42,47,10,1,12640,Suffolk,2012-01-22,2012-01-24,Registered Voters,600,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,45,45,6,2,12639,Quinnipiac,2012-01-19,2012-01-23,Registered Voters,1518,Live Phone,Nonpartisan,None
+2012-florida-president-romney-vs-obama,46,45,9,Not included in poll,12580,Tarrance (R-Walker),2012-01-17,2012-01-18,Likely Voters,607,Live Phone,Pollster,Rep
+2012-florida-president-romney-vs-obama,43,46,6,2,12445,Quinnipiac,2012-01-04,2012-01-08,Registered Voters,1412,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,48,47,1,3,16667,Ipsos/Reuters (Web),2012-11-03,2012-11-05,Likely Voters,774,Internet,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,52,46,3,Not included in poll,16643,PPP (D),2012-11-03,2012-11-04,Likely Voters,1096,Automated Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,50,46,2,2,16668,OnSight/Keating (D),2012-11-02,2012-11-04,Likely Voters,603,Live Phone,Sponsor,Dem
+2012-colorado-president-romney-vs-obama,45,44,9,3,16626,Lake Research (D),2012-10-31,2012-11-04,Likely Voters,400,Live Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,48,47,2,3,16585,YouGov,2012-10-31,2012-11-03,Likely Voters,752,Internet,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,46,46,4,4,16481,Ipsos/Reuters (Web),2012-10-31,2012-11-02,Likely Voters,1052,Internet,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,50,46,4,Not included in poll,16462,PPP (D-LCV),2012-10-31,2012-11-01,Likely Voters,825,Automated Phone,Sponsor,Dem
+2012-colorado-president-romney-vs-obama,47,45,,Not included in poll,16465,Denver Post/SurveyUSA,2012-10-28,2012-10-31,Likely Voters,695,Mixed,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,50,48,2,Not included in poll,16434,CNN,2012-10-26,2012-10-31,Likely Voters,764,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,50,47,,3,16392,We Ask America,2012-10-30,2012-10-30,Likely Voters,1246,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,47,50,1,2,16443,Rasmussen,2012-10-29,2012-10-29,Likely Voters,750,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,48,45,6,1,16374,Grove Insight (D-Project New America/USAction),2012-10-28,2012-10-29,Likely Voters,500,Live Phone,Sponsor,Dem
+2012-colorado-president-romney-vs-obama,47,48,4,1,16277,ARG,2012-10-25,2012-10-28,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,47,46,5,1,16206,Purple Strategies,2012-10-23,2012-10-25,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,51,47,2,Not included in poll,16172,PPP (D),2012-10-23,2012-10-25,Likely Voters,904,Automated Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,48,45,,Not included in poll,16176,OnSight/Keating (D),2012-10-23,2012-10-24,Likely Voters,502,Live Phone,Sponsor,Dem
+2012-colorado-president-romney-vs-obama,48,48,2,2,16175,NBC/WSJ/Marist,2012-10-23,2012-10-24,Likely Voters,1128,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,46,43,8,3,16156,Grove Insight (D-Project New America/USAction),2012-10-23,2012-10-24,Likely Voters,500,Live Phone,Sponsor,Dem
+2012-colorado-president-romney-vs-obama,46,50,1,2,16022,Rasmussen,2012-10-21,2012-10-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,50,47,3,Not included in poll,15931,PPP (D),2012-10-16,2012-10-18,Likely Voters,1000,Automated Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,47,44,7,2,15897,Grove Insight (D-Project New America),2012-10-15,2012-10-16,Likely Voters,500,Live Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,47,48,4,1,15821,We Ask America,2012-10-15,2012-10-15,Likely Voters,1206,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,48,46,6,Not included in poll,15777,Gravis Marketing,2012-10-05,2012-10-11,Likely Voters,2089,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,48,45,5,2,15842,YouGov,2012-10-04,2012-10-11,Likely Voters,527,Internet,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,45,46,5,3,15754,Denver Post/SurveyUSA,2012-10-09,2012-10-10,Likely Voters,614,IVR/Online,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,47,48,2,2,15680,Quinnipiac/NYT/CBS,2012-10-04,2012-10-09,Likely Voters,1254,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,46,50,3,1,15628,ARG,2012-10-05,2012-10-08,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,49,48,2,1,15583,Rasmussen,2012-10-07,2012-10-07,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,47,43,5,4,15567,Selzer/University of Denver,2012-10-04,2012-10-05,Likely Voters,604,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,46,49,5,Not included in poll,15569,Gravis Marketing,2012-10-03,2012-10-04,Likely Voters,1285,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,46,50,4,Not included in poll,15545,McLaughlin (R-American Conservative Union),2012-09-30,2012-10-02,Likely Voters,300,Live Phone,Sponsor,Rep
+2012-colorado-president-romney-vs-obama,49,46,4,1,15444,We Ask America,2012-09-25,2012-09-27,Likely Voters,1273,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,51,45,4,Not included in poll,15254,PPP (D),2012-09-20,2012-09-23,Likely Voters,940,Automated Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,50,46,4,Not included in poll,15345,Gravis Marketing,2012-09-21,2012-09-22,Likely Voters,765,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,48,45,7,Not included in poll,15197,Purple Strategies,2012-09-15,2012-09-19,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,50,45,4,1,15196,NBC/WSJ/Marist,2012-09-16,2012-09-18,Likely Voters,971,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,45,47,6,2,15104,Rasmussen,2012-09-17,2012-09-17,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,48,47,3,2,15120,Quinnipiac/NYT/CBS,2012-09-11,2012-09-17,Likely Voters,1497,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,50,45,2,3,15151,YouGov,2012-09-07,2012-09-14,Likely Voters,707,Internet,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,49,47,3,1,15010,ARG,2012-09-10,2012-09-12,Likely Voters,600,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,45,44,7,4,15050,Denver Post/SurveyUSA,2012-09-09,2012-09-12,Likely Voters,615,IVR/Online,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,49,44,,Not included in poll,15011,OnSight/Project New America/Keating (D),2012-09-10,2012-09-11,Likely Voters,503,Live Phone,Sponsor,Dem
+2012-colorado-president-romney-vs-obama,49,46,5,Not included in poll,14870,PPP (D),2012-08-31,2012-09-02,Likely Voters,1001,Automated Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,48,44,5,2,14767,OnSight/Keating (D),2012-08-21,2012-08-22,Likely Voters,500,Live Phone,Sponsor,Dem
+2012-colorado-president-romney-vs-obama,49,46,5,Not included in poll,14665,Purple Strategies,2012-08-13,2012-08-14,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,45,46,,Not included in poll,14784,Gravis Marketing,2012-08-09,2012-08-09,Likely Voters,607,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,47,47,2,3,14579,Rasmussen,2012-08-06,2012-08-06,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,45,50,4,1,14584,Quinnipiac/NYT/CBS,2012-07-31,2012-08-06,Likely Voters,1463,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,49,43,7,Not included in poll,14583,PPP (D),2012-08-02,2012-08-05,Likely Voters,799,Automated Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,45,44,11,Not included in poll,14355,Purple Strategies,2012-07-09,2012-07-13,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,49,42,,Not included in poll,14320,Garin-Hart-Yang (D-Priorities USA),2012-06-25,2012-07-03,Likely Voters,600,Live Phone,Sponsor,Dem
+2012-colorado-president-romney-vs-obama,47,43,10,Not included in poll,14174,We Ask America,2012-06-25,2012-06-25,Likely Voters,1083,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,49,42,8,Not included in poll,14119,PPP (D),2012-06-14,2012-06-17,Likely Voters,799,Automated Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,45,45,5,6,14026,Rasmussen,2012-06-06,2012-06-06,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,48,46,5,Not included in poll,14034,Purple Strategies,2012-05-31,2012-06-05,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,46,45,8,1,13960,NBC/Marist,2012-05-22,2012-05-24,Registered Voters,1030,Live Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,48,44,,Not included in poll,13928,Project New America,2012-05-21,2012-05-24,Likely Voters,601,Automated Phone,Pollster,Dem
+2012-colorado-president-romney-vs-obama,47,47,6,Not included in poll,13616,Purple Strategies,2012-04-19,2012-04-23,Likely Voters,600,Automated Phone,Nonpartisan,None
+2012-colorado-president-romney-vs-obama,53,40,7,Not included in poll,13490,PPP (D),2012-04-05,2012-04-07,Registered Voters,542,Automated Phone,Pollster,Dem
+2012-arizona-president-romney-vs-obama,46,53,1,Not included in poll,16560,PPP (D),2012-11-02,2012-11-03,Likely Voters,1080,Automated Phone,Pollster,Dem
+2012-arizona-president-romney-vs-obama,44,52,3,2,16586,YouGov,2012-10-31,2012-11-03,Likely Voters,702,Internet,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,44,52,2,2,16184,Rasmussen/CBS 5,2012-10-21,2012-10-21,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,43,52,3,2,15861,YouGov,2012-10-04,2012-10-11,Likely Voters,469,Internet,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,42,40,13,5,15765,Behavior Research Center,2012-10-04,2012-10-10,Registered Voters,523,Live Phone,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,44,53,3,Not included in poll,15503,PPP (D),2012-10-01,2012-10-03,Likely Voters,595,Automated Phone,Pollster,Dem
+2012-arizona-president-romney-vs-obama,42,46,9,4,15409,Moore Information (R-HighGround),2012-09-25,2012-09-26,Likely Voters,500,Live Phone,Sponsor,Rep
+2012-arizona-president-romney-vs-obama,42,52,2,4,15328,Rasmussen,2012-09-25,2012-09-25,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,45,48,7,Not included in poll,15204,Purple Strategies,2012-09-15,2012-09-19,Likely Voters,600,IVR/Online,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,41,51,4,4,15230,YouGov,2012-09-07,2012-09-14,Likely Voters,628,Internet,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,44,53,4,Not included in poll,14970,PPP (D-League of Conservation Voters),2012-09-07,2012-09-09,Likely Voters,993,Automated Phone,Sponsor,Dem
+2012-arizona-president-romney-vs-obama,41,52,7,Not included in poll,14523,PPP (D-League of Conservation Voters),2012-07-23,2012-07-25,Likely Voters,833,Automated Phone,Sponsor,Dem
+2012-arizona-president-romney-vs-obama,41,54,2,3,14196,Rasmussen,2012-06-26,2012-06-26,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,46,49,5,Not included in poll,14127,PPP (D),2012-06-04,2012-06-05,Likely Voters,791,Automated Phone,Pollster,Dem
+2012-arizona-president-romney-vs-obama,43,50,8,Not included in poll,13883,PPP (D),2012-05-17,2012-05-20,Registered Voters,500,Automated Phone,Pollster,Dem
+2012-arizona-president-romney-vs-obama,43,52,5,Not included in poll,13685,Magellan (R),2012-04-30,2012-05-02,Likely Voters,909,Automated Phone,Pollster,Rep
+2012-arizona-president-romney-vs-obama,40,42,18,Not included in poll,13605,ASU - Merrill/Morrison Institute,2012-04-10,2012-04-20,Registered Voters,488,Live Phone,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,42,40,18,Not included in poll,13613,Behavior Research Center,2012-04-09,2012-04-17,Registered Voters,511,Live Phone,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,40,51,2,7,13221,Rasmussen,2012-03-13,2012-03-13,Likely Voters,500,Automated Phone,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,40,45,15,Not included in poll,12990,NBC/Marist,2012-02-19,2012-02-20,Registered Voters,1265,Live Phone,Nonpartisan,None
+2012-arizona-president-romney-vs-obama,47,47,6,Not included in poll,12966,PPP (D),2012-02-17,2012-02-19,Registered Voters,743,Automated Phone,Pollster,Dem
+2012-arizona-president-romney-vs-obama,37,43,20,Not included in poll,12520,Behavior Research Center,2012-01-05,2012-01-09,Registered Voters,553,Live Phone,Nonpartisan,None
