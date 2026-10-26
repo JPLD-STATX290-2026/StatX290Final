@@ -1,0 +1,217 @@
+---
+title: "Accuracy of Polled Data In Predicting Presidential Results"
+author:
+  - "Patrick Brinkworth (a1966975)"
+  - "Daniel O'Loughlin (a1968026)"
+  - "Lachlan Ellis (a1971583)"
+  - "Jasper Hill (a1973576)"
+date: today
+abstract: |
+  Executive summary. 4–6 sentences, written for a non-specialist. State the
+  research question, the data, the method, and the key finding, translating any
+  statistics into plain language. Write this last, once the report is complete.
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    documentclass: scrartcl
+    fig-pos: "H"
+bibliography: report-references.bib
+execute:
+  echo: false      # keep code out of the body; it is shown in the appendix
+  warning: false
+  message: false
+editor: source
+---
+
+**Code and data:** all analysis for this report is reproducible from the
+repository at <https://github.com/USER/REPO>.  <!-- See rubric: Code repository -->
+
+
+Questions:
+Main Question:
+How accurately can we predict the accuracy of a poll based on the sampled population?
+(We'd want to fit a binomial to find accuracy of actual predictions win/loss. Additionally,
+do lm to find actual percentages. Can compare absolute accuracy of binary outcome versus 
+percentage accuracy, both are important. Do this for both 2012 and 2016 data.)
+
+Sub Questions:
+How do different methods and factors in a polled population affect the accuracy of polls?
+(This is analysis of different models, ANOVA, possibly trying forward/backward/both stepwise,
+do the stuff from this week to check for overfitting)
+
+How much do unexpected results affect the accuracy of prediction?
+(Out of the incorrect predictions, were these outliers/unexpected results? (Landslide win
+when predicting 50/50ish). Check this by looking at residual vs fitted plots/similar.
+Look at cooks distance for polls as well? After making a model, check if removing these
+improves prediction. DO NOT PHRASE THIS AS IMPROVING THE MODEL. THIS IS NOT IMPROVING THE MODEL.
+WE WOULD DO THIS TO SEE HOW MUCH OUTLIERS AFFECTED OUR MODELS AFTER THE FACT. This can 
+help future models, outliers being significant here means outliers may be significant in
+other polls.)
+
+
+
+# Introduction {#sec-intro}
+
+<!-- See rubric: Introduction - state and motivate the research question. -->
+
+We 
+
+State the research question clearly and motivate why it matters, ideally with
+reference to existing literature [@wickham2023]. For example: *we ask whether a
+vehicle's weight is associated with its fuel economy, and how strong that
+association is after accounting for engine power.*
+
+# Method {#sec-method}
+
+<!-- See rubric: Method - describe the data and the statistical methods. -->
+
+## Data
+- Patrick dibs
+
+Describe the data accurately: its source, the unit of observation, the variables
+used, and any cleaning or exclusions. The example uses the built-in `mtcars`
+data [@rcore], covering `r n_obs` vehicles. Summarise the key variables as in
+@tbl-descriptives.
+
+```{r}
+#| label: tbl-descriptives
+#| tbl-cap: "Summary of the variables used in the analysis."
+data |>
+  summarise(
+    across(c(mpg, wt, hp),
+           list(mean = mean, sd = sd),
+           .names = "{.col}_{.fn}")
+  ) |>
+  pivot_longer(everything(),
+               names_to = c("Variable", ".value"),
+               names_sep = "_") |>
+  kable(digits = 2, col.names = c("Variable", "Mean", "SD"))
+```
+
+## Statistical methods
+
+Describe and justify the statistical methods in the context of the question
+here, a multiple linear regression of fuel economy on weight and power. State
+the model and the assumptions you will check (linearity, constant variance,
+normal residuals); the checks themselves go in @sec-appendix.
+
+# Results {#sec-results}
+
+<!-- See rubric: Results - describe analysis w.r.t. the question; visualise; check assumptions. -->
+
+@fig-relationship shows the relationship between weight and fuel economy, with a
+fitted regression line. The estimated model is reported in @tbl-model: each
+additional 1000 lbs is associated with a change of `r round(wt_beta, 1)` mpg,
+and the model explains `r round(100 * r2, 1)`% of the variation in fuel economy.
+Model assumptions are checked in @sec-appendix.
+
+```{r}
+#| label: fig-relationship
+#| fig-cap: "Fuel economy against vehicle weight, with a fitted linear regression line and 95% confidence band."
+#| fig-width: 5
+#| fig-height: 3.2
+ggplot(data, aes(wt, mpg)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm", formula = y ~ x) +
+  labs(x = "Weight (1000 lbs)", y = "Fuel economy (mpg)") +
+  theme_minimal()
+```
+
+```{r}
+#| label: tbl-model
+#| tbl-cap: "Linear regression of fuel economy (mpg) on weight and horsepower."
+# modelsummary's default `tinytable` backend renders cleanly to PDF.
+modelsummary(
+  list("Fuel economy (mpg)" = model),
+  coef_map = c("wt" = "Weight (1000 lbs)",
+               "hp" = "Horsepower",
+               "(Intercept)" = "Intercept"),
+  gof_map = c("nobs", "r.squared", "adj.r.squared"),
+  stars = TRUE
+)
+```
+
+
+# Discussion {#sec-discussion}
+
+<!-- See rubric: Discussion - connect to the question and context; examine limitations. -->
+
+Interpret the result in relation to the research question and the wider context,
+then examine the limitations honestly. Keep claims within what the data support:
+these are observational 1974 model-year cars (`r n_obs` of them), so the
+association is not causal and may not generalise to modern vehicles.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+```{=latex}
+\appendix
+```
+
+# Statistical appendix {#sec-appendix}
+
+<!-- See rubric: Statistical appendix - fully reproducible, annotated analysis. -->
+
+This appendix documents the analysis so the results above are fully reproducible.
+The annotated code reproduces the model and its assumption checks; the complete
+project (data, scripts, and commit history) is in the repository linked at the
+top.
+
+## Model {#sec-app-model}
+
+@tbl-model-detail reports the full fitted model with 95% confidence intervals.
+
+```{r}
+#| label: tbl-model-detail
+#| tbl-cap: "Full regression results, with 95% confidence intervals."
+#| echo: true
+# Fit the model and report it as a formatted table (not raw console output)
+model <- lm(mpg ~ wt + hp, data = mtcars)
+
+modelsummary(
+  list("Fuel economy (mpg)" = model),
+  statistic = "conf.int",                       # 95% CIs beneath each estimate
+  coef_map  = c("wt" = "Weight (1000 lbs)",
+                "hp" = "Horsepower",
+                "(Intercept)" = "Intercept"),
+  gof_map   = c("nobs", "r.squared", "adj.r.squared")
+)
+```
+
+## Assumption checks {#sec-app-checks}
+
+@fig-diagnostics shows the residual diagnostics used to check the linear-model
+assumptions of constant variance and approximately normal residuals.
+
+```{r}
+#| label: fig-diagnostics
+#| echo: true
+#| fig-cap: "Residual diagnostics: residuals vs fitted values (left) and a normal Q-Q plot (right)."
+#| fig-width: 7
+#| fig-height: 3.2
+par(mfrow = c(1, 2))
+plot(model, which = 1)   # residuals vs fitted: linearity and equal variance
+plot(model, which = 2)   # normal Q-Q: normality of residuals
+```
+
+## Computational environment {#sec-app-env}
+
+The complete software environment is captured in `renv.lock` in the repository,
+so the analysis can be restored exactly with `renv::restore()`. The core package
+versions are listed in @tbl-environment.
+
+```{r}
+#| label: tbl-environment
+#| tbl-cap: "Core software versions used to produce this report."
+#| echo: true
+pkgs <- c("tidyverse", "modelsummary", "gt")
+tibble::tibble(
+  Software = c("R", pkgs),
+  Version  = c(paste(R.version$major, R.version$minor, sep = "."),
+               vapply(pkgs, \(p) as.character(packageVersion(p)), character(1)))
+) |>
+  kable()
+```
