@@ -36,13 +36,26 @@ clean_election_results <- clean_election_results %>%
     candidatevotes = sum(candidatevotes, na.rm = TRUE),
     .groups = "drop"
   )
-# New derived variable for percentage of total votes
+
+# New derived variables for share of total votes
+# vote_election: proportion (0-1), not rounded so no accuracy is lost
+# vote_percent:  percentage (0-100), rounded to 2 decimal places
 clean_election_results <- clean_election_results %>% 
   mutate(
-    vote_election = round((candidatevotes / totalvotes), 2)
+    vote_election = candidatevotes / totalvotes,
+    vote_percent  = round(vote_election * 100, 2)
   )
 
 write.csv(clean_election_results, "Data/Clean/1976-2024-president_clean.csv", row.names = FALSE)
+
+# Actual Democrat and Republican result (percent) and margin for each state and year.
+# Used to measure how far a poll's margin was from the real result.
+actual_results <- clean_election_results %>%
+  filter(party_simplified %in% c("DEMOCRAT", "REPUBLICAN")) %>%
+  select(year, state, party_simplified, vote_percent) %>%
+  pivot_wider(names_from = party_simplified, values_from = vote_percent) %>%
+  rename(act_dem = DEMOCRAT, act_rep = REPUBLICAN) %>%
+  mutate(act_margin = act_dem - act_rep)
 
 # 2012 Poll Clean ---------------------------------------------------------
 
@@ -65,14 +78,19 @@ data_clean_2012_poll <- data_2012_poll %>%
     days_to_election = as.integer(election_day["2012"] - end_date),
     Undecided = replace_na(Undecided, 0),
     vote_poll = (Obama/(100-Undecided)),
+    dem = Obama,
+    rep = Romney,
+    # A sample size of -1 is not a real value, so treat it as missing
+    sample_size = replace(sample_size, sample_size <= 0, NA),
     year = str_extract(poll_info, "^\\d{4}"),
     state = str_extract(poll_info, "(?<=^\\d{4}-).*?(?=-president)")
   )
 
+# Make state names match the election results file.
 data_clean_2012_poll <- data_clean_2012_poll %>%
   mutate(
     state = state %>%
-      str_replace_all(regex("washington-?d?-?c?", ignore_case = TRUE), "WASHINGTON") %>%
+      str_replace(regex("^washington-d-?c$", ignore_case = TRUE), "DISTRICT OF COLUMBIA") %>%
       str_replace_all("\\.", "") %>%
       str_replace_all("-", " ") %>%
       str_to_upper()
@@ -82,7 +100,7 @@ data_clean_2012_poll <- data_clean_2012_poll %>%
 # so the column can be treated as numeric
 data_clean_2012_poll <- data_clean_2012_poll %>%
   mutate(
-    Other = na_if(Other, "Not included in poll"),
+    Other = na_if(Other, "Not included in poll")
   )
 
 # Convert the Other column from character to integer
@@ -101,6 +119,7 @@ data_clean_2012_poll <- data_clean_2012_poll %>%
     partisan_affiliation = factor(partisan_affiliation)
   )
 
+# Drop columns no longer needed (dem and rep are kept)
 data_clean_2012_poll <- data_clean_2012_poll %>% 
   select(-poll_info, -Obama, -Romney, -Undecided, -Other, -poll_id, -start_date, -end_date)
 
@@ -108,14 +127,14 @@ data_clean_2012_poll <- data_clean_2012_poll %>%
 # row.names = FALSE prevents R from adding row numbers as an extra column
 write.csv(
   data_clean_2012_poll,
-  "data/clean/state_polls_2012_clean.csv",
+  "Data/Clean/state_polls_2012_clean.csv",
   row.names = FALSE
 )
 
 # 2016 Poll Clean ---------------------------------------------------------
 
 # Loading in the raw 2016 state polling data
-data_2016_poll <- read_csv("data/raw/state_polls_2016.csv")
+data_2016_poll <- read_csv("Data/Raw/state_polls_2016.csv")
 
 # Create a cleaned version of this raw data which includes 'days to election'
 # as a new variable which will be used for exploratory analysis later
@@ -126,6 +145,9 @@ data_clean_2016_poll <- data_2016_poll %>%
     days_to_election = as.integer(election_day["2016"] - end_date),
     Undecided = replace_na(Undecided, 0),
     vote_poll = (Clinton/(100-Undecided)),
+    dem = Clinton,
+    rep = Trump,
+    sample_size = replace(sample_size, sample_size <= 0, NA),
     year = str_extract(poll_info, "^\\d{4}"),
     state = str_extract(poll_info, "(?<=^\\d{4}-).*?(?=-president)")
   )
@@ -133,7 +155,7 @@ data_clean_2016_poll <- data_2016_poll %>%
 data_clean_2016_poll <- data_clean_2016_poll %>%
   mutate(
     state = state %>%
-      str_replace_all(regex("washington-?d?-?c?", ignore_case = TRUE), "WASHINGTON") %>%
+      str_replace(regex("^washington-d-?c$", ignore_case = TRUE), "DISTRICT OF COLUMBIA") %>%
       str_replace_all("\\.", "") %>%
       str_replace_all("-", " ") %>%
       str_to_upper()
@@ -158,6 +180,7 @@ data_clean_2016_poll <- data_clean_2016_poll %>% mutate(
   Other = as.integer(Other)
 ) 
 
+# Drop columns no longer needed (dem and rep are kept)
 data_clean_2016_poll <- data_clean_2016_poll %>% 
   select(-poll_info, -Trump, -Clinton, -Undecided, -Other, -poll_id, -start_date, -end_date, -Johnson, -McMullin)
 
@@ -170,19 +193,23 @@ data_2012_16_poll <- bind_rows(data_clean_2012_poll, data_clean_2016_poll)
 
 combined_data <- data_2012_16_poll %>%
   mutate(year = as.integer(year)) %>%
+  # Democrat share of the vote as a proportion (used for poll_election_dif)
   left_join(
-    clean_election_results %>% filter(party_simplified == "DEMOCRAT"),
+    clean_election_results %>%
+      filter(party_simplified == "DEMOCRAT") %>%
+      select(year, state, vote_election),
     by = c("year", "state")
-  )
-
-combined_data <- combined_data %>%
-  select(-party_simplified, -totalvotes, -candidatevotes)
+  ) %>%
+  # Actual Democrat %, Republican % and margin
+  left_join(actual_results, by = c("year", "state"))
 
 combined_data <- combined_data %>%
   mutate(
-    poll_election_dif = vote_election-vote_poll
+    poll_election_dif = vote_election - vote_poll
   )
 
+# The join must not add rows, and every poll must find its state result
+stopifnot(nrow(combined_data) == nrow(data_2012_16_poll))
+stopifnot(!anyNA(combined_data$act_margin))
+
 write.csv(combined_data, "Data/Clean/combined_data.csv", row.names = FALSE)
-
-
