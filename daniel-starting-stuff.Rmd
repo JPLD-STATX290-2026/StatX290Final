@@ -1,0 +1,215 @@
+---
+title: "Sub-question 1: Polling methods and poll accuracy"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(car)
+set.seed(67)
+```
+
+# Data
+
+The aim is to investigate whether polling methods and sampled-population factors are associated with poll accuracy.
+
+We define accuracy as the *absolute margin error*, abs_err = |(dem - rep - act_margin|. This is how many percentage points the poll’s Democrat-minus-Republican lead differed from the real result. We use the margin rather than each candidate’s percentage because polls include undecided respondents, so a candidate’s poll percentage is always below their vote share even for a perfect poll. The margin cancels this out. A second outcome, correct, records whether the poll’s leader was the actual winner. Exact ties are set to missing because they predict no winner. The remaining lines make sample size easier to read (n1000 is in thousands) and collapse the sampled population into “Likely” versus “Registered voters or adults”.
+
+```{r data}
+polls <- read.csv("Data/Clean/combined_data.csv") %>%
+  filter(sample_size > 0) %>% # drops the 2 polls whose invalid sample_size (-1) was set to NA
+  mutate(abs_err = abs((dem - rep) - act_margin), # how far off the poll was
+         correct = if_else(dem == rep, NA_integer_, # did the poll pick the right winner?
+                           as.integer(sign(dem - rep) == sign(act_margin))),
+         n1000   = sample_size / 1000,
+         pop2    = factor(if_else(sample_subpopulation == "Likely Voters", "Likely", "RV_Adults")),
+         partisanship = factor(partisanship))
+```
+
+Adults made up only 5 polls in 2012 and 7 in 2016, which is too few to estimate their effect separately, so they are combined with registered voters. Modes with fewer than 30 polls in a year are lumped into “Other”, and Live Phone is the reference level so every mode coefficient reads as “difference from a live phone poll”. The two elections are modelled separately because their mode categories differ.
+
+```{r split}
+prep <- function(yr) {
+  polls %>% filter(year == yr) %>%
+    mutate(mode3 = fct_lump_min(factor(mode), min = 30, other_level = "Other"),
+           mode3 = relevel(mode3, ref = "Live Phone")) %>%
+    droplevels()
+}
+d12 <- prep(2012)
+d16 <- prep(2016)
+table(d12$mode3); table(d16$mode3)
+```
+
+# Linear Regression: Size of the Polling Error
+
+We fit one model per election with these predictors: mode, sampled population (`pop2`), partisanship, sample size (per 1000) and days to election.
+
+## 2012
+
+The model asks which poll characteristics are associated with larger or smaller errors. The key result is that days to election is strongly significant (+0.0058 points per day, p < 0.001). So a poll taken 100 days earlier is about 0.6 points less accurate, on average. Internet polls were about 0.8 points more accurate than live phone polls (p = 0.0099). The overall R^2 is only 0.057, so these predictors explain about 5% of the variation in poll error.
+
+```{r lm2012}
+full12 <- lm(abs_err ~ mode3 + pop2 + partisanship + n1000 + days_to_election, data = d12)
+null12 <- lm(abs_err ~ 1, data = d12)
+
+summary(full12) # Overall fit, coefficient estimates and individual tests
+```
+
+The Type II ANOVA gives one test per predictor, adjusted for all the others. In 2012, mode and days to election are significant. Sampled population, partisanship and sample size are not. The VIF check looks possible multiicollinearity concerns, but all values are well under the rule-of-thumb threshold of 5 so this isn't an issue.
+
+```{r}
+Anova(full12, type = 2) # Tests the contribution of each predictor
+vif(full12) # Checks whether predictors are strongly correlated
+```
+
+We compare the full model with an intercept-only model to check whether the predictors improve the fit overall. The F-test is highly significant (p = 8.85e-11), so the predictors collectively matter. With R^2 of about 5%, though, that effect is small. 
+
+```{r nested12}
+anova(null12, full12)
+```
+
+Test models with some interaction terms MIGHT BE BETTER AFTER BOXCOX LOWKEY
+
+```{r int12}
+# anova(full12, INTERACTIONS MODEL, data = d12))
+```
+
+Stepwise selection adds and removes predictors, keeping the model with the best AIC. In 2012 it keeps just mode and days to election. The AIC of the full model (5658.2) and the selected model (5655.3) differ by less than 3, so they fit about equally well, and both are far better than the null (5706.6). BIC penalises complexity more heavily and clearly prefers the smaller model (5690.6 vs 5713.5).
+
+```{r step12}
+step12 <- step(null12, scope = list(lower = ~ 1, upper = formula(full12)), direction = "both", trace = 0)
+formula(step12)
+AIC(null12, full12, step12)
+BIC(null12, full12, step12)
+```
+
+I THINK YOU CAN DO STEPWISE WITH BIC TOO, MAYBE TRY THAT AS WELL
+
+```{r}
+
+```
+
+
+Model diagnostics are used to check the residual pattern and identify potentially influential polls. These checks help assess whether the linear model is a reasonable description of the data. Here the Q-Q curve bends upward, showing that the residuals are right-skewed. Cook’s distance flags polls that influence the fit. Many polls exceed the rough 4/n guideline (59 in 2012), but the largest is 0.07, far below the guideline of 0.5 or 1.0. Ten polls have studentised residuals above 3.
+
+```{r diag12, fig.height=7}
+par(mfrow = c(2, 2))
+plot(full12, which = 1) # residuals vs fitted
+plot(full12, which = 2) # normal Q-Q
+plot(cooks.distance(full12), type = "h", ylab = "Cook's distance", main = "Cook's distance")
+abline(h = 4 / nrow(d12), col = "red", lty = 2)
+par(mfrow = c(1, 1))
+
+sum(abs(rstudent(full12)) > 3) # polls with |studentised residual| > 3
+sum(cooks.distance(full12) > 4 / nrow(d12)) # polls above the 4/n guideline
+max(cooks.distance(full12)) # worry if > 05 or 1
+```
+
+A Box-Cox analysis is used to investigate whether transforming the response may be helpful. RESULTS OF BOXCOX
+
+```{r bc12}
+#IDK HOW TO DO THIS BUT WE SHOULD
+
+```
+
+Redo ANOVA and such if box cox turns out statistically significant
+
+
+Maybe look at doing a train/test split then check for overfitting
+
+```{r tt12}
+
+```
+
+## 2016
+
+The same steps are repeated for 2016, with some differences. Days to election is again significant (p < 0.001). Mode is significant (p = 0.0001), driven mostly by the “Other” modes being about 3.8 points less accurate. Partisanship (p = 0.018) and sample size (p = 0.001) are significant here but not in 2012. Each extra 1,000 respondents is associated with about 0.84 points less error. Sampled population is again not significant. Stepwise selection keeps mode, days, sample size and partisanship and drops sampled population. R^2 is again about 5%.
+
+```{r lm2016}
+full16 <- lm(abs_err ~ mode3 + pop2 + partisanship + n1000 + days_to_election, data = d16)
+null16 <- lm(abs_err ~ 1, data = d16)
+
+summary(full16)
+Anova(full16, type = 2)
+vif(full16)
+anova(null16, full16)
+
+# TEST SOME INTERACTION TERMS
+# anova(full16, lm(abs_err ~ INTERACTION STUFF, data = d16))
+```
+
+```{r step16}
+step16 <- step(null16, scope = list(lower = ~ 1, upper = formula(full16)), direction = "both", trace = 0)
+formula(step16)
+AIC(null16, full16, step16)
+BIC(null16, full16, step16)
+```
+
+```{r diag16, fig.height=7}
+par(mfrow = c(2, 2))
+plot(full16, which = 1)
+plot(full16, which = 2)
+plot(cooks.distance(full16), type = "h", ylab = "Cook's distance", main = "Cook's distance")
+abline(h = 4 / nrow(d16), col = "red", lty = 2)
+par(mfrow = c(1, 1))
+
+sum(abs(rstudent(full16)) > 3)
+sum(cooks.distance(full16) > 4 / nrow(d16))
+max(cooks.distance(full16))
+
+# BOX COX
+```
+
+```{r tt16}
+# TRAIN TEST SPLIT?
+```
+
+# Logistic Regression: Predicting the Correct Winner
+
+This model uses `correct` as a binary response: 1 if the poll predicted the correct winner and 0 otherwise. Ties are excluded because they predict no winner. The “Other” mode group is also excluded because all 13 of its polls in 2012 were correct, which can negatively affect the (I tested it, absolutely bonkers chat). This isn't the case with "Other" in 2016 but in the interest of comparing the models it's probably best to be consistent. In 2012, 87.35% of polls picked the right winner, compared with only 71.91% in 2016.
+
+```{r logit-data}
+l12 <- d12 %>% filter(!is.na(correct), mode3 != "Other") %>% droplevels()
+l16 <- d16 %>% filter(!is.na(correct), mode3 != "Other") %>% droplevels()
+mean(l12$correct); mean(l16$correct) # proportion of polls that picked the right winner
+```
+
+## 2012
+
+Paragraph
+
+```{r glm12}
+g12 <- glm(correct ~ mode3 + pop2 + partisanship + n1000 + days_to_election, family = binomial, data = l12)
+summary(g12)
+Anova(g12, type = 2) # likelihood ratio test for each factor
+exp(cbind(OR = coef(g12), confint.default(g12))) # odds ratios with 95% CI
+anova(glm(correct ~ 1, family = binomial, data = l12), g12, test = "Chisq") # overall model test
+```
+
+Maybe a train test split thing, confusion table, etc idk
+
+```{r class12}
+
+```
+
+## 2016
+
+Paragraph part 2 electric boogaloo
+
+```{r glm16}
+g16 <- glm(correct ~ mode3 + pop2 + partisanship + n1000 + days_to_election, family = binomial, data = l16)
+summary(g16)
+Anova(g16, type = 2)
+exp(cbind(OR = coef(g16), confint.default(g16)))
+anova(glm(correct ~ 1, family = binomial, data = l16), g16, test = "Chisq")
+
+# Train test split thingo?
+
+```
+
+# Preliminary Summary
+
+Across both elections, how far from election day a poll was taken is the clearest predictor of its accuracy. Polls conducted earlier had larger margin errors in both 2012 and 2016 (p < 0.001), by roughly 0.6 to 0.75 percentage points per additional 100 days. Polling mode was also significant in both years, although the pattern differed: in 2012, Internet polls had smaller errors than live phone polls, while in 2016 the rare “Other” modes had much larger errors. The sampled population (likely vs registered voters or adults) showed no significant relationship with accuracy in either election, and partisanship and sample size were significant in 2016 but not 2012.
+
+However, these predictors explain very little: together they account for only about 5% of the variation in margin error in each year. This is unsurprising, as most polling error is likely to be random sampling noise that no feature of the poll can explain, with the rest coming from factors not in our data, such as which state or pollster was involved. The effects above are therefore real but small.
