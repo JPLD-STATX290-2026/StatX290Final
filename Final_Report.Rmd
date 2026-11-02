@@ -75,8 +75,26 @@ used, and any cleaning or exclusions. The example uses the built-in `mtcars`
 data [@rcore], covering `r n_obs` vehicles. Summarise the key variables as in
 @tbl-descriptives.
 
+<<<<<<< HEAD
 
 
+=======
+```{r}
+#| label: tbl-descriptives
+#| tbl-cap: "Summary of the variables used in the analysis."
+library(knitr)
+data |>
+  summarise(
+    across(c(mpg, wt, hp),
+           list(mean = mean, sd = sd),
+           .names = "{.col}_{.fn}")
+  ) |>
+  pivot_longer(everything(),
+               names_to = c("Variable", ".value"),
+               names_sep = "_") |>
+  kable(digits = 2, col.names = c("Variable", "Mean", "SD"))
+```
+>>>>>>> 97dfbaeb1f0e38337169ca5e40fe31d42e546b31
 
 ## Statistical methods
 
