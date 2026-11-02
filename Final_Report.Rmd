@@ -55,7 +55,8 @@ other polls.)
 
 <!-- See rubric: Introduction - state and motivate the research question. -->
 
-We 
+Our goal is to understand the accuracy of polls in political situations. More explicitly, we ask how accurately can the accuracy of a poll be predicted based on the sampled population? We motivate this question by considering the possible uses of such information. Biases in polls can lead to inaccurate reporting leading up to elections, and can impact the voting habits of prospective voters. Treating polls as objectively correct can lead to lesser trust in data and statistics by the general public, when results are different from polls. We begin to answer this question  by asking how different methods and factors in a polled population affect the accuracy of polls. Finally, once we've found out the accuracy of our polls, we consider the impact of unexpected results on the accuracy of prediction. Essentially, we look at where our models gave very inaccurate predictions, and why. This information should not be used to improve existing models, but could improve future analysis. Some factors of sampled populations may give inconsistent results, which considering when creating future models could improve analysis.
+
 
 State the research question clearly and motivate why it matters, ideally with
 reference to existing literature [@wickham2023]. For example: *we ask whether a
@@ -74,20 +75,8 @@ used, and any cleaning or exclusions. The example uses the built-in `mtcars`
 data [@rcore], covering `r n_obs` vehicles. Summarise the key variables as in
 @tbl-descriptives.
 
-```{r}
-#| label: tbl-descriptives
-#| tbl-cap: "Summary of the variables used in the analysis."
-data |>
-  summarise(
-    across(c(mpg, wt, hp),
-           list(mean = mean, sd = sd),
-           .names = "{.col}_{.fn}")
-  ) |>
-  pivot_longer(everything(),
-               names_to = c("Variable", ".value"),
-               names_sep = "_") |>
-  kable(digits = 2, col.names = c("Variable", "Mean", "SD"))
-```
+
+
 
 ## Statistical methods
 
@@ -159,6 +148,30 @@ This appendix documents the analysis so the results above are fully reproducible
 The annotated code reproduces the model and its assumption checks; the complete
 project (data, scripts, and commit history) is in the repository linked at the
 top.
+
+```{r}
+# Get datasets
+
+data2012 <- read.csv("Data/Clean/state_polls_2012_clean.csv")
+data2016 <- read.csv("Data/Clean/state_polls_2016_clean.csv")
+data1976to2024 <- read.csv("Data/Clean/1976-2024-president_clean.csv")
+
+data2016 <- data2016 %>%
+  mutate(
+    State = str_extract(poll_info, "(?<=\\d{4}-).*?(?=-president)")
+  )
+
+data2012 <- data2012 %>%
+  mutate(
+    State = str_extract(poll_info, "(?<=\\d{4}-).*?(?=-president)")
+  )
+
+```
+
+
+
+
+
 
 ## Model {#sec-app-model}
 
