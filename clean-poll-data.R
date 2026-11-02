@@ -39,7 +39,7 @@ clean_election_results <- clean_election_results %>%
 # New derived variable for percentage of total votes
 clean_election_results <- clean_election_results %>% 
   mutate(
-    vote_percent = round((candidatevotes / totalvotes)*100, 2)
+    vote_election = round((candidatevotes / totalvotes), 2)
   )
 
 write.csv(clean_election_results, "Data/Clean/1976-2024-president_clean.csv", row.names = FALSE)
@@ -62,14 +62,27 @@ data_clean_2012_poll <- data_2012_poll %>%
     
     # Calculate the number of days between the end of each poll
     # and the 2012 election day
-    days_to_election = as.integer(election_day["2012"] - end_date)
+    days_to_election = as.integer(election_day["2012"] - end_date),
+    Undecided = replace_na(Undecided, 0),
+    vote_poll = (Obama/(100-Undecided)),
+    year = str_extract(poll_info, "^\\d{4}"),
+    state = str_extract(poll_info, "(?<=^\\d{4}-).*?(?=-president)")
+  )
+
+data_clean_2012_poll <- data_clean_2012_poll %>%
+  mutate(
+    state = state %>%
+      str_replace_all(regex("washington-?d?-?c?", ignore_case = TRUE), "WASHINGTON") %>%
+      str_replace_all("\\.", "") %>%
+      str_replace_all("-", " ") %>%
+      str_to_upper()
   )
 
 # Replace "Not included in poll" with NA in the Other column 
 # so the column can be treated as numeric
 data_clean_2012_poll <- data_clean_2012_poll %>%
   mutate(
-    Other = na_if(Other, "Not included in poll")
+    Other = na_if(Other, "Not included in poll"),
   )
 
 # Convert the Other column from character to integer
@@ -88,6 +101,9 @@ data_clean_2012_poll <- data_clean_2012_poll %>%
     partisan_affiliation = factor(partisan_affiliation)
   )
 
+data_clean_2012_poll <- data_clean_2012_poll %>% 
+  select(-poll_info, -Obama, -Romney, -Undecided, -Other, -poll_id, -start_date, -end_date)
+
 # Save the cleaned dataset to the data/clean folder
 # row.names = FALSE prevents R from adding row numbers as an extra column
 write.csv(
@@ -103,13 +119,25 @@ data_2016_poll <- read_csv("data/raw/state_polls_2016.csv")
 
 # Create a cleaned version of this raw data which includes 'days to election'
 # as a new variable which will be used for exploratory analysis later
-data_clean_2016_poll <- data_2016_poll |>
+data_clean_2016_poll <- data_2016_poll %>%
   mutate(
     start_date = as.Date(start_date),
     end_date   = as.Date(end_date),
-    days_to_election = as.integer(election_day["2016"] - end_date)
+    days_to_election = as.integer(election_day["2016"] - end_date),
+    Undecided = replace_na(Undecided, 0),
+    vote_poll = (Clinton/(100-Undecided)),
+    year = str_extract(poll_info, "^\\d{4}"),
+    state = str_extract(poll_info, "(?<=^\\d{4}-).*?(?=-president)")
   )
 
+data_clean_2016_poll <- data_clean_2016_poll %>%
+  mutate(
+    state = state %>%
+      str_replace_all(regex("washington-?d?-?c?", ignore_case = TRUE), "WASHINGTON") %>%
+      str_replace_all("\\.", "") %>%
+      str_replace_all("-", " ") %>%
+      str_to_upper()
+  )
 
 # Classify all non-entries as hard NA's to make later plotting easier
 data_clean_2016_poll <- data_clean_2016_poll %>% mutate(
@@ -130,6 +158,31 @@ data_clean_2016_poll <- data_clean_2016_poll %>% mutate(
   Other = as.integer(Other)
 ) 
 
+data_clean_2016_poll <- data_clean_2016_poll %>% 
+  select(-poll_info, -Trump, -Clinton, -Undecided, -Other, -poll_id, -start_date, -end_date, -Johnson, -McMullin)
+
 # Write the cleaned dataset to its own csv file for easier further use
 write.csv(data_clean_2016_poll, "Data/Clean/state_polls_2016_clean.csv", row.names = FALSE)
+
+# Combined Poll ---------------------------------------------------------
+
+data_2012_16_poll <- bind_rows(data_clean_2012_poll, data_clean_2016_poll)
+
+combined_data <- data_2012_16_poll %>%
+  mutate(year = as.integer(year)) %>%
+  left_join(
+    clean_election_results %>% filter(party_simplified == "DEMOCRAT"),
+    by = c("year", "state")
+  )
+
+combined_data <- combined_data %>%
+  select(-party_simplified, -totalvotes, -candidatevotes)
+
+combined_data <- combined_data %>%
+  mutate(
+    poll_election_dif = vote_election-vote_poll
+  )
+
+write.csv(combined_data, "Data/Clean/combined_data.csv", row.names = FALSE)
+
 

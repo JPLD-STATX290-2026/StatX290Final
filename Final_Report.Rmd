@@ -77,6 +77,7 @@ data [@rcore], covering `r n_obs` vehicles. Summarise the key variables as in
 ```{r}
 #| label: tbl-descriptives
 #| tbl-cap: "Summary of the variables used in the analysis."
+library(knitr)
 data |>
   summarise(
     across(c(mpg, wt, hp),
