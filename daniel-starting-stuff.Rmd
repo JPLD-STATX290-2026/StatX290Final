@@ -106,10 +106,23 @@ sum(cooks.distance(full12) > 4 / nrow(d12)) # polls above the 4/n guideline
 max(cooks.distance(full12)) # worry if > 05 or 1
 ```
 
-A Box-Cox analysis is used to investigate whether transforming the response may be helpful. RESULTS OF BOXCOX
+As model diagnostics showed large deviations from normality, a Box-Cox transformation was tested. This tests whether a power transformation significantly improves normality and consistency of spread. It was found that a Box-Cox transformation was needed, with an optimal value of 0.4338, and a 95% confidence interval of (0.3873, 0.4804). For ease of interpretation and understanding, a Box-Cox transformation of 0.5 was used, which corresponds to a square root transformation. 
 
 ```{r bc12}
-#IDK HOW TO DO THIS BUT WE SHOULD
+# Box-Cox for 2012
+
+# Box-Cox on the full model 
+pt12 <- powerTransform(full12)
+summary(pt12)            # estimate, Wald CI, Test if lambda = 0 or 1
+MASS::boxcox(full12, lambda = seq(-0.5, 1.5, by = 0.05))   # Log likelihood
+
+# Close to 0.5, fit 0.5 for simpler interpretability
+full12_t <- update(full12, sqrt(abs_err) ~ .) 
+summary(full12_t)
+plot(full12_t, which = 1)   # residuals vs fitted
+plot(full12_t, which = 2)   # normal Q-Q
+plot(full12_t, which = 3)   # scale-location (checks constant variance)
+plot(full12_t, which = 4)   # Cook's distance
 
 ```
 
