@@ -72,28 +72,15 @@ anova(null12, full12)
 
 Test models with some interaction terms MIGHT BE BETTER AFTER BOXCOX LOWKEY
 
-```{r int12}
-step12_int <- step12 <- step(null12, scope = list(lower = ~ 1, upper = formula(full12_int)), direction = "both", trace = 0)
-summary(step12_int)
-anova(full12, step12_int)
-```
-
 Stepwise selection adds and removes predictors, keeping the model with the best AIC. In 2012 it keeps just mode and days to election. The AIC of the full model (5658.2) and the selected model (5655.3) differ by less than 3, so they fit about equally well, and both are far better than the null (5706.6). BIC penalises complexity more heavily and clearly prefers the smaller model (5690.6 vs 5713.5).
 
 ```{r step12}
 step12 <- step(null12, scope = list(lower = ~ 1, upper = formula(full12)), direction = "both", trace = 0)
+step12_int <- step12 <- step(null12, scope = list(lower = ~ 1, upper = formula(full12_int)), direction = "both", trace = 0)
 
-formula(step12)
-AIC(null12, full12, step12)
-BIC(null12, full12, step12)
+AIC(null12, full12, step12, step12_int)
+BIC(null12, full12, step12, step12_int)
 ```
-
-I THINK YOU CAN DO STEPWISE WITH BIC TOO, MAYBE TRY THAT AS WELL
-
-```{r}
-
-```
-
 
 Model diagnostics are used to check the residual pattern and identify potentially influential polls. These checks help assess whether the linear model is a reasonable description of the data. Here the Q-Q curve bends upward, showing that the residuals are right-skewed. Cook’s distance flags polls that influence the fit. Many polls exceed the rough 4/n guideline (59 in 2012), but the largest is 0.07, far below the guideline of 0.5 or 1.0. Ten polls have studentised residuals above 3.
 
@@ -129,10 +116,6 @@ plot(full12_t, which = 3)   # scale-location (checks constant variance)
 plot(full12_t, which = 4)   # Cook's distance
 ```
 
-Redo ANOVA and such if box cox turns out statistically significant
-
-
-Maybe look at doing a train/test split then check for overfitting
 
 ## 2016
 
@@ -141,21 +124,21 @@ The same steps are repeated for 2016, with some differences. Days to election is
 ```{r lm2016}
 full16 <- lm(abs_err ~ mode3 + pop2 + partisanship + n1000 + days_to_election, data = d16)
 null16 <- lm(abs_err ~ 1, data = d16)
+full16_int <- lm(abs_err ~ (mode3 + pop2 + partisanship + n1000 + days_to_election)^2, data = d16)
 
 summary(full16)
 Anova(full16, type = 2)
 vif(full16)
 anova(null16, full16)
 
-# TEST SOME INTERACTION TERMS
-# anova(full16, lm(abs_err ~ INTERACTION STUFF, data = d16))
 ```
 
 ```{r step16}
 step16 <- step(null16, scope = list(lower = ~ 1, upper = formula(full16)), direction = "both", trace = 0)
-formula(step16)
-AIC(null16, full16, step16)
-BIC(null16, full16, step16)
+step16_int <- step16 <- step(null16, scope = list(lower = ~ 1, upper = formula(full16_int)), direction = "both", trace = 0)
+
+AIC(null16, full16, step16, step16_int)
+BIC(null16, full16, step16, step16_int)
 ```
 
 ```{r diag16, fig.height=7}
