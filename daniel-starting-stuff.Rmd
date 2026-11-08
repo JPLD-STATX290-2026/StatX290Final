@@ -4,10 +4,12 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
+#
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-library(tidyverse)
-library(car)
-set.seed(67)
+library(tidyverse) # General functions
+library(car) # Has capital A Anova
+library(rsample) # Allows us to do train test split
+set.seed(67) # Set the seed daniel got us to set
 ```
 
 # Data
@@ -17,23 +19,22 @@ The aim is to investigate whether polling methods and sampled-population factors
 We define accuracy as the *absolute margin error*, abs_err = |(dem - rep - act_margin|. This is how many percentage points the poll’s Democrat-minus-Republican lead differed from the real result. We use the margin rather than each candidate’s percentage because polls include undecided respondents, so a candidate’s poll percentage is always below their vote share even for a perfect poll. The margin cancels this out. A second outcome, correct, records whether the poll’s leader was the actual winner. Exact ties are set to missing because they predict no winner. The remaining lines make sample size easier to read (n1000 is in thousands) and collapse the sampled population into “Likely” versus “Registered voters or adults”.
 
 ```{r data}
-polls <- read.csv("Data/Clean/combined_data.csv") %>%
+polls <- read.csv("Data/Clean/combined_data.csv") %>% 
   filter(sample_size > 0) %>% # drops the 2 polls whose invalid sample_size (-1) was set to NA
   mutate(abs_err = abs((dem - rep) - act_margin), # how far off the poll was
          correct = if_else(dem == rep, NA_integer_, # did the poll pick the right winner?
                            as.integer(sign(dem - rep) == sign(act_margin))),
-         n1000   = sample_size / 1000,
-         pop2    = factor(if_else(sample_subpopulation == "Likely Voters", "Likely", "RV_Adults")),
+         n1000   = sample_size / 1000, # Sample size in thousands (easier to interpret coefficients)
          partisanship = factor(partisanship))
 ```
 
 Adults made up only 5 polls in 2012 and 7 in 2016, which is too few to estimate their effect separately, so they are combined with registered voters. Modes with fewer than 30 polls in a year are lumped into “Other”, and Live Phone is the reference level so every mode coefficient reads as “difference from a live phone poll”. The two elections are modelled separately because their mode categories differ.
 
 ```{r split}
-prep <- function(yr) {
-  polls %>% filter(year == yr) %>%
-    mutate(mode3 = fct_lump_min(factor(mode), min = 30, other_level = "Other"),
-           mode3 = relevel(mode3, ref = "Live Phone")) %>%
+prep <- function(yr) { 
+  polls %>% filter(year == yr) %>% # Datasets are joined, separate by year
+    mutate(mode3 = fct_lump_min(factor(mode), min = 30, other_level = "Other"), # All modes with less than 30 polls put in other
+           mode3 = relevel(mode3, ref = "Live Phone")) %>% #Reorder mode 
     droplevels()
 }
 d12 <- prep(2012)
@@ -41,18 +42,35 @@ d16 <- prep(2016)
 table(d12$mode3); table(d16$mode3)
 ```
 
+```{r tt16}
+
+set.seed(67)
+
+# 75/25 train test split
+split12 <- initial_split(d12, prop = 0.75)
+split16 <- initial_split(d16, prop = 0.75)
+
+# Extract training and testing datasets
+d12 <- training(split12)
+test12  <- testing(split12)
+
+d16 <- training(split16)
+test16  <- testing(split16)
+```
+
 # Linear Regression: Size of the Polling Error
 
-We fit one model per election with these predictors: mode, sampled population (`pop2`), partisanship, sample size (per 1000) and days to election.
+We fit one model per election with these predictors: mode, sampled population (`sample_subpopulation`), partisanship, sample size (per 1000) and days to election.
 
 ## 2012
 
 The model asks which poll characteristics are associated with larger or smaller errors. The key result is that days to election is strongly significant (+0.0058 points per day, p < 0.001). So a poll taken 100 days earlier is about 0.6 points less accurate, on average. Internet polls were about 0.8 points more accurate than live phone polls (p = 0.0099). The overall R^2 is only 0.057, so these predictors explain about 5% of the variation in poll error.
 
 ```{r lm2012}
-full12 <- lm(abs_err ~ mode3 + pop2 + partisanship + n1000 + days_to_election, data = d12)
+# Fit a full model, null model, model with all interaction terms
+full12 <- lm(abs_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d12)
 null12 <- lm(abs_err ~ 1, data = d12)
-full12_int <- lm(abs_err ~ (mode3 + pop2 + partisanship + n1000 + days_to_election)^2, data = d12)
+full12_int <- lm(abs_err ~ (mode3 + sample_subpopulation + partisanship + n1000 + days_to_election)^2, data = d12)
 
 summary(full12) # Overall fit, coefficient estimates and individual tests
 ```
@@ -67,7 +85,7 @@ vif(full12) # Checks whether predictors are strongly correlated
 We compare the full model with an intercept-only model to check whether the predictors improve the fit overall. The F-test is highly significant (p = 8.85e-11), so the predictors collectively matter. With R^2 of about 5%, though, that effect is small. 
 
 ```{r nested12}
-anova(null12, full12)
+anova(null12, full12) # Do I need to comment this?
 ```
 
 Test models with some interaction terms MIGHT BE BETTER AFTER BOXCOX LOWKEY
@@ -75,9 +93,11 @@ Test models with some interaction terms MIGHT BE BETTER AFTER BOXCOX LOWKEY
 Stepwise selection adds and removes predictors, keeping the model with the best AIC. In 2012 it keeps just mode and days to election. The AIC of the full model (5658.2) and the selected model (5655.3) differ by less than 3, so they fit about equally well, and both are far better than the null (5706.6). BIC penalises complexity more heavily and clearly prefers the smaller model (5690.6 vs 5713.5).
 
 ```{r step12}
+# Run stepwise regression on the regular and full models
 step12 <- step(null12, scope = list(lower = ~ 1, upper = formula(full12)), direction = "both", trace = 0)
 step12_int <- step12 <- step(null12, scope = list(lower = ~ 1, upper = formula(full12_int)), direction = "both", trace = 0)
 
+# Compare in AIC and BIC, both models are identical
 AIC(null12, full12, step12, step12_int)
 BIC(null12, full12, step12, step12_int)
 ```
@@ -122,9 +142,9 @@ plot(full12_t, which = 4)   # Cook's distance
 The same steps are repeated for 2016, with some differences. Days to election is again significant (p < 0.001). Mode is significant (p = 0.0001), driven mostly by the “Other” modes being about 3.8 points less accurate. Partisanship (p = 0.018) and sample size (p = 0.001) are significant here but not in 2012. Each extra 1,000 respondents is associated with about 0.84 points less error. Sampled population is again not significant. Stepwise selection keeps mode, days, sample size and partisanship and drops sampled population. R^2 is again about 5%.
 
 ```{r lm2016}
-full16 <- lm(abs_err ~ mode3 + pop2 + partisanship + n1000 + days_to_election, data = d16)
+full16 <- lm(abs_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d16)
 null16 <- lm(abs_err ~ 1, data = d16)
-full16_int <- lm(abs_err ~ (mode3 + pop2 + partisanship + n1000 + days_to_election)^2, data = d16)
+full16_int <- lm(abs_err ~ (mode3 + sample_subpopulation + partisanship + n1000 + days_to_election)^2, data = d16)
 
 summary(full16)
 Anova(full16, type = 2)
@@ -173,10 +193,6 @@ plot(full16_t, which = 4)   # Cook's distance
 
 ```
 
-```{r tt16}
-# TRAIN TEST SPLIT?
-```
-
 # Logistic Regression: Predicting the Correct Winner
 
 This model uses `correct` as a binary response: 1 if the poll predicted the correct winner and 0 otherwise. Ties are excluded because they predict no winner. The “Other” mode group is also excluded because all 13 of its polls in 2012 were correct, which can negatively affect the (I tested it, absolutely bonkers chat). This isn't the case with "Other" in 2016 but in the interest of comparing the models it's probably best to be consistent. In 2012, 87.35% of polls picked the right winner, compared with only 71.91% in 2016.
@@ -192,7 +208,7 @@ mean(l12$correct); mean(l16$correct) # proportion of polls that picked the right
 Paragraph
 
 ```{r glm12}
-g12 <- glm(correct ~ mode3 + pop2 + partisanship + n1000 + days_to_election, family = binomial, data = l12)
+g12 <- glm(correct ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, family = binomial, data = l12)
 summary(g12)
 Anova(g12, type = 2) # likelihood ratio test for each factor
 exp(cbind(OR = coef(g12), confint.default(g12))) # odds ratios with 95% CI
@@ -210,7 +226,7 @@ Maybe a train test split thing, confusion table, etc idk
 Paragraph part 2 electric boogaloo
 
 ```{r glm16}
-g16 <- glm(correct ~ mode3 + pop2 + partisanship + n1000 + days_to_election, family = binomial, data = l16)
+g16 <- glm(correct ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, family = binomial, data = l16)
 summary(g16)
 Anova(g16, type = 2)
 exp(cbind(OR = coef(g16), confint.default(g16)))
