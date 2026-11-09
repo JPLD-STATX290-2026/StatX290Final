@@ -124,7 +124,7 @@ As model diagnostics showed large deviations from normality, a Box-Cox transform
 
 # Box-Cox on the full model 
 pt12 <- powerTransform(full12)
-summary(pt12)            # estimate, Wald CI, Test if lambda = 0 or 1
+summary(pt12)            # estimate, Wald CI and test if lambda = 0 or 1
 MASS::boxcox(full12, lambda = seq(-0.5, 1.5, by = 0.05))   # Log likelihood
 
 # Close to 0.5, fit 0.5 for simpler interpretability
@@ -142,10 +142,12 @@ plot(full12_t, which = 4)   # Cook's distance
 The same steps are repeated for 2016, with some differences. Days to election is again significant (p < 0.001). Mode is significant (p = 0.0001), driven mostly by the “Other” modes being about 3.8 points less accurate. Partisanship (p = 0.018) and sample size (p = 0.001) are significant here but not in 2012. Each extra 1,000 respondents is associated with about 0.84 points less error. Sampled population is again not significant. Stepwise selection keeps mode, days, sample size and partisanship and drops sampled population. R^2 is again about 5%.
 
 ```{r lm2016}
+# Full, null and interaction term models for 2016 data
 full16 <- lm(abs_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d16)
 null16 <- lm(abs_err ~ 1, data = d16)
 full16_int <- lm(abs_err ~ (mode3 + sample_subpopulation + partisanship + n1000 + days_to_election)^2, data = d16)
 
+#Summary, run ANOVA, vif for multicollinearity
 summary(full16)
 Anova(full16, type = 2)
 vif(full16)
@@ -154,6 +156,7 @@ anova(null16, full16)
 ```
 
 ```{r step16}
+# Stepwise regression on 2016, compare the final models with AIC and BIC
 step16 <- step(null16, scope = list(lower = ~ 1, upper = formula(full16)), direction = "both", trace = 0)
 step16_int <- step16 <- step(null16, scope = list(lower = ~ 1, upper = formula(full16_int)), direction = "both", trace = 0)
 
@@ -163,8 +166,8 @@ BIC(null16, full16, step16, step16_int)
 
 ```{r diag16, fig.height=7}
 par(mfrow = c(2, 2))
-plot(full16, which = 1)
-plot(full16, which = 2)
+plot(full16, which = 1) # Plot residuals vs fitted
+plot(full16, which = 2) # Q-Q Plot
 plot(cooks.distance(full16), type = "h", ylab = "Cook's distance", main = "Cook's distance")
 abline(h = 4 / nrow(d16), col = "red", lty = 2)
 par(mfrow = c(1, 1))
