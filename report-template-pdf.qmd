@@ -27,7 +27,7 @@ editor: source
 **Code and data:** all analysis for this report is reproducible from the
 repository at <https://github.com/USER/REPO>.  <!-- See rubric: Code repository -->
 
-
+<!--
 Questions:
 Main Question:
 How accurately can we predict the accuracy of a poll based on the sampled population?
@@ -48,7 +48,64 @@ improves prediction. DO NOT PHRASE THIS AS IMPROVING THE MODEL. THIS IS NOT IMPR
 WE WOULD DO THIS TO SEE HOW MUCH OUTLIERS AFFECTED OUR MODELS AFTER THE FACT. This can 
 help future models, outliers being significant here means outliers may be significant in
 other polls.)
+-->
 
+```{r setup}
+#| label: setup
+#| include: false
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse) # General functions
+library(car) # Has capital A Anova
+library(rsample) # Allows us to do train test split
+set.seed(67) # Set the seed daniel got us to set
+```
+
+```{r data}
+#| label: data-prep
+#| include: false
+polls <- read.csv("Data/Clean/combined_data.csv") %>% 
+  filter(sample_size > 0) %>% # drops the 2 polls whose invalid sample_size (-1) was set to NA
+  mutate(abs_err = abs((dem - rep) - act_margin), # how far off the poll was
+         correct = if_else(dem == rep, NA_integer_, # did the poll pick the right winner?
+                           as.integer(sign(dem - rep) == sign(act_margin))),
+         n1000   = sample_size / 1000, # Sample size in thousands (easier to interpret coefficients)
+         partisanship = factor(partisanship))
+# Number of polls, quoted in the text
+n_polls <- nrow(polls)
+n_all12 <- sum(polls$year == 2012)
+n_all16 <- sum(polls$year == 2016)
+```
+
+```{r}
+#| label: prep-split
+#| include: false
+# Separate the elections; modes with fewer than 30 polls in a year are grouped as "Other"
+# and Live Phone is the reference level
+prep <- function(yr) { 
+  polls %>% filter(year == yr) %>% # Datasets are joined, separate by year
+    mutate(mode3 = fct_lump_min(factor(mode), min = 30, other_level = "Other"), # All modes with less than 30 polls put in other
+           mode3 = relevel(mode3, ref = "Live Phone")) %>% #Reorder mode 
+    droplevels()
+}
+all12 <- prep(2012)
+all16 <- prep(2016)
+```
+
+```{r tt16}
+
+set.seed(67)
+
+# 75/25 train test split
+split12 <- initial_split(all12, prop = 0.75)
+split16 <- initial_split(all16, prop = 0.75)
+
+# Extract training and testing datasets
+d12 <- training(split12)
+test12  <- testing(split12)
+
+d16 <- training(split16)
+test16  <- testing(split16)
+```
 
 
 # Introduction {#sec-intro}
@@ -57,11 +114,7 @@ other polls.)
 
 Our goal is to understand the accuracy of polls in political situations. More explicitly, we ask how accurately can the accuracy of a poll be predicted based on the sampled population? We motivate this question by considering the possible uses of such information. Biases in polls can lead to inaccurate reporting leading up to elections, and can impact the voting habits of prospective voters. Treating polls as objectively correct can lead to lesser trust in data and statistics by the general public, when results are different from polls. We begin to answer this question  by asking how different methods and factors in a polled population affect the accuracy of polls. Finally, once we've found out the accuracy of our polls, we consider the impact of unexpected results on the accuracy of prediction. Essentially, we look at where our models gave very inaccurate predictions, and why. This information should not be used to improve existing models, but could improve future analysis. Some factors of sampled populations may give inconsistent results, which considering when creating future models could improve analysis.
 
-
-State the research question clearly and motivate why it matters, ideally with
-reference to existing literature [@wickham2023]. For example: *we ask whether a
-vehicle's weight is associated with its fuel economy, and how strong that
-association is after accounting for engine power.*
+<!-- For HD: motivate the question with existing literature-->
 
 # Method {#sec-method}
 
@@ -72,20 +125,27 @@ association is after accounting for engine power.*
 
 Our data consists of three datasets, polling information from 2012 and 2016, as well as presidential election results from 1976-2024. The 2012 and 2016 datasets contain state-level polling information collected prior to each election, and the 1976–2024 dataset contains certified presidential election results.The 2012 and 2016 polling datasets were originally collected from HuffPost Pollster, which compiled polling results from a range of polling organisations. The 1976–2024 election results dataset was sourced from the MIT Election Data and Science Lab. The cleaning of the election results also involves simplifying the original party classifications by combining minor-party candidates into an "OTHER" category. Further details about cleaning choices and their limitations can be found in the EDA report.
 
-Describe the data accurately: its source, the unit of observation, the variables
-used, and any cleaning or exclusions. The example uses the built-in `mtcars`
-data [@rcore], covering `r n_obs` vehicles. Summarise the key variables as in
-@tbl-descriptives.
+After removing two polls with an invalid sample size, each of the `r n_polls` polls (`r n_all12` in 2012 and `r n_all16` in 2016) is compared with the actual result for its state. We measure accuracy in two ways. The *absolute margin error* is the number of percentage points by which a poll's Democrat-minus-Republican lead differed from the actual margin. We use the margin rather than each candidate's share because undecided respondents mean a candidate's poll percentage sits below their vote share even for a perfect poll, which the margin cancels out. The binary outcome *correct* records whether the poll's leader won the state (exact ties are excluded because they predict no winner).
 
+The predictors are polling mode, sampled population, partisanship, sample size (per 1000 respondents) and days to election. Modes with fewer than 30 polls in a year are grouped as "Other" (@tbl-modes), and Live Phone is the reference level, so each mode coefficient is a difference from a live-phone poll. Adults made up only 5 polls in 2012 and 7 in 2016, so they are removed. <!-- Make sure we actually removed this stuff, also possibly just move IVR/live phone fully in/fully separate it, so number of modes matches and is thus nicer? -->
 
+```{r}
+#| label: tbl-modes
+#| tbl-cap: "Number of polls by polling mode in each election (modes with fewer than 30 polls in a year are grouped as Other)."
+bind_rows(all12, all16) %>%
+  count(year, mode3) %>%
+  pivot_wider(names_from = year, values_from = n, values_fill = 0) %>%
+  kable(col.names = c("Mode", "2012", "2016"))
+```
 
 
 ## Statistical methods
 
-Describe and justify the statistical methods in the context of the question
-here, a multiple linear regression of fuel economy on weight and power. State
-the model and the assumptions you will check (linearity, constant variance,
-normal residuals); the checks themselves go in @sec-appendix.
+The 2012 and 2016 elections are analysed separately due to differences in their modes and voting trends. In each year, 25% of polls were held out as a test set (seed 67) and all models are fitted to the remaining 75%.
+
+We fit a multiple linear regression of absolute margin error on all five predictors. Each predictor is tested with a Type II F-test (done through ANOVA), multicollinearity is checked with generalised variance inflation factors (GVIFs), and the model is compared with an intercept-only model. Stepwise selection by AIC (searching main effects, then all two-way interactions) identifies simpler models, which we compare using AIC and BIC. We check the assumptions of linearity, constant variance and normal residuals with residual and Q-Q plots, and look for influential polls using Cook's distance and studentised residuals above 3. Because absolute errors are right-skewed, a Box-Cox analysis chooses a power transformation of the response.
+
+We model `correct` with logistic regression on the same predictors, reporting odds ratios with 95% confidence intervals and likelihood-ratio tests. The "Other" mode is excluded because all of its 2012 polls were correct, which causes complete separation (its odds ratio cannot be estimated), we also exclude it in 2016 for comparability.
 
 # Results {#sec-results}
 
@@ -98,30 +158,188 @@ and the model explains `r round(100 * r2, 1)`% of the variation in fuel economy.
 Model assumptions are checked in @sec-appendix.
 
 ```{r}
-#| label: fig-relationship
-#| fig-cap: "Fuel economy against vehicle weight, with a fitted linear regression line and 95% confidence band."
-#| fig-width: 5
-#| fig-height: 3.2
-ggplot(data, aes(wt, mpg)) +
-  geom_point(alpha = 0.7) +
+#| label: lmfit
+#| include: false
+# Full, intercept-only and all two way interaction models for each election
+full12 <- lm(abs_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d12)
+null12 <- lm(abs_err ~ 1, data = d12)
+full12_int <- lm(abs_err ~ (mode3 + sample_subpopulation + partisanship + n1000 + days_to_election)^2, data = d12)
+
+full16 <- lm(abs_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d16)
+null16 <- lm(abs_err ~ 1, data = d16)
+full16_int <- lm(abs_err ~ (mode3 + sample_subpopulation + partisanship + n1000 + days_to_election)^2, data = d16)
+```
+
+```{r}
+#| label: lmtests
+#| include: false
+# Type II tests, multicollinearity (GVIF) and the anova against the null model
+a12 <- Anova(full12, type = 2)
+a16 <- Anova(full16, type = 2)
+v12 <- vif(full12)
+v16 <- vif(full16)
+nested12 <- anova(null12, full12)
+nested16 <- anova(null16, full16)
+```
+
+```{r}
+#| label: lmselect
+#| include: false
+# Stepwise selection by AIC, over main effects and over all two way interactions
+step12     <- step(null12, scope = list(lower = ~ 1, upper = formula(full12)),     direction = "both", trace = 0)
+step12_int <- step(null12, scope = list(lower = ~ 1, upper = formula(full12_int)), direction = "both", trace = 0)
+step16     <- step(null16, scope = list(lower = ~ 1, upper = formula(full16)),     direction = "both", trace = 0)
+step16_int <- step(null16, scope = list(lower = ~ 1, upper = formula(full16_int)), direction = "both", trace = 0)
+```
+
+```{r}
+#| label: lminfluence
+#| include: false
+# Influence checks. studentised residual > 3, Cook's distance above 4/n, and the largest Cook's distance
+diag_stats <- function(m) {
+  list(n_rstud  = sum(abs(rstudent(m)) > 3),
+       n_cook   = sum(cooks.distance(m) > 4 / nobs(m)),
+       max_cook = max(cooks.distance(m)))   # worry if > 0.5 or 1
+}
+ds12 <- diag_stats(full12)
+ds16 <- diag_stats(full16)
+```
+
+```{r}
+#| label: boxcox
+#| include: false
+# Box-Cox: estimated power with Wald confidence interval for each election
+pt12 <- powerTransform(full12)
+pt16 <- powerTransform(full16)
+bc12 <- summary(pt12)$result   # columns: estimate, rounded power, lower and upper bound
+bc16 <- summary(pt16)$result
+
+# Estimates are close to 0.5, so refit with the square root for easier interpretation
+full12_t <- update(full12, sqrt(abs_err) ~ .)
+full16_t <- update(full16, sqrt(abs_err) ~ .)
+```
+
+```{r}
+#| label: logitfit
+#| include: false
+# Logistic models for picking the right winner ("Other" mode excluded)
+l12 <- d12 %>% filter(!is.na(correct), mode3 != "Other") %>% droplevels()
+l16 <- d16 %>% filter(!is.na(correct), mode3 != "Other") %>% droplevels()
+
+g12 <- glm(correct ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, family = binomial, data = l12)
+g16 <- glm(correct ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, family = binomial, data = l16)
+
+glm_a12 <- Anova(g12, type = 2)   # likelihood-ratio test for each predictor
+glm_a16 <- Anova(g16, type = 2)
+glm_null12 <- anova(glm(correct ~ 1, family = binomial, data = l12), g12, test = "Chisq")   # overall test
+glm_null16 <- anova(glm(correct ~ 1, family = binomial, data = l16), g16, test = "Chisq")
+
+# Proportion of polls that picked the right winner (%)
+pct12 <- round(100 * mean(l12$correct), 2)
+pct16 <- round(100 * mean(l16$correct), 2)
+```
+
+```{r}
+#| label: values
+#| include: false
+# Numbers to quote in text
+r2_12 <- summary(full12)$r.squared
+r2_16 <- summary(full16)$r.squared
+b_int12 <- unname(coef(full12)["mode3Internet"])   # Internet vs Live Phone, 2012
+b_oth16 <- unname(coef(full16)["mode3Other"])      # Other vs Live Phone, 2016
+b_n16   <- unname(coef(full16)["n1000"])           # per 1000 respondents, 2016
+
+p_day12  <- a12["days_to_election", "Pr(>F)"]
+p_day16  <- a16["days_to_election", "Pr(>F)"]
+p_mode12 <- a12["mode3", "Pr(>F)"]
+p_mode16 <- a16["mode3", "Pr(>F)"]
+p_pop12  <- a12["sample_subpopulation", "Pr(>F)"]
+p_pop16  <- a16["sample_subpopulation", "Pr(>F)"]
+p_part16 <- a16["partisanship", "Pr(>F)"]
+p_n16    <- a16["n1000", "Pr(>F)"]
+p_f12    <- nested12[2, "Pr(>F)"]
+p_f16    <- nested16[2, "Pr(>F)"]
+p_g12    <- glm_null12[2, "Pr(>Chi)"]
+p_g16    <- glm_null16[2, "Pr(>Chi)"]
+```
+
+# Preliminary Summary
+
+Across both elections, how far from election day a poll was taken is the clearest predictor of its accuracy. Polls conducted earlier had larger margin errors in both 2012 and 2016 (p < 0.001), by roughly 0.6 to 0.75 percentage points per additional 100 days. Polling mode was also significant in both years, although the pattern differed: in 2012, Internet polls had smaller errors than live phone polls, while in 2016 the rare “Other” modes had much larger errors. The sampled population (likely vs registered voters or adults) showed no significant relationship with accuracy in either election, and partisanship and sample size were significant in 2016 but not 2012.
+
+However, these predictors explain very little: together they account for only about 5% of the variation in margin error in each year. This is unsurprising, as most polling error is likely to be random sampling noise that no feature of the poll can explain, with the rest coming from factors not in our data, such as which state or pollster was involved. The effects above are therefore real but small.
+
+## Size of the polling error
+
+```{r}
+#| label: figdays
+#| fig-cap: "Absolute margin error against days to election in each election, fitted linear trend line and 95% confidence interval."
+#| fig-width: 6.5
+#| fig-height: 3
+bind_rows(d12, d16) %>%
+  ggplot(aes(days_to_election, abs_err)) +
+  geom_point(alpha = 0.3) +
   geom_smooth(method = "lm", formula = y ~ x) +
-  labs(x = "Weight (1000 lbs)", y = "Fuel economy (mpg)") +
+  facet_wrap(~ year) +
+  labs(x = "Days to election", y = "Absolute margin error (percentage points)") +
   theme_minimal()
 ```
 
 ```{r}
-#| label: tbl-model
-#| tbl-cap: "Linear regression of fuel economy (mpg) on weight and horsepower."
-# modelsummary's default `tinytable` backend renders cleanly to PDF.
+#| label: tblanova
+#| tbl-cap: "Type II ANOVA results for each predictor of absolute margin error, adjusted for all other predictors."
+# One row per predictor and election
+anova_df <- function(a, yr) {
+  a <- a[rownames(a) != "Residuals", ]
+  tibble(Year = yr,
+         Predictor = unname(pred_lab[rownames(a)]),
+         Fstat = a[["F value"]],
+         p = format.pval(a[["Pr(>F)"]], digits = 2, eps = 0.001))
+}
+bind_rows(anova_df(a12, "2012"), anova_df(a16, "2016")) %>%
+  kable(digits = 2, col.names = c("Year", "Predictor", "F", "p-value"))
+```
+
+```{r}
+#| label: tbllm
+#| tbl-cap: "Linear regression of absolute margin error (percentage points) on poll characteristics. Standard errors in parentheses, Live Phone is the reference mode."
 modelsummary(
-  list("Fuel economy (mpg)" = model),
-  coef_map = c("wt" = "Weight (1000 lbs)",
-               "hp" = "Horsepower",
-               "(Intercept)" = "Intercept"),
-  gof_map = c("nobs", "r.squared", "adj.r.squared"),
-  stars = TRUE
+  list("2012" = full12, "2016" = full16),
+  stars = TRUE,
+  gof_map = c("nobs", "r.squared", "adj.r.squared")
 )
 ```
+
+```{r}
+#| label: figdiag12
+#| echo: true
+#| fig-cap: "2012 residual diagnostics for the linear model of absolute margin error."
+#| fig-width: 7
+#| fig-height: 6
+# Four standard diagnostics for one fitted model
+diag_plots <- function(m, yr) {
+  par(mfrow = c(2, 2))
+  plot(m, which = 1, sub.caption = yr)   # residuals vs fitted
+  plot(m, which = 2, sub.caption = yr)   # normal Q-Q
+  plot(m, which = 3, sub.caption = yr)   # scale-location
+  plot(cooks.distance(m), type = "h", ylab = "Cook's distance",
+       main = paste("Cook's distance,", yr))
+  abline(h = 4 / nobs(m), col = "red", lty = 2)
+  par(mfrow = c(1, 1))
+}
+diag_plots(full12, "2012")
+```
+
+```{r}
+#| label: figdiag16
+#| echo: true
+#| fig-cap: "2016 residual diagnostics for the linear model of absolute margin error."
+#| fig-width: 7
+#| fig-height: 6
+diag_plots(full16, "2016")
+```
+
+## Accuracy in picking the winning candidate
 
 
 # Discussion {#sec-discussion}
