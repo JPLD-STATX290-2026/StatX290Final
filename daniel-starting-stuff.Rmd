@@ -218,7 +218,7 @@ exp(cbind(OR = coef(g12), confint.default(g12))) # odds ratios with 95% CI
 anova(glm(correct ~ 1, family = binomial, data = l12), g12, test = "Chisq") # overall model test
 ```
 
-Maybe a train test split thing, confusion table, etc idk
+# 2012 - Logistic prediction and confusion matrix
 
 ```{r class12}
 test12_logit <- test12 |>
@@ -245,6 +245,8 @@ exp(cbind(OR = coef(g16), confint.default(g16)))
 anova(glm(correct ~ 1, family = binomial, data = l16), g16, test = "Chisq")
 
 ```
+# 2016 - Logistic prediction and confusion matrix
+
 ```{r class16}
 
 test16_logit <- test16 |>
