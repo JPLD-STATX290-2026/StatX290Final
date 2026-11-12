@@ -258,7 +258,7 @@ test16_logit$pred_class <- ifelse(test16_logit$pred_prob >= 0.5, 1, 0)
 
 table(Actual = test16_logit$correct, Predicted = test16_logit$pred_class)
 
-mean(test12_logit$correct == test12_logit$pred_class)
+mean(test16_logit$correct == test16_logit$pred_class)
 ```
 
 

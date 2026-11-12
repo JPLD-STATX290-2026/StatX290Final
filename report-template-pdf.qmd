@@ -57,6 +57,8 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(tidyverse) # General functions
 library(car) # Has capital A Anova
 library(rsample) # Allows us to do train test split
+library(knitr)
+library(modelsummary)
 set.seed(67) # Set the seed daniel got us to set
 ```
 
@@ -105,6 +107,18 @@ test12  <- testing(split12)
 
 d16 <- training(split16)
 test16  <- testing(split16)
+
+# Signed error for data correcting 
+d12s <- d12 %>% 
+  mutate(
+  signed_err = ((dem-rep) - act_margin)
+)
+
+d16s <- d16 %>% 
+  mutate(
+  signed_err = ((dem-rep) - act_margin)
+)
+
 ```
 
 
@@ -193,6 +207,13 @@ step16_int <- step(null16, scope = list(lower = ~ 1, upper = formula(full16_int)
 ```
 
 ```{r}
+#| label: Signedlm
+#| include: false
+
+
+```
+
+```{r}
 #| label: lminfluence
 #| include: false
 # Influence checks. studentised residual > 3, Cook's distance above 4/n, and the largest Cook's distance
@@ -237,6 +258,21 @@ glm_null16 <- anova(glm(correct ~ 1, family = binomial, data = l16), g16, test =
 # Proportion of polls that picked the right winner (%)
 pct12 <- round(100 * mean(l12$correct), 2)
 pct16 <- round(100 * mean(l16$correct), 2)
+```
+
+```{r}
+# Signed err models
+full12s <- lm(signed_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d12s)
+full16s <- lm(signed_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d16s)
+
+null12s <- lm(signed_err ~ 1, data = d12s)
+null16s <- lm(signed_err ~ 1, data = d16s)
+
+step12s <- step(null12s, scope = list(lower = ~ 1, upper = formula(full12s)),     direction = "both", trace = 0)
+step16s <- step(null16s, scope = list(lower = ~ 1, upper = formula(full16s)),     direction = "both", trace = 0)
+
+formula(step12s)
+formula(step16s)
 ```
 
 ```{r}
@@ -292,7 +328,7 @@ bind_rows(d12, d16) %>%
 anova_df <- function(a, yr) {
   a <- a[rownames(a) != "Residuals", ]
   tibble(Year = yr,
-         Predictor = unname(pred_lab[rownames(a)]),
+         Predictor = unname(rownames(a)),
          Fstat = a[["F value"]],
          p = format.pval(a[["Pr(>F)"]], digits = 2, eps = 0.001))
 }
@@ -340,6 +376,90 @@ diag_plots(full16, "2016")
 ```
 
 ## Accuracy in picking the winning candidate
+```{r}
+# Merging unconected variables
+common_modes <- intersect(step12s$xlevels$mode3,
+                          step16s$xlevels$mode3)
+
+common_modes <- setdiff(common_modes, "Other")
+
+t12s <- test12 %>% filter(mode3 %in% common_modes)
+t16s <- test16 %>% filter(mode3 %in% common_modes)
+
+check_bias <- function(model, test) {
+  original = test$dem - test$rep
+  adjusted = original - predict(model, newdata = test)
+  actual = test$act_margin
+  
+  data.frame(
+    method = c("Original", "Adjusted"),
+    MAE = c(mean(abs(original - actual)),
+            mean(abs(adjusted - actual))),
+    winner_accuracy = c(mean(sign(original) == sign(actual)),
+                        mean(sign(adjusted) == sign(actual)))
+  )
+}
+bias_results <- bind_rows(
+  "2012 on 2012" = check_bias(step12s, t12s),
+  "2016 on 2016" = check_bias(step16s, t16s),
+  "2012 on 2016" = check_bias(step12s, t16s),
+  "2016 on 2012" = check_bias(step16s, t12s),
+  .id = "Comparison"
+)
+
+knitr::kable(bias_results, digits = 3,
+             col.names = c("Comparison", "Method", "MAE",
+                           "Winner Accuracy"))
+
+check_mean <- function(train, test) {
+
+  original <- test$dem - test$rep
+  adjusted <- original - mean(train$signed_err)
+
+  c(
+    MAE = mean(abs(adjusted - test$act_margin)),
+    Winner_Accuracy = mean(sign(adjusted) ==
+                           sign(test$act_margin))
+  )
+}
+
+mean_results <- rbind(
+  "2012 on 2012s" = check_mean(d12s, t12s),
+  "2016 on 2016" = check_mean(d16s, t16s),
+  "2012 on 2016" = check_mean(d12s, t16s),
+  "2016 on 2012" = check_mean(d16s, t12s)
+)
+knitr::kable(mean_results, digits = 3,
+             col.names = c("MAE", "Winner Accuracy"))
+
+# 2016 polling margins
+original <- t12s$dem - t12s$rep
+actual <- t12s$act_margin
+
+# Errors after mean and regression correction
+err_mean <- abs(original - mean(d12s$signed_err) - actual)
+err_model <- abs(original - predict(step12s, newdata = t12s) - actual)
+
+# Paired t-test
+t.test(err_mean, err_model, paired = TRUE)
+
+# 2016 polling margins
+original <- t16s$dem - t16s$rep
+actual <- t16s$act_margin
+
+# Errors after mean and regression correction
+err_mean <- abs(original - mean(d16s$signed_err) - actual)
+err_model <- abs(original - predict(step16s, newdata = t16s) - actual)
+
+# Paired t-test
+t.test(err_mean, err_model, paired = TRUE)
+
+# Actual and predicted signed errors
+actual16 <- (t16s$dem - t16s$rep) - t16s$act_margin
+pred16 <- predict(step16s, newdata = t16s)
+
+cor(actual16, pred16)
+```
 
 
 # Discussion {#sec-discussion}
