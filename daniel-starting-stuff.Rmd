@@ -221,7 +221,16 @@ anova(glm(correct ~ 1, family = binomial, data = l12), g12, test = "Chisq") # ov
 Maybe a train test split thing, confusion table, etc idk
 
 ```{r class12}
+test12_logit <- test12 |>
+  filter(!is.na(correct), mode3 != "Other")
 
+test12_logit$pred_prob <- predict(g12, newdata = test12_logit, type = "response")
+
+test12_logit$pred_class <- ifelse(test12_logit$pred_prob >= 0.5, 1, 0)
+
+table(Actual = test12_logit$correct, Predicted = test12_logit$pred_class)
+
+mean(test12_logit$correct == test12_logit$pred_class)
 ```
 
 ## 2016
@@ -236,6 +245,20 @@ exp(cbind(OR = coef(g16), confint.default(g16)))
 anova(glm(correct ~ 1, family = binomial, data = l16), g16, test = "Chisq")
 
 ```
+```{r class16}
+
+test16_logit <- test16 |>
+  filter(!is.na(correct), mode3 != "Other")
+
+test16_logit$pred_prob <- predict(g16, newdata = test16_logit, type = "response")
+
+test16_logit$pred_class <- ifelse(test16_logit$pred_prob >= 0.5, 1, 0)
+
+table(Actual = test16_logit$correct, Predicted = test16_logit$pred_class)
+
+mean(test12_logit$correct == test12_logit$pred_class)
+```
+
 
 # Preliminary Summary
 
