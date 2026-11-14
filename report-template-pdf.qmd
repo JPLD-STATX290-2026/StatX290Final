@@ -274,6 +274,138 @@ step16s <- step(null16s, scope = list(lower = ~ 1, upper = formula(full16s)),   
 formula(step12s)
 formula(step16s)
 ```
+```{r}
+#| label: functions
+#| include: false
+# Area under the ROC curve: the chance a random right-winner poll gets a higher predicted
+# probability than a random wrong-winner poll (0.5 = no better than guessing)
+auc <- function(y, p) {
+  r <- rank(p)
+  n1 <- sum(y == 1)
+  n0 <- sum(y == 0)
+  (sum(r[y == 1]) - n1 * (n1 + 1) / 2) / (n1 * n0)
+}
+
+# MAE, RMSE and R^2 measured against a baseline prediction `base`.
+# With base = the training mean this is the out-of-sample R^2 (negative = worse than the mean).
+score <- function(y, pred, base) {
+  ok <- !is.na(y) & !is.na(pred)
+  y <- y[ok]
+  pred <- pred[ok]
+  c(MAE  = mean(abs(y - pred)),
+    RMSE = sqrt(mean((y - pred)^2)),
+    R2   = 1 - sum((y - pred)^2) / sum((y - base)^2))
+}
+
+# Predictions on the original (percentage point) scale. For a square-root model, E[Z^2] = mu^2 + sigma^2,
+# so the residual variance is added back to avoid under predicting after back transforming.
+pred_abs <- function(m, newdata, sqrt_scale = FALSE) {
+  p <- predict(m, newdata = newdata)
+  if (sqrt_scale) p^2 + sigma(m)^2 else p
+}
+```
+
+```{r}
+#| label: testeval
+#| include: false
+# Linear --- training vs test performance
+eval_abs <- function(train, test, mods, yr) {
+  base <- mean(train$abs_err)            # "predict the training mean" baseline
+  one <- function(label, set, data, pred) {
+    bind_cols(tibble(Year = yr, Model = label, Set = set),
+              as_tibble_row(score(data$abs_err, pred, base)))
+  }
+  bind_rows(
+    one("Training mean", "Train", train, rep(base, nrow(train))),
+    one("Training mean", "Test",  test,  rep(base, nrow(test))),
+    bind_rows(lapply(names(mods), function(nm) {
+      sq <- nm == "Full (square root)"
+      bind_rows(one(nm, "Train", train, pred_abs(mods[[nm]], train, sq)),
+                one(nm, "Test",  test,  pred_abs(mods[[nm]], test,  sq)))
+    }))
+  )
+}
+
+lm_eval <- bind_rows(
+  eval_abs(d12, test12, list(Full = full12, Stepwise = step12, "Full (square root)" = full12_t), "2012"),
+  eval_abs(d16, test16, list(Full = full16, Stepwise = step16, "Full (square root)" = full16_t), "2016")
+)
+
+# Logistic --- performance on the test polls
+# "Other" mode polls are dropped because the logistic models were fitted without them
+prep_logit_test <- function(model, test) {
+  test <- test %>% filter(!is.na(correct), mode3 != "Other")
+  test$p <- predict(model, newdata = test, type = "response")   # predicted P(poll picks the right winner)
+  test
+}
+
+logit_scores <- function(model, lt, yr) {
+  major <- as.integer(mean(model$y) >= 0.5)   # majority class in the training data
+  tibble(Year = yr,
+         Polls = nrow(lt),
+         Accuracy = mean((lt$p > 0.5) == lt$correct),
+         `Majority-class accuracy` = mean(major == lt$correct),   # always predict the majority class
+         AUC = auc(lt$correct, lt$p))
+}
+
+conf_df <- function(lt, yr) {
+  lv <- c("Wrong winner", "Right winner")
+  tibble(Predicted = factor(if_else(lt$p > 0.5, lv[2], lv[1]), levels = lv),
+         Actual    = factor(if_else(lt$correct == 1, lv[2], lv[1]), levels = lv)) %>%
+    count(Predicted, Actual, .drop = FALSE) %>%
+    mutate(Year = yr)
+}
+
+lt12 <- prep_logit_test(g12, test12)
+lt16 <- prep_logit_test(g16, test16)
+logit_eval <- bind_rows(logit_scores(g12, lt12, "2012"), logit_scores(g16, lt16, "2016"))
+conf_tab   <- bind_rows(conf_df(lt12, "2012"), conf_df(lt16, "2016"))
+
+null_g12 <- glm(correct ~ 1, family = binomial, data = l12)
+null_g16 <- glm(correct ~ 1, family = binomial, data = l16)
+
+sg12 <- step(glm(correct ~ 1, family = binomial, data = l12),
+             scope = list(lower = ~ 1, upper = formula(g12)), direction = "both", trace = 0)
+sg16 <- step(glm(correct ~ 1, family = binomial, data = l16),
+             scope = list(lower = ~ 1, upper = formula(g16)), direction = "both", trace = 0)
+
+# All two-way interactions, then stepwise over them
+g12_int <- glm(correct ~ (mode3 + sample_subpopulation + partisanship + n1000 + days_to_election)^2,
+                                family = binomial, data = l12)
+g16_int <- glm(correct ~ (mode3 + sample_subpopulation + partisanship + n1000 + days_to_election)^2,
+                                family = binomial, data = l16)
+sg12_int <- step(glm(correct ~ 1, family = binomial, data = l12),
+             scope = list(lower = ~ 1, upper = formula(g12_int)), direction = "both", trace = 0)
+sg16_int <- step(glm(correct ~ 1, family = binomial, data = l16),
+             scope = list(lower = ~ 1, upper = formula(g16_int)), direction = "both", trace = 0)
+
+logit_eval <- bind_rows(
+  logit_scores(g12,  lt12, "2012") %>% mutate(Model = "Full"),
+  logit_scores(sg12, prep_logit_test(sg12, test12), "2012") %>% mutate(Model = "Stepwise"),
+  logit_scores(sg12_int, prep_logit_test(sg12_int, test12), "2012") %>% mutate(Model = "Interaction + Stepwise"),
+  logit_scores(g16,  lt16, "2016") %>% mutate(Model = "Full"),
+  logit_scores(sg16, prep_logit_test(sg16, test16), "2016") %>% mutate(Model = "Stepwise"),
+  logit_scores(sg16_int, prep_logit_test(sg16_int, test16), "2016") %>% mutate(Model = "Interaction + Stepwise")
+) %>% relocate(Model, .after = Year)
+
+
+```
+
+```{r}
+#| label: logit-values
+#| include: false
+get_le <- function(yr, model, col) logit_eval[[col]][logit_eval$Year == yr & logit_eval$Model == model]
+
+# Full model's test polls, how many were flagged as likely wrong (P(right winner) <= 0.5), and how many of those were actually wrong
+n_flag12       <- sum(lt12$p <= 0.5)
+n_flag16       <- sum(lt16$p <= 0.5)
+n_flag16_wrong <- sum(lt16$p <= 0.5 & lt16$correct == 0)
+pct_flag16     <- round(100 * n_flag16_wrong / n_flag16)         # % of flagged polls that were wrong
+pct_wrong16    <- round(100 * mean(lt16$correct == 0), 1)         # % of all 2016 test polls that were wrong
+auc12_range    <- range(logit_eval$AUC[logit_eval$Year == "2012"])
+
+
+```
 
 ```{r}
 #| label: values
@@ -376,6 +508,7 @@ diag_plots(full16, "2016")
 ```
 
 ## Accuracy in picking the winning candidate
+Features of a poll did not predict the direction of a poll’s error well enough to correct it. A feature based correction reduced absolute error by only 0.11 points when compared to subtracting the average bias in 2012 (paired t-test, p = 0.057) and increased it by 0.03 points in 2016 (p = 0.57). Predicted and actual signed errors in 2016 were almost uncorrelated (r = 0.06).
 ```{r}
 # Merging unconected variables
 common_modes <- intersect(step12s$xlevels$mode3,
@@ -460,6 +593,60 @@ pred16 <- predict(step16s, newdata = t16s)
 
 cor(actual16, pred16)
 ```
+On the testing set, the models explained little of the error. Out-of-sample R² was 4.8% (2012) and 3.2% (2016), against 5.5% and 6.0% in training, and test MAE increased by 7% and 3% respectively. The gap between training and test R² was small in 2012 but larger in 2016, which may indicate overfitting (@tbl-test-lm).
+
+```{r}
+#| label: tbl-test-lm
+#| tbl-cap: "Prediction of absolute margin error (percentage points) on the training and test polls. R2 is measured against predicting the training mean, so values near 0 (or negative) mean the model predicts no better than the average error."
+lm_eval %>%
+  select(Year, Model, Set, MAE, R2) %>%
+  pivot_wider(names_from = Set, values_from = c(MAE, R2), names_glue = "{.value} ({Set})") %>%
+  kable(digits = 3)
+```
+
+On the testing polls, the logistic models do not beat the benchmark of assuming every poll picks the right winner. In 2012 the model never predicted a wrong winner, so its accuracy (`r round(100 * logit_eval$Accuracy[1], 1)`%) equals the majority-class rate (proportion of polls that were the same as the majority in the training data) and its AUC (`r round(logit_eval$AUC[1], 2)`) is close to 0.5, which indicates a model little better than chance. Stepwise selection and interactions made little difference (AUC `r round(auc12_range[1], 2)` to `r round(auc12_range[2], 2)` across the three models). In 2016 the AIC to was higher (`r round(get_le("2016", "Full", "AUC"), 2)`), but accuracy (`r round(100 * get_le("2016", "Full", "Accuracy"), 1)`%) was below the benchmark (`r round(100 * get_le("2016", "Full", "Majority-class accuracy"), 1)`%). Only `r n_flag16_wrong` of the `r n_flag16` polls the full model flagged as likely wrong (predicted probability of a right winner below 0.5) were wrong, so flagging polls as incorrect added little (@tbl-test-logit).
+
+```{r}
+#| label: tbl-test-logit
+#| tbl-cap: "Performance of the logistic models at predicting whether a poll picked the right winner, on the test polls. Accuracy uses a 0.5 cut-off and is compared with always predicting the majority class; AUC of 0.5 means no discrimination."
+kable(logit_eval, digits = 3)
+```
+
+The two accuracy measures (binary and percentage) exhibit different behaviour (@fig-binary-pct, @tbl-race). Polls in states where a candidate was much more likely to win had the largest margin errors (6.1 and 8.7 points), yet almost always picked the winner (100% and 99.2%). This is understandable, if a candidate has a poll margin 20 or over, the candidate is the clear favourite for that polled population, even if the exact win percentage varies wildly from the estimate. Polls in races decided by under 5 points had smaller errors (2.9 and 5.4 points) but were far more often wrong. In 2016, only 43.7% of these types of polls picked the right winner. 
+
+```{r}
+#| label: fig-binary-pct
+#| fig-cap: "Absolute margin error against the size of the actual margin. A poll can only pick the wrong winner if its error exceeds the actual margin, so wrong-winner polls lie above the dashed line."
+#| fig-width: 6.5
+#| fig-height: 3.2
+polls %>%
+  filter(!is.na(correct)) %>%
+  mutate(outcome = factor(correct, levels = c(1, 0), labels = c("Right winner", "Wrong winner"))) %>%
+  ggplot(aes(abs(act_margin), abs_err, colour = outcome)) +
+  geom_point(alpha = 0.4) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
+  facet_wrap(~ year) +
+  labs(x = "Actual margin (absolute, percentage points)",
+       y = "Absolute margin error (percentage points)",
+       colour = NULL) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+```{r}
+#| label: tbl-race
+#| tbl-cap: "Mean absolute margin error and percentage of polls picking the right winner, by how close the actual result was."
+polls %>%
+  filter(!is.na(correct)) %>%
+  mutate(`Actual margin` = cut(abs(act_margin), breaks = c(0, 5, 10, 20, Inf), right = FALSE,
+                               labels = c("< 5", "5 to 10", "10 to 20", "20 +"))) %>%
+  group_by(Year = year, `Actual margin`) %>%
+  summarise(Polls = n(),
+            `Mean absolute error` = mean(abs_err),
+            `Right winner (%)` = 100 * mean(correct),
+            .groups = "drop") %>%
+  kable(digits = 1)
+```
 
 
 # Discussion {#sec-discussion}
@@ -484,27 +671,37 @@ association is not causal and may not generalise to modern vehicles.
 
 <!-- See rubric: Statistical appendix - fully reproducible, annotated analysis. -->
 
+```{r}
+#| label: tbl-confusion
+#| echo: true
+#| tbl-cap: "Confusion tables for the logistic models on the test polls (rows: what the model predicts; columns: what happened)."
+conf_tab %>%
+  pivot_wider(names_from = Actual, values_from = n) %>%
+  relocate(Year) %>%
+  kable()
+```
+
 This appendix documents the analysis so the results above are fully reproducible.
 The annotated code reproduces the model and its assumption checks; the complete
 project (data, scripts, and commit history) is in the repository linked at the
 top.
 
 ```{r}
-# Get datasets
+# Get datasets, think we can remove this but I wanna make sure
 
-data2012 <- read.csv("Data/Clean/state_polls_2012_clean.csv")
-data2016 <- read.csv("Data/Clean/state_polls_2016_clean.csv")
-data1976to2024 <- read.csv("Data/Clean/1976-2024-president_clean.csv")
+#data2012 <- read.csv("Data/Clean/state_polls_2012_clean.csv")
+#data2016 <- read.csv("Data/Clean/state_polls_2016_clean.csv")
+#data1976to2024 <- read.csv("Data/Clean/1976-2024-president_clean.csv")
 
-data2016 <- data2016 %>%
-  mutate(
-    State = str_extract(poll_info, "(?<=\\d{4}-).*?(?=-president)")
-  )
+#data2016 <- data2016 %>%
+#  mutate(
+#    State = str_extract(poll_info, "(?<=\\d{4}-).*?(?=-president)")
+#  )
 
-data2012 <- data2012 %>%
-  mutate(
-    State = str_extract(poll_info, "(?<=\\d{4}-).*?(?=-president)")
-  )
+#data2012 <- data2012 %>%
+#  mutate(
+#    State = str_extract(poll_info, "(?<=\\d{4}-).*?(?=-president)")
+#  )
 
 ```
 
