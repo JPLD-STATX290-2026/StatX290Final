@@ -16,7 +16,6 @@ format:
     number-sections: true
     documentclass: scrartcl
     fig-pos: "H"
-bibliography: report-references.bib
 execute:
   echo: false      # keep code out of the body; it is shown in the appendix
   warning: false
@@ -164,12 +163,6 @@ We model `correct` with logistic regression on the same predictors, reporting od
 # Results {#sec-results}
 
 <!-- See rubric: Results - describe analysis w.r.t. the question; visualise; check assumptions. -->
-
-@fig-relationship shows the relationship between weight and fuel economy, with a
-fitted regression line. The estimated model is reported in @tbl-model: each
-additional 1000 lbs is associated with a change of `r round(wt_beta, 1)` mpg,
-and the model explains `r round(100 * r2, 1)`% of the variation in fuel economy.
-Model assumptions are checked in @sec-appendix.
 
 ```{r}
 #| label: lmfit
@@ -653,10 +646,7 @@ polls %>%
 
 <!-- See rubric: Discussion - connect to the question and context; examine limitations. -->
 
-Interpret the result in relation to the research question and the wider context,
-then examine the limitations honestly. Keep claims within what the data support:
-these are observational 1974 model-year cars (`r n_obs` of them), so the
-association is not causal and may not generalise to modern vehicles.
+
 
 # References {.unnumbered}
 
@@ -757,7 +747,7 @@ versions are listed in @tbl-environment.
 #| label: tbl-environment
 #| tbl-cap: "Core software versions used to produce this report."
 #| echo: true
-pkgs <- c("tidyverse", "modelsummary", "gt")
+pkgs <- c("tidyverse", "modelsummary")
 tibble::tibble(
   Software = c("R", pkgs),
   Version  = c(paste(R.version$major, R.version$minor, sep = "."),
