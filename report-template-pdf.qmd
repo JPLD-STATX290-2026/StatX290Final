@@ -65,7 +65,7 @@ set.seed(67) # Set the seed daniel got us to set
 #| label: data-prep
 #| include: false
 polls <- read.csv("Data/Clean/combined_data.csv") %>% 
-  filter(sample_size > 0) %>% # drops the 2 polls whose invalid sample_size (-1) was set to NA
+  filter(sample_size > 0, sample_subpopulation != "Adults") %>% # drops the polls whose invalid sample_size (-1) was set to NA, and the very few Adult observations
   mutate(abs_err = abs((dem - rep) - act_margin), # how far off the poll was
          correct = if_else(dem == rep, NA_integer_, # did the poll pick the right winner?
                            as.integer(sign(dem - rep) == sign(act_margin))),
@@ -93,6 +93,7 @@ all16 <- prep(2016)
 ```
 
 ```{r tt16}
+#| include: false
 
 set.seed(67)
 
@@ -134,13 +135,12 @@ Our goal is to understand the accuracy of polls in political situations. More ex
 <!-- See rubric: Method - describe the data and the statistical methods. -->
 
 ## Data
-- Patrick dibs
 
 Our data consists of three datasets, polling information from 2012 and 2016, as well as presidential election results from 1976-2024. The 2012 and 2016 datasets contain state-level polling information collected prior to each election, and the 1976–2024 dataset contains certified presidential election results.The 2012 and 2016 polling datasets were originally collected from HuffPost Pollster, which compiled polling results from a range of polling organisations. The 1976–2024 election results dataset was sourced from the MIT Election Data and Science Lab. The cleaning of the election results also involves simplifying the original party classifications by combining minor-party candidates into an "OTHER" category. Further details about cleaning choices and their limitations can be found in the EDA report.
 
-After removing two polls with an invalid sample size, each of the `r n_polls` polls (`r n_all12` in 2012 and `r n_all16` in 2016) is compared with the actual result for its state. We measure accuracy in two ways. The *absolute margin error* is the number of percentage points by which a poll's Democrat-minus-Republican lead differed from the actual margin. We use the margin rather than each candidate's share because undecided respondents mean a candidate's poll percentage sits below their vote share even for a perfect poll, which the margin cancels out. The binary outcome *correct* records whether the poll's leader won the state (exact ties are excluded because they predict no winner).
+After removing two polls with an invalid sample size and 12 polls of adults, each of the `r n_polls` polls (`r n_all12` in 2012 and `r n_all16` in 2016) is compared with the actual result for its state. We measure accuracy in two ways. The *absolute margin error* is the number of percentage points by which a poll's Democrat-minus-Republican lead differed from the actual margin. We use the margin rather than each candidate's share because undecided respondents mean a candidate's poll percentage sits below their vote share even for a perfect poll, which the margin cancels out. The binary outcome *correct* records whether the poll's leader won the state (exact ties are excluded because they predict no winner).
 
-The predictors are polling mode, sampled population, partisanship, sample size (per 1000 respondents) and days to election. Modes with fewer than 30 polls in a year are grouped as "Other" (@tbl-modes), and Live Phone is the reference level, so each mode coefficient is a difference from a live-phone poll. Adults made up only 5 polls in 2012 and 7 in 2016, so they are removed. <!-- Make sure we actually removed this stuff, also possibly just move IVR/live phone fully in/fully separate it, so number of modes matches and is thus nicer? -->
+The predictors are polling mode, sampled population, partisanship, sample size (per 1000 respondents) and days to election. Modes with fewer than 30 polls in a year are grouped as "Other" (@tbl-modes), and Live Phone is the reference level, so each mode coefficient is a difference from a live-phone poll. Adults made up only 5 polls in 2012 and 7 in 2016, so they are removed. 
 
 ```{r}
 #| label: tbl-modes
@@ -254,6 +254,8 @@ pct16 <- round(100 * mean(l16$correct), 2)
 ```
 
 ```{r}
+#| include: false
+
 # Signed err models
 full12s <- lm(signed_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d12s)
 full16s <- lm(signed_err ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, data = d16s)
@@ -409,6 +411,10 @@ r2_16 <- summary(full16)$r.squared
 b_int12 <- unname(coef(full12)["mode3Internet"])   # Internet vs Live Phone, 2012
 b_oth16 <- unname(coef(full16)["mode3Other"])      # Other vs Live Phone, 2016
 b_n16   <- unname(coef(full16)["n1000"])           # per 1000 respondents, 2016
+b_day12 <- unname(coef(full12)["days_to_election"]) * 100   # points per 100 days
+b_day16 <- unname(coef(full16)["days_to_election"]) * 100
+r2_lm <- function(yr, set) round(100 * lm_eval$R2[lm_eval$Year == yr & lm_eval$Model == "Full" & lm_eval$Set == set], 1)
+mae_inc <- function(yr) { x <- lm_eval[lm_eval$Year == yr & lm_eval$Model == "Full", ]; round(100 * (x$MAE[x$Set == "Test"] / x$MAE[x$Set == "Train"] - 1)) }
 
 p_day12  <- a12["days_to_election", "Pr(>F)"]
 p_day16  <- a16["days_to_election", "Pr(>F)"]
@@ -424,11 +430,11 @@ p_g12    <- glm_null12[2, "Pr(>Chi)"]
 p_g16    <- glm_null16[2, "Pr(>Chi)"]
 ```
 
-# Preliminary Summary
+## Summary of Findings
 
-Across both elections, how far from election day a poll was taken is the clearest predictor of its accuracy. Polls conducted earlier had larger margin errors in both 2012 and 2016 (p < 0.001), by roughly 0.6 to 0.75 percentage points per additional 100 days. Polling mode was also significant in both years, although the pattern differed: in 2012, Internet polls had smaller errors than live phone polls, while in 2016 the rare “Other” modes had much larger errors. The sampled population (likely vs registered voters or adults) showed no significant relationship with accuracy in either election, and partisanship and sample size were significant in 2016 but not 2012.
+Across both elections, how far from election day a poll was taken is the clearest predictor of its accuracy. Polls conducted earlier had larger margin errors in 2012 and 2016 (p < 0.001), by about `r round(b_day12, 2)` and `r round(b_day16, 2)` percentage points per additional 100 days. Polling mode was significant in 2016 (p = `r signif(p_mode16, 2)`) but not at the 5% level in 2012 (p = `r round(p_mode12, 3)`). In 2012 Internet polls were `r abs(round(b_int12, 2))` points more accurate than live phone polls, and in 2016 the rare "Other" modes were `r round(b_oth16, 2)` points less accurate. Sampled population (likely vs registered voters) showed no significant relationship with accuracy in either election (p = `r round(p_pop12, 2)` and `r round(p_pop16, 2)`). Partisanship (p = `r round(p_part16, 3)`) and sample size (p = `r round(p_n16, 3)`) were significant in 2016 only.
 
-However, these predictors explain very little: together they account for only about 5% of the variation in margin error in each year. This is unsurprising, as most polling error is likely to be random sampling noise that no feature of the poll can explain, with the rest coming from factors not in our data, such as which state or pollster was involved. The effects above are therefore real but small.
+However, these predictors explain very little: R² was `r round(100 * r2_12, 1)`% in 2012 and `r round(100 * r2_16, 1)`% in 2016. This is unsurprising, as most polling error is likely to be random sampling noise that no feature of the poll can explain, with the rest coming from factors not in our data, such as which state or pollster was involved. The effects above are therefore real but small.
 
 ## Size of the polling error
 
@@ -567,7 +573,7 @@ err_mean <- abs(original - mean(d12s$signed_err) - actual)
 err_model <- abs(original - predict(step12s, newdata = t12s) - actual)
 
 # Paired t-test
-t.test(err_mean, err_model, paired = TRUE)
+tt12 <- t.test(err_mean, err_model, paired = TRUE)
 
 # 2016 polling margins
 original <- t16s$dem - t16s$rep
@@ -578,15 +584,16 @@ err_mean <- abs(original - mean(d16s$signed_err) - actual)
 err_model <- abs(original - predict(step16s, newdata = t16s) - actual)
 
 # Paired t-test
-t.test(err_mean, err_model, paired = TRUE)
+tt16 <- t.test(err_mean, err_model, paired = TRUE)
 
 # Actual and predicted signed errors
 actual16 <- (t16s$dem - t16s$rep) - t16s$act_margin
 pred16 <- predict(step16s, newdata = t16s)
 
-cor(actual16, pred16)
+r16 <- cor(actual16, pred16)
 ```
-On the testing set, the models explained little of the error. Out-of-sample R² was 4.8% (2012) and 3.2% (2016), against 5.5% and 6.0% in training, and test MAE increased by 7% and 3% respectively. The gap between training and test R² was small in 2012 but larger in 2016, which may indicate overfitting (@tbl-test-lm).
+
+On the testing set, the models explained little of the error. Out-of-sample R² was `r r2_lm("2012", "Test")`% (2012) and `r r2_lm("2016", "Test")`% (2016), against `r r2_lm("2012", "Train")`% and `r r2_lm("2016", "Train")`% in training, and test MAE was `r mae_inc("2012")`% and `r mae_inc("2016")`% higher than training MAE. The gap between training and test R² was small in 2012 but larger in 2016, which may indicate overfitting (@tbl-test-lm).
 
 ```{r}
 #| label: tbl-test-lm
@@ -597,7 +604,7 @@ lm_eval %>%
   kable(digits = 3)
 ```
 
-On the testing polls, the logistic models do not beat the benchmark of assuming every poll picks the right winner. In 2012 the model never predicted a wrong winner, so its accuracy (`r round(100 * logit_eval$Accuracy[1], 1)`%) equals the majority-class rate (proportion of polls that were the same as the majority in the training data) and its AUC (`r round(logit_eval$AUC[1], 2)`) is close to 0.5, which indicates a model little better than chance. Stepwise selection and interactions made little difference (AUC `r round(auc12_range[1], 2)` to `r round(auc12_range[2], 2)` across the three models). In 2016 the AIC to was higher (`r round(get_le("2016", "Full", "AUC"), 2)`), but accuracy (`r round(100 * get_le("2016", "Full", "Accuracy"), 1)`%) was below the benchmark (`r round(100 * get_le("2016", "Full", "Majority-class accuracy"), 1)`%). Only `r n_flag16_wrong` of the `r n_flag16` polls the full model flagged as likely wrong (predicted probability of a right winner below 0.5) were wrong, so flagging polls as incorrect added little (@tbl-test-logit).
+On the testing polls, the logistic models do not beat the benchmark of assuming every poll picks the right winner. In 2012 the model never predicted a wrong winner, so its accuracy (`r round(100 * logit_eval$Accuracy[1], 1)`%) equals the majority-class rate (proportion of polls that were the same as the majority in the training data) and its AUC (`r round(logit_eval$AUC[1], 2)`) is close to 0.5, which indicates a model little better than chance. Stepwise selection and interactions made little difference (AUC `r round(auc12_range[1], 2)` to `r round(auc12_range[2], 2)` across the three models). In 2016 the AUC was higher (`r round(get_le("2016", "Full", "AUC"), 2)`), but accuracy (`r round(100 * get_le("2016", "Full", "Accuracy"), 1)`%) was below the benchmark (`r round(100 * get_le("2016", "Full", "Majority-class accuracy"), 1)`%). Only `r n_flag16_wrong` of the `r n_flag16` polls the full model flagged as likely wrong (predicted probability of a right winner below 0.5) were wrong, so flagging polls as incorrect added little (@tbl-test-logit).
 
 ```{r}
 #| label: tbl-test-logit
@@ -695,46 +702,12 @@ top.
 
 ```
 
-
-
-
-
-
-## Model {#sec-app-model}
-
-@tbl-model-detail reports the full fitted model with 95% confidence intervals.
-
 ```{r}
 #| label: tbl-model-detail
-#| tbl-cap: "Full regression results, with 95% confidence intervals."
+#| tbl-cap: "Full linear models with 95% confidence intervals."
 #| echo: true
-# Fit the model and report it as a formatted table (not raw console output)
-model <- lm(mpg ~ wt + hp, data = mtcars)
-
-modelsummary(
-  list("Fuel economy (mpg)" = model),
-  statistic = "conf.int",                       # 95% CIs beneath each estimate
-  coef_map  = c("wt" = "Weight (1000 lbs)",
-                "hp" = "Horsepower",
-                "(Intercept)" = "Intercept"),
-  gof_map   = c("nobs", "r.squared", "adj.r.squared")
-)
-```
-
-## Assumption checks {#sec-app-checks}
-
-@fig-diagnostics shows the residual diagnostics used to check the linear-model
-assumptions of constant variance and approximately normal residuals.
-
-```{r}
-#| label: fig-diagnostics
-#| echo: true
-#| fig-cap: "Residual diagnostics: residuals vs fitted values (left) and a normal Q-Q plot (right)."
-#| fig-width: 7
-#| fig-height: 3.2
-par(mfrow = c(1, 2))
-plot(model, which = 1)   # residuals vs fitted: linearity and equal variance
-plot(model, which = 2)   # normal Q-Q: normality of residuals
+modelsummary(list("2012" = full12, "2016" = full16), statistic = "conf.int",
+             gof_map = c("nobs", "r.squared", "adj.r.squared"))
 ```
 
 ## Computational environment {#sec-app-env}
