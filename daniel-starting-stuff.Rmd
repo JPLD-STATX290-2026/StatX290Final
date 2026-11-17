@@ -212,6 +212,7 @@ Paragraph
 
 ```{r glm12}
 g12 <- glm(correct ~ mode3 + sample_subpopulation + partisanship + n1000 + days_to_election, family = binomial, data = l12)
+
 summary(g12)
 Anova(g12, type = 2) # likelihood ratio test for each factor
 exp(cbind(OR = coef(g12), confint.default(g12))) # odds ratios with 95% CI
@@ -261,6 +262,15 @@ table(Actual = test16_logit$correct, Predicted = test16_logit$pred_class)
 mean(test16_logit$correct == test16_logit$pred_class)
 ```
 
+# AUC and log-loss
+```{r}
+library(yardstick)
+roc_auc_vec(truth = factor(test12_logit$correct, levels = c(1,0)),
+            estimate = test12_logit$pred_prob)
+
+mn_log_loss_vec(truth = factor(test16_logit$correct, levels = c(1, 0)),
+            estimate = test16_logit$pred_prob)
+```
 
 # Preliminary Summary
 
