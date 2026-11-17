@@ -234,6 +234,7 @@ table(Actual = test12_logit$correct, Predicted = test12_logit$pred_class)
 mean(test12_logit$correct == test12_logit$pred_class)
 ```
 
+
 ## 2016
 
 Paragraph part 2 electric boogaloo
@@ -264,13 +265,30 @@ mean(test16_logit$correct == test16_logit$pred_class)
 
 # AUC and log-loss
 ```{r}
+# 2012
 library(yardstick)
 roc_auc_vec(truth = factor(test12_logit$correct, levels = c(1,0)),
             estimate = test12_logit$pred_prob)
+mn_log_loss_vec(
+  truth = factor(test12_logit$correct, levels = c(1, 0)),
+            estimate = test12_logit$pred_prob
+)
+
+# 2016
+roc_auc_vec(
+  truth = factor(test16_logit$correct, levels = c(1, 0)),
+            estimate = test16_logit$pred_prob
+)
 
 mn_log_loss_vec(truth = factor(test16_logit$correct, levels = c(1, 0)),
             estimate = test16_logit$pred_prob)
 ```
+## 2012 analysis of Accuracy, Confusion Matrix, AUC, and Log-Loss
+The 2012 logistic regression model was evaluated on our 2012 dataset with a classification threshold of 0.5. The model achieved a classification accuracy of 87.64%. This result is slightly misleading however, as the confusion matrix revealed that all of the observations were predicted to have correctly identified the election winner. This included the 33 polls that were actually incorrect. This insinuates that the high accuracy is almost completely as a result of the unbalanced proportion in actual result correctness. The 2012 model achieved an AUC of 0.577, further indicating a lack of insightful prediction. The log-loss was found to be 0.379, which is a more promising statistic value.
+
+## 2016 analysis of Accuracy, Confusion Matrix, AUC, and Log-Loss
+The 2016 logistic regression model was evaluated on our 2016 dataset with the same classification threshold of 0.5. The model achieved a weak classification accuracy of 71.34%. This result is noticeably lower than that of the 2012 model due to a more balanced real outcome of the polls (correct/incorrect). The model achieved an AUC of 0.637, showing a slight yet clear improvement in comparison to the 2012 results. The trade off for this improved result is a higher log-loss result of 0.554 in comparison to 0.379 for the 2012 model. Overall, while the model showed better discrimination in 2016, the reliability and scope of its predictive power was rather limited. This suggests that the characteristics and depth of information provided by the polling data is not comprehensive enough to reliably predict the likelihood of a poll correctly identifying an election winner.
+
 
 # Preliminary Summary
 
