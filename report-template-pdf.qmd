@@ -14,6 +14,10 @@ format:
     number-sections: true
     documentclass: scrartcl
     fig-pos: "H"
+    include-in-header:
+      text: |
+        \usepackage{fvextra}
+        \fvset{breaklines=true,breakanywhere=true}
 execute:
   echo: false      # keep code out of the body; it is shown in the appendix
   warning: false
@@ -245,6 +249,7 @@ pct16 <- round(100 * mean(l16$correct), 2)
 ```
 
 ```{r}
+#| label: signed-models
 #| include: false
 
 # Signed err models
@@ -575,6 +580,8 @@ polls %>%
 To investigate whether polling predictions could be improved, we fit linear models of signed error using stepwise AIC selection. The predicted error by the models is subtracted from the original polling margin to generate adjusted predictions across both elections. We also apply a constant mean adjustment, subtracting the average signed error of the training data from every polling margin. This gives a benchmark for evaluating whether the regression based adjustments improve accuracy beyond corrections for average polling bias. 
 
 ```{r}
+#| label: bias-adjustment
+#| include: false
 # Merging unconnected variables
 common_modes <- intersect(step12s$xlevels$mode3,
                           step16s$xlevels$mode3)
@@ -616,6 +623,8 @@ knitr::kable(bias_results, digits = 3,
 ```
 
 ```{r}
+#| label: mean_adjustment
+#| include: false
 check_mean <- function(train, test) {
 
   original <- test$dem - test$rep
@@ -646,7 +655,8 @@ knitr::kable(mean_results, digits = 3, col.names = c("MAE", "Winner Accuracy"))
 ```
 
 ```{r}
-
+#| label: bias-tests
+#| include: false
 # 2012 polling margins
 original <- t12s$dem - t12s$rep
 actual <- t12s$act_margin
@@ -735,6 +745,138 @@ modelsummary(list("2012" = full12, "2016" = full16), statistic = "conf.int",
                                "r.squared", "R²", 3,
                                "adj.r.squared", "Adjusted R²", 3))
 ```
+
+
+## Data preparation {#sec-app-data}
+
+The following code describes the process underwent when cleaning and preparing the datasets for analysis. This included the creation of response variables and the training/testing split.
+
+```{r}
+#| echo: false
+#| results: asis
+cat(
+  "```r\n",
+  paste(knitr::knit_code$get("data-prep"), collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+```{r}
+#| echo: false
+#| results: asis
+cat(
+  "```r\n",
+  paste(knitr::knit_code$get("prep-split"), collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+```{r}
+#| echo: false
+#| results: asis
+cat(
+  "```r\n",
+  paste(knitr::knit_code$get("tt16"), collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+## Linear regression analysis {#sec-app-linear}
+
+Multiple linear regression models were fitted separately for 2012 and 2016. The following code includes model fitting, ANOVA, model selection, influence diagnostics and lastly response transformations.
+
+```{r}
+#| echo: false
+#| results: asis
+
+for (chunk in c("lmfit", "lmtests", "lmselect",
+                "lminfluence", "boxcox")) {
+
+  cat(
+    "```r\n",
+    paste(knitr::knit_code$get(chunk), collapse = "\n"),
+    "\n```\n\n",
+    sep = ""
+  )
+}
+```
+
+
+## Logistic regression analysis {#sec-app-logistic}
+
+Logistic regression models were fitted separately but similarly for the 2012 and 2016 election datasets to discover if the polling characteristics found in these polls are enough alone to predict the correct election winner.
+
+```{r}
+#| echo: false
+#| results: asis
+
+cat(
+  "```r\n",
+  paste(knitr::knit_code$get("logitfit"), collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+## Model evaluation {#sec-app-evaluation}
+
+The following code was used to evaluate model performance on the testing splits originating from our initial data split. The performance testing includes linear regression error metrics, logistic regression classification accuracy, AUC, and comprehensive comparisons between alternative models.
+
+```{r}
+#| echo: false
+#| results: asis
+
+for (chunk in c("functions", "testeval")) {
+
+  cat(
+    "```r\n",
+    paste(knitr::knit_code$get(chunk), collapse = "\n"),
+    "\n```\n\n",
+    sep = ""
+  )
+}
+```
+
+## Signed-error regression models {#sec-app-signed}
+
+Signed-error regression models were fitted separately for 2012 and 2016 to investigate systematic polling bias. A Stepwise AIC selection was used to identify models for adjusting the original polling margins.
+
+```{r}
+#| echo: false
+#| results: asis
+
+cat(
+  "```r\n",
+  paste(knitr::knit_code$get("signed-models"), collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+## Polling-margin adjustments {#sec-app-adjustments}
+
+This code compares the original polling margins with margins that have been adjusted using regression models and average signed errors. Paired t-tests are used to investigate the differences in absolute error between the different adjustment methods.
+
+```{r}
+#| echo: false
+#| results: asis
+
+for (chunk in c("bias-adjustment",
+                "mean-adjustment",
+                "bias-tests")) {
+
+  cat(
+    "```r\n",
+    paste(knitr::knit_code$get(chunk), collapse = "\n"),
+    "\n```\n\n",
+    sep = ""
+  )
+}
+```
+
 
 ## Computational environment {#sec-app-env}
 
