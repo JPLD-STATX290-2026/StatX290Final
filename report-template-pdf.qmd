@@ -142,7 +142,7 @@ The predictors are polling mode, sampled population, partisanship, sample size (
 
 ```{r}
 #| label: tbl-modes
-#| tbl-cap: "Number of polls by polling mode in each election (modes with fewer than 30 polls in a year are grouped as Other)."
+#| tbl-cap: "Number of polls by polling mode in each election. Modes with fewer than 30 polls in a year are grouped as Other."
 bind_rows(all12, all16) %>%
   count(year, mode3) %>%
   pivot_wider(names_from = year, values_from = n, values_fill = 0) %>%
@@ -279,8 +279,8 @@ auc <- function(y, p) {
   (sum(r[y == 1]) - n1 * (n1 + 1) / 2) / (n1 * n0)
 }
 
-# MAE, RMSE and R^2 measured against a baseline prediction `base`.
-# With base = the training mean this is the out-of-sample R^2 (negative = worse than the mean).
+# MAE, RMSE and R² measured against a baseline prediction `base`.
+# With base = the training mean this is the out-of-sample R² (negative = worse than the mean).
 score <- function(y, pred, base) {
   ok <- !is.na(y) & !is.na(pred)
   y <- y[ok]
@@ -437,7 +437,7 @@ However, these predictors explain very little: R² on the training polls was `r 
 
 ```{r}
 #| label: figdays
-#| fig-cap: "Absolute margin error against days to election in each election, fitted linear trend line and 95% confidence interval."
+#| fig-cap: "Absolute margin error against days to election in each election, by election. Each point is one poll; lines show fitted linear trends with 95% confidence interval."
 #| fig-width: 6.5
 #| fig-height: 3
 bind_rows(d12, d16) %>%
@@ -451,7 +451,7 @@ bind_rows(d12, d16) %>%
 
 ```{r}
 #| label: tblanova
-#| tbl-cap: "Type II ANOVA results for each predictor of absolute margin error, adjusted for all other predictors."
+#| tbl-cap: "Type II ANOVA of absolute margin error on poll characteristics (training polls). Each F-test is adjusted for all other predictors."
 # One row per predictor and election
 anova_df <- function(a, yr) {
   a <- a[rownames(a) != "Residuals", ]
@@ -466,7 +466,7 @@ bind_rows(anova_df(a12, "2012"), anova_df(a16, "2016")) %>%
 
 ```{r}
 #| label: tbllm
-#| tbl-cap: "Linear regression of absolute margin error (percentage points) on poll characteristics. Standard errors in parentheses, Live Phone is the reference mode."
+#| tbl-cap: "Linear regression of absolute margin error (percentage points) on poll characteristics (training polls). Standard errors in parentheses; reference levels are Live Phone, Likely Voters and Nonpartisan."
 modelsummary(
   list("2012" = full12, "2016" = full16),
   stars = TRUE,
@@ -477,7 +477,7 @@ modelsummary(
 ```{r}
 #| label: figdiag12
 #| echo: false
-#| fig-cap: "2012 residual diagnostics for the linear model of absolute margin error."
+#| fig-cap: "Residual diagnostics for the 2012 linear model of absolute margin error: residuals against fitted values, normal Q-Q plot, scale-location plot, and Cook's distance (dashed line at 4/n)."
 #| fig-width: 7
 #| fig-height: 6
 # Four standard diagnostics for one fitted model
@@ -497,7 +497,7 @@ diag_plots(full12, "2012")
 ```{r}
 #| label: figdiag16
 #| echo: false
-#| fig-cap: "2016 residual diagnostics for the linear model of absolute margin error."
+#| fig-cap: "Residual diagnostics for the 2016 linear model of absolute margin error: residuals against fitted values, normal Q-Q plot, scale-location plot, and Cook's distance (dashed line at 4/n)."
 #| fig-width: 7
 #| fig-height: 6
 diag_plots(full16, "2016")
@@ -509,7 +509,7 @@ On the testing set, the models explained little of the error. Out-of-sample R² 
 
 ```{r}
 #| label: tbl-test-lm
-#| tbl-cap: "Prediction of absolute margin error (percentage points) on the training and test polls. R2 is measured against predicting the training mean, so values near 0 (or negative) mean the model predicts no better than the average error."
+#| tbl-cap: "Prediction of absolute margin error (percentage points) on the training and test polls. R² is measured against predicting the training mean, so values near zero (or negative) mean the model predicts no better than the average error."
 lm_eval %>%
   select(Year, Model, Set, MAE, R2) %>%
   pivot_wider(names_from = Set, values_from = c(MAE, R2), names_glue = 
@@ -598,10 +598,17 @@ bias_results <- bind_rows(
   .id = "Comparison"
 )
 
-knitr::kable(bias_results, digits = 3,
-             col.names = c("Comparison", "Method", "MAE",
-                           "Winner Accuracy"))
+```
 
+```{r}
+#| label: tbl-bias
+#| tbl-cap: "Mean absolute error (MAE, percentage points) and winner accuracy of the original poll margins and of margins adjusted by a stepwise model of signed error, on the test polls. 'A on B' means the model fitted to A's training polls was applied to B's test polls."
+
+knitr::kable(bias_results, digits = 3,
+             col.names = c("Comparison", "Method", "MAE", "Winner Accuracy"))
+```
+
+```{r}
 check_mean <- function(train, test) {
 
   original <- test$dem - test$rep
@@ -620,8 +627,18 @@ mean_results <- rbind(
   "2012 on 2016" = check_mean(d12s, t16s),
   "2016 on 2012" = check_mean(d16s, t12s)
 )
-knitr::kable(mean_results, digits = 3,
-             col.names = c("MAE", "Winner Accuracy"))
+
+```
+
+```{r}
+#| label: tbl-bias-mean
+#| tbl-cap: "Mean absolute error (MAE, percentage points) and winner accuracy after subtracting the average signed error of the training polls from every test poll's margin. 'A on B' means the average error from A's training polls was applied to B's test polls."
+
+knitr::kable(mean_results, digits = 3, col.names = c("MAE", "Winner Accuracy"))
+
+```
+
+```{r}
 
 # 2012 polling margins
 original <- t12s$dem - t12s$rep
