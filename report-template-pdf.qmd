@@ -198,13 +198,6 @@ step16_int <- step(null16, scope = list(lower = ~ 1, upper = formula(full16_int)
 ```
 
 ```{r}
-#| label: Signedlm
-#| include: false
-
-
-```
-
-```{r}
 #| label: lminfluence
 #| include: false
 # Influence checks. studentised residual > 3, Cook's distance above 4/n, and the largest Cook's distance
@@ -435,6 +428,8 @@ However, these predictors explain very little: R² on the training polls was `r 
 
 ## Size of the polling error
 
+We first describe the errors, then report which poll characteristics were related to them.
+
 ```{r}
 #| label: figdays
 #| fig-cap: "Absolute margin error against days to election in each election, by election. Each point is one poll; lines show fitted linear trends with 95% confidence interval."
@@ -448,6 +443,10 @@ bind_rows(d12, d16) %>%
   labs(x = "Days to election", y = "Absolute margin error (percentage points)") +
   theme_minimal()
 ```
+
+Figure 1 shows each poll's error against how many days before the election it ended. Most polls missed the margin by less than 10 points, but errors reached more than 30 points, and they were visibly more spread out in 2016 than in 2012. Errors tended to be larger for polls that ended earlier, as the fitted lines slope upwards in both elections. The wide scatter however, suggests that timing alone leaves most of the variation unexplained.
+
+Table 2 gives the Type II F-test for each predictor and @tbl-lm the coefficients; the main results are summarised in Section 3.1, with the details below.
 
 ```{r}
 #| label: tblanova
@@ -470,9 +469,15 @@ bind_rows(anova_df(a12, "2012"), anova_df(a16, "2016")) %>%
 modelsummary(
   list("2012" = full12, "2016" = full16),
   stars = TRUE,
-  gof_map = c("nobs", "r.squared", "adj.r.squared")
-)
+  gof_map = tribble(~raw, ~clean, ~fmt,
+                    "nobs", "Observations", 0,
+                    "r.squared", "R²", 3,
+                    "adj.r.squared", "Adjusted R²", 3))
 ```
+
+The coefficients in @tbllm show the direction and size of these effects with the other characteristics held fixed. Each additional 100 days before the election was associated with about `r round(b_day12, 1)` more points of error in 2012 and `r round(b_day16, 1)` more in 2016. Mode effects are measured against live phone polls. In 2012, Internet polls had about `r abs(round(b_int12, 1))` fewer points of error, while the other 2012 modes did not differ significantly. In 2016 the only significant mode difference was for the rare "Other" modes (`r round(b_oth16, 1)` more points of error). This group contains only 26 polls and combines mail, mixed-mode and live phone/online polls, so it be interpreted carefully. In 2016, a poll with 1,000 more respondents had about `r abs(round(coef(full16)["n1000"], 1))` fewer points of error, and polls in the "Pollster" partisanship category had about `r abs(round(coef(full16)["partisanshipPollster"], 1))` fewer points of error than nonpartisan polls. Polls in the "Sponsor" category did not differ from nonpartisan polls, and none of these effects were present in 2012. Overall the models explain little of the variation in error. R² was `r round(r2_12, 3)` in 2012 and `r round(r2_16, 3)` in 2016 (adjusted `r round(summary(full12)$adj.r.squared, 3)` and `r round(summary(full16)$adj.r.squared, 3)`), so more than 90% of the variation is unexplained.
+
+Figures 2 and 4 check the model assumptions. The diagnostic plots suggest that some linear regression assumptions are not fully met in either model. The residuals-against-fitted plots show some deviation from linearity, while the Q-Q plots show clear normality violations, particularly in the upper tails. The scale-location plots also show an upward trend, suggesting some heteroskedasticity, with residual variability increasing as fitted values increase. Cook's distance remained below approximately 0.1 in both elections, indicating that no single poll was highly influential, although some polls exceeded the 4/n guideline. Refitting the models using the square root of the error produced similar prediction performance (@tbl-test-lm).
 
 ```{r}
 #| label: figdiag12
@@ -502,6 +507,8 @@ diag_plots(full12, "2012")
 #| fig-height: 6
 diag_plots(full16, "2016")
 ```
+
+Multicollinearity was not a concern: the largest $\text{GVIF}^{1/(2\,\text{Df})}$ was `r round(max(v12[, "GVIF^(1/(2*Df))"]), 2)` in 2012 and `r round(max(v16[, "GVIF^(1/(2*Df))"]), 2)` in 2016, well below the usual threshold of about 2.2 (equivalent to a VIF of 5). Box-Cox estimated a power of `r round(bc12[1, "Est Power"], 2)` in 2012 and `r round(bc16[1, "Est Power"], 2)` in 2016, between a log transformation (0) and a square root (0.5). The square root is the nearest standard transformation, so we used it in the refit in @tbl-test-lm.
 
 ## Predicting the size of the error on new polls
 
@@ -686,8 +693,6 @@ The models' low explanatory power suggests that poll characteristics alone canno
 
 The distinction between our two measures of accuracy also helps explain why the logistic models performed poorly. Polls in states with more lopsided results tended to have larger margin errors but still managed to correctly identify the winning candidate. Conversely, polls in closer races could have smaller margins of error while still predicting the wrong winner. In 2016, for example, only 43.5% of polls in races decided by fewer than five points correctly identified the winner (@tbl-race). This demonstrates that correctly predicting the winner depends heavily on the closeness of the race, rather than just how accurately a poll estimates the margin. As a result, the characteristics that explain variation in margin error do not necessarily help predict whether a poll will identify the correct winner or not.
 
-SUB QUESTION 2 STUFF
-
 Several limitations should be considered when interpreting these findings. First, polls conducted in the same state share the same election result and are therefore not independent, meaning that the reported p-values might be overly optimistic. Second, the residuals were right-skewed, which may affect the assumptions underlying the linear models. Third, our random train/test split meant that polls in the test set could come from the same states and pollsters represented in the training set. This could potential overstate models' ability to predict the accuracy of polls from unfamiliar states or pollsters. Our analysis was also limited to two elections. This required us to group less common polling modes, and excluded the 12 polls of adults. Finally, these results describe broader patterns across groups of polls and should not be taken as an indication of any individual pollster's or candidate's performance.
 
 Future research could investigate whether state-level and pollster-specific characteristics provide greater predictive value than the polling methods examined here. It could also examine how polling error changes throughout an election campaign and whether patterns observed across multiple elections can be used to improve the predictions of future polling accuracy.
@@ -725,7 +730,10 @@ top.
 #| tbl-cap: "Full linear models with 95% confidence intervals."
 #| echo: true
 modelsummary(list("2012" = full12, "2016" = full16), statistic = "conf.int",
-             gof_map = c("nobs", "r.squared", "adj.r.squared"))
+             gof_map = tribble(~raw, ~clean, ~fmt,
+                               "nobs", "Observations", 0,
+                               "r.squared", "R²", 3,
+                               "adj.r.squared", "Adjusted R²", 3))
 ```
 
 ## Computational environment {#sec-app-env}
