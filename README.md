@@ -82,7 +82,22 @@ The raw data are the same three datasets used in the EDA report.
 ## Project structure
 
 ```
-
+StatX290Final/
+├── README.md                   # project overview
+├── StatX290Final.Rproj
+├── EDA.qmd                     # exploratory data analysis report
+├── clean-poll-data.R           # reproducible data-cleaning process
+├── report-template-pdf.qmd     # source of the final report (renders to PDF)
+└── Data/
+    ├── Raw/
+    │   ├── state_polls_2012.csv
+    │   ├── state_polls_2016.csv
+    │   └── 1976-2024-president.csv
+    └── Clean/
+        ├── state_polls_2012_clean.csv
+        ├── state_polls_2016_clean.csv
+        ├── 1976-2024-president_clean.csv
+        └── combined_data.csv
 ```
 
 ## Required Packages
