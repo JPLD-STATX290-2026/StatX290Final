@@ -81,6 +81,7 @@ The raw data are the same three datasets used in the EDA report.
 
 ## Project structure
 
+These are the files where our analysis is located:
 ```
 StatX290Final/
 ├── README.md                   # project overview
@@ -88,6 +89,7 @@ StatX290Final/
 ├── EDA.qmd                     # exploratory data analysis report
 ├── clean-poll-data.R           # reproducible data-cleaning process
 ├── report-template-pdf.qmd     # source of the final report (renders to PDF)
+├── bibliography.bib            # Bibliography 
 └── Data/
     ├── Raw/
     │   ├── state_polls_2012.csv
@@ -141,3 +143,4 @@ The random seed is set, so the train/test split and the results in the report ar
 
 - Washington DC is recoded explicitly to "DISTRICT OF COLUMBIA" in `clean-poll-data.R` so that it is not merged with Washington State.
 - In the report, polls of "Adults" (12 in total) are removed because there are too few to estimate separately.
+- The "Other" category is removed for logistic model fitting, as all polls in this category accurately predicted the outcome of their election.
